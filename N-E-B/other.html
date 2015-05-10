@@ -15,7 +15,6 @@
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
     <script src="../dist/js/custom.js"></script>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -58,7 +57,7 @@
                 <ul class="nav nav-sidebar">
                     <li class="x-tab"><a href="index.html">Main</a></li>
                     <li><a href="overview.html">Overview</a></li>
-                    <li class="x-active"><a href="results.html">Results</a></li>
+                    <li><a href="results.html">Results</a></li>
                 </ul>
                 <ul class="nav nav-sidebar">
                     <li class="x-tab"><a href="help.html">Help</a></li>
@@ -67,12 +66,25 @@
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header">Results</h1></h1>
+                <h1 class="page-header">Other</h1></h1>
                 <hr class="style-eight"/>  
 
-                <h2 class="sub-header">Default Settings</h2>
-                <h3>N.E.B. is currently still in development. No official results have been released. Before release, studies will be done on the behavior that arises within the simulation, and the results will be available for the default settings, and possibly for any settings and/or dna seeds that result in interesting behaviors.</h3>
-             
+                <h2 class="sub-header">Appearance</h2>
+                <h3>Main Color</h3>
+                <div class="btn-group indentp">
+                  <button id="maincolor" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Light Blue <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" onclick="maincol('success');">Green</a></li>
+                    <li><a href="#" onclick="maincol('danger');">Red</a></li>
+                    <li><a href="#" onclick="maincol('warning');">Orange</a></li>
+                    <li><a href="#" onclick="maincol('primary');">Blue</a></li>
+                    <li><a href="#" onclick="maincol('info');">Light Blue</a></li>
+                    <li><a href="#" onclick="maincol('default');">White</a></li>
+                  </ul>
+                </div>
+                <button class="btn" onclick="alert(readCookie('maincolor'));">read</button>
             </div>
         </div>
     </div>
