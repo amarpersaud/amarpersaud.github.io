@@ -72,6 +72,7 @@ if(! readCookie('maincolor')){
   createCookie('maincolor', 'default', 10);
   var color = readCookie('maincolor');
   alert(color);
+} 
   
   
   
