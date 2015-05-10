@@ -34,7 +34,7 @@
       document.getElementById('maincolor').innerHTML = 'White <span class="caret"></span>';
       }
       createCookie('maincolor', color);
-      setButton(color);
+      setButtons(color);
     }
 
     
@@ -68,6 +68,7 @@ function setButtons(color){
   for(var i=0; i<list.length; i++){
     list[i].setAttribute('class', list[i].getAttribute('class') + 'btn-' + color);
   }
+  alert(color + 'buttons set?')
 }
 
 
