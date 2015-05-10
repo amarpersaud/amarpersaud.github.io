@@ -66,7 +66,7 @@ function eraseCookie(name) {
 function setButtons(color){
   var list = document.getElementsByTagName('button');
   for(var i=0; i<list.length; i++){
-    list[i].setAttribute('class', list[i].getAttribute('class') + 'btn-' + color);
+    list[i].setAttribute('class', list[i].getAttribute('class') + ' btn-' + color);
   }
   alert(color + 'buttons set?')
 }
