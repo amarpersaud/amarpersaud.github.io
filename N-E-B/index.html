@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Help and readme for N.E.B.">
+    <meta name="description" content="N.E.B.">
     <meta name="author" content="Amar Persaud">
     <meta name="lang" http-equiv="Content-Language" content="en">
     
-    <title>Help + Readme</title>
+    <title>N.E.B.</title>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
     <script src="custom.js"></script>
@@ -44,7 +44,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../projects.html">Projects</a></li>
                     <li><a href="../about.html">About Me</a></li>
-                    <li><a href="#">Other</a></li>
+                    <li><a href="../other.html">Other</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
                     <input type="text" class="form-control" placeholder="Search...">
@@ -75,25 +75,18 @@
                 <hr class="style-eight"/>
                 <br/>
                 <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-success progress-bar-medium active" id="complete" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%">
+                  <div class="progress-bar progress-bar-striped progress-bar-info progress-bar-medium active" id="complete" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%">
                   0%
                   </div>
                 </div>
                 <h4 align="center" text-align="center">Current Progress</h4> 
-                <button class="btn btn-primary"onclick="document.getElementById('complete').setAttribute('class', 'progress-bar progress-bar-striped progress-bar-primary progress-bar-medium active');">primary</button>
-                <button class="btn btn-success"onclick="document.getElementById('complete').setAttribute('class', 'progress-bar progress-bar-striped progress-bar-success progress-bar-medium active');">success</button>
-                <button class="btn btn-info"onclick="document.getElementById('complete').setAttribute('class', 'progress-bar progress-bar-striped progress-bar-info progress-bar-medium active');">info</button>
-                <button class="btn btn-warning"onclick="document.getElementById('complete').setAttribute('class', 'progress-bar progress-bar-striped progress-bar-warning progress-bar-medium active');">warning</button>
-                <button class="btn btn-danger"onclick="document.getElementById('complete').setAttribute('class', 'progress-bar progress-bar-striped progress-bar-danger progress-bar-medium active');">danger</button>
-                <button class="btn btn-default"onclick="document.getElementById('complete').setAttribute('class', 'progress-bar progress-bar-striped progress-bar-default progress-bar-medium active');">default</button>             
-               
                <hr class="style-eight"/>
                 
                 
                 <h2 class="sub-header">What is N.E.B.?</h2>
-                <h3 class="indentp">N.E.B. is a project designed to create neuroevolutionary "cells" that evolve to best survive in the environment.</h3>
+                <h3 class="indentp">N.E.B. is a project designed to create neuroevolutionary "cells" that evolve to best survive in the environment.</h3><br/>
                 <h2 class="sub-header">What is Neuroevolution?</h2>
-                <h3 class="indentp">Neuroevolution is using genetic evolution to decide the weights, biases, and or connections between the neurons of a neural network.</h3>
+                <h3 class="indentp">Neuroevolution is using genetic evolution to decide the weights, biases, and or connections between the neurons of a neural network.</h3><br/>
                 <h2 class="sub-header">What is Genetic Evolution?</h2>
                 <h3 class="indentp">Genetic evolution is the use of DNA, combined from two parents to create a child. The child's DNA is a combination of the two parents'. It is similar to both parents' DNA, but not identical to either. Mutation also occurs at a fixed chance, usually below 5% probability. Both factors contribute to genetic diversity, and allow for varying cells to evolve. The top performing cells are selected to be bred, and the bottom performing cells die off. cells will only mate with cells of the same species, or the cells with somewhat similar DNA (in length and in values), and will choose mates that have high performances.</h3>
             </div>
@@ -106,7 +99,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
