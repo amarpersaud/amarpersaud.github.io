@@ -63,17 +63,20 @@ function eraseCookie(name) {
 	createCookie(name,"",-1);
 }
 
-function setButton(color){
-  window.alert(color);
+function setButtons(color){
+  var list = document.getElementsByTagName('button');
+  for(var i=0; i<list.length; i++){
+    list[i].setAttribute('class', list[i].getAttribute('class') + 'btn-' + color);
+  }
 }
 
 
 if(! readCookie('maincolor')){
   createCookie('maincolor', 'default', 10);
   var color = readCookie('maincolor');
-  alert(color);
 } 
-  
+setButtons(color);
+
   
   
   
