@@ -14,14 +14,12 @@
       }
     }
     function maincol(color){
-      if(! color){
         document.getElementById('customtemplate').setAttrubute('href', 'http://amarpersaud.github.io/dist/css/' + color + '.css');
-      }
       createCookie('maincolor', color);
     }
 
     
-    function createCookie(name,value,days) {
+    function createCookie(name,value) {
 
       var date = new Date ();
       date.setYear (date.getYear() + 1);
@@ -49,7 +47,7 @@ function eraseCookie(name) {
 
 function loaded(){
 if(! readCookie('maincolor')){
-  createCookie('maincolor', 'default', 10);
+  createCookie('maincolor', 'info');
   var color = readCookie('maincolor');
   maincol(color);
 } else{
