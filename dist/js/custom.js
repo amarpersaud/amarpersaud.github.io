@@ -75,8 +75,8 @@ function setButtons(color){
         ca[a] = '';
       }
     }
-    for(var b=0; b< ca.length; b++){
-      var classtoput = classtoput+ca[b];
+    for(var b=0; b<=ca.length; b++){
+      var classtoput = classtoput + " " + ca[b];
     }
     
     list[i].setAttribute('class', classtoput + ' btn-' + color);
