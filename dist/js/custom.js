@@ -16,7 +16,7 @@
     function maincol(color){
       var head  = document.getElementsByTagName('head')[0];
       var links  = document.createElement('link');
-      links.id   = cssId;
+      links.id   = 'customtemplate';
       links.rel  = 'stylesheet';
       links.type = 'text/css';
       links.href = 'http://amarpersaud.github.io/dist/css/' + color + '.css';
@@ -53,7 +53,7 @@ function eraseCookie(name) {
 }
 
 
-function loaded(){
+function start(){
 if(! readCookie('maincolor')){
   createCookie('maincolor', 'info');
   var color = readCookie('maincolor');
