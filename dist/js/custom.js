@@ -70,7 +70,7 @@ function setButtons(color){
     ca = list[i].getAttribute('class').split(' ');
     
     for(var a=0; a<ca.length; a++){
-      if(ca[a] == "btn-primary" || ca[a] == "btn-danger" || ca[a] == "btn-warning" || ca[a] == "btn-info" || ca[a] == "btn-default" || ca[a] == "btn-success"){
+      if(ca[a] == "btn-primary" || ca[a] == "btn-danger" || ca[a] == "btn-warning" || ca[a] == "btn-info" || ca[a] == "btn-default" || ca[a] == "btn-success" || ca[a] == "undefined"){
         ca[a] = '';
       }
     }
@@ -85,16 +85,8 @@ function setButtons(color){
 
 
 
-
-
-
-
-
-
-
-
 if(! readCookie('maincolor')){
-  createCookie('maincolor', 'default', 10);
+  createCookie('maincolor', 'default', 100);
   var color = readCookie('maincolor');
 } 
 setButtons(color);
