@@ -21,7 +21,7 @@
       links.type = 'text/css';
       links.href = 'http://amarpersaud.github.io/dist/css/' + color + '.css';
       links.media = 'all';
-      head.appendChild(link);
+      head.appendChild(links);
       
       createCookie('maincolor', color);
     }
