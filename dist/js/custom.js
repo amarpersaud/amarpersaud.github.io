@@ -87,8 +87,8 @@ function setButtons(color){
 
 if(! readCookie('maincolor')){
   createCookie('maincolor', 'default', 100);
-  var color = readCookie('maincolor');
 } 
+var color = readCookie('maincolor');
 setButtons(color);
 
   
