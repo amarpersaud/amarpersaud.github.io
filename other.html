@@ -64,7 +64,7 @@
                 <h3>Main Color</h3>
                 <div class="btn-group indentp">
                   <button type="button" class="btn dropdown-toggle btn-template" data-toggle="dropdown" aria-expanded="false">
-                    <color id="maincolor">Light Blue </color><span class="caret"></span>
+                    <color id="maincolor" onload="getElementById('maincolor').innerHTML = readCookie('maincolor');">Light Blue </color><span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#" onclick="maincol('success'); document.getElementById('maincolor').innerHTML = 'Green';">Green</a></li>
