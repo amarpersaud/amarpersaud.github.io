@@ -66,7 +66,6 @@ if(! readCookie('maincolor')){
 
 function loadSettings(){
   col = readCookie('maincolor');
-  col = "info";
   if(col == "default"){
         document.getElementById('maincolor').innerHTML = "White";
   }
@@ -85,6 +84,5 @@ function loadSettings(){
   else{
         document.getElementById('maincolor').innerHTML = "Green";
   }
-    document.getElementById('maincolor').innerHTML = readCookie('maincolor');
     document.getElementById('loading').remove();
 }
