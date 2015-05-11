@@ -25,11 +25,12 @@
       
       createCookie('maincolor', color);
     }
+    var qq;
     function mcol(q){
-      var color = q;
+      qq = q;
     }
     function setmcol(){
-      maincol(color);
+      maincol(qq);
     }
 
     
