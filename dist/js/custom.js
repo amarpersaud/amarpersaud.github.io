@@ -69,12 +69,12 @@ function setButtons(color){
   for(var i=0; i<list.length; i++){
     ca = list[i].getAttribute('class').split(' ');
     
-    
     for(var a=0; a<ca.length; a++){
       if(ca[a] == "btn-primary" || ca[a] == "btn-danger" || ca[a] == "btn-warning" || ca[a] == "btn-info" || ca[a] == "btn-default" || ca[a] == "btn-success"){
         ca[a] = '';
       }
     }
+    classtoput = '';
     for(var b=0; b<=ca.length; b++){
       var classtoput = classtoput + " " + ca[b];
     }
