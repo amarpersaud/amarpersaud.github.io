@@ -68,15 +68,15 @@
                     <color id="maincolor">Light Blue </color><span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#" onclick="maincol('success'); document.getElementById('maincolor').innerHTML = 'Green';">Green</a></li>
-                    <li><a href="#" onclick="maincol('danger');  document.getElementById('maincolor').innerHTML = 'Red';">Red</a></li>
-                    <li><a href="#" onclick="maincol('warning');  document.getElementById('maincolor').innerHTML = 'Orange';">Orange</a></li>
-                    <li><a href="#" onclick="maincol('primary');  document.getElementById('maincolor').innerHTML = 'Blue';">Blue</a></li>
-                    <li><a href="#" onclick="maincol('info');  document.getElementById('maincolor').innerHTML = 'Light Blue';">Light Blue</a></li>
-                    <li><a href="#" onclick="maincol('default');  document.getElementById('maincolor').innerHTML = 'White';">White</a></li>
+                    <li><a href="#" onclick="mcol('success'); document.getElementById('maincolor').innerHTML = 'Green';">Green</a></li>
+                    <li><a href="#" onclick="mcol('danger');  document.getElementById('maincolor').innerHTML = 'Red';">Red</a></li>
+                    <li><a href="#" onclick="mcol('warning');  document.getElementById('maincolor').innerHTML = 'Orange';">Orange</a></li>
+                    <li><a href="#" onclick="mcol('primary');  document.getElementById('maincolor').innerHTML = 'Blue';">Blue</a></li>
+                    <li><a href="#" onclick="mcol('info');  document.getElementById('maincolor').innerHTML = 'Light Blue';">Light Blue</a></li>
+                    <li><a href="#" onclick="mcol('default');  document.getElementById('maincolor').innerHTML = 'White';">White</a></li>
                   </ul>
                 </div>
-                <button class="btn btn-template" onclick="alert(readCookie('maincolor'));">save</button>
+                <button class="btn btn-template" onclick="setmcol();">save</button>
             </div>
         </div>
     </div>
