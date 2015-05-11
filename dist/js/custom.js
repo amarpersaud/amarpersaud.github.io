@@ -83,10 +83,14 @@ function setButtons(color){
 
 
 if(! readCookie('maincolor')){
-  createCookie('maincolor', 'default', 100);
-} 
-var color = readCookie('maincolor');
-setButtons(color);
+  createCookie('maincolor', 'default', 10);
+  var color = readCookie('maincolor');
+  setButtons(color);
+} else{
+  var color = readCookie('maincolor');
+  setButtons(color);
+}
+
 
   
   
