@@ -84,7 +84,7 @@ function setButtons(color){
 }
 
 
-
+function loaded(){
 if(! readCookie('maincolor')){
   createCookie('maincolor', 'default', 10);
   var color = readCookie('maincolor');
@@ -93,11 +93,4 @@ if(! readCookie('maincolor')){
   var color = readCookie('maincolor');
   maincol(color);
 }
-
-
-  
-  
-  
-  
-  
-  
+}
