@@ -22,17 +22,16 @@
       links.href = 'http://amarpersaud.github.io/dist/css/' + color + '.css';
       links.media = 'all';
       head.appendChild(links);
-      
-      createCookie('maincolor', color);
     }
     var qq;
     function mcol(q){
       qq = q;
-    }
-    function setmcol(){
       maincol(qq);
     }
 
+    saveSettings(){
+      createCookie('maincolor', qq);
+    }
     
     function createCookie(name,value) {
 
