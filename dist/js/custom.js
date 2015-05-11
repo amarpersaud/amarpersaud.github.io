@@ -14,7 +14,15 @@
       }
     }
     function maincol(color){
-        document.getElementById('customtemplate').setAttrubute('href', 'http://amarpersaud.github.io/dist/css/' + color + '.css');
+      var head  = document.getElementsByTagName('head')[0];
+      var links  = document.createElement('link');
+      links.id   = cssId;
+      links.rel  = 'stylesheet';
+      links.type = 'text/css';
+      links.href = 'http://amarpersaud.github.io/dist/css/' + color + '.css';
+      links.media = 'all';
+      head.appendChild(link);
+      
       createCookie('maincolor', color);
     }
 
