@@ -29,7 +29,7 @@
       maincol(qq);
     }
 
-    saveSettings(){
+    function saveSettings(){
       createCookie('maincolor', qq);
     }
     
