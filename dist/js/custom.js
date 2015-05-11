@@ -65,6 +65,26 @@ if(! readCookie('maincolor')){
 }
 
 function loadSettings(){
+  col = readCookie('maincolor');
+  col = "info";
+  if(col == "default"){
+        document.getElementById('maincolor').innerHTML = "White";
+  }
+  else if(col == "danger"){
+        document.getElementById('maincolor').innerHTML = "Red";
+  }
+  else if(col == "warning"){
+        document.getElementById('maincolor').innerHTML = "Orange";
+  }
+  else if(col == "primary"){
+        document.getElementById('maincolor').innerHTML = "Blue";
+  }
+  else if(col == "info"){
+        document.getElementById('maincolor').innerHTML = "Light Blue";
+  }
+  else{
+        document.getElementById('maincolor').innerHTML = "Green";
+  }
     document.getElementById('maincolor').innerHTML = readCookie('maincolor');
     document.getElementById('loading').remove();
 }
