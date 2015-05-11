@@ -144,5 +144,28 @@ height:50px;
 body{
 padding-bottom: 50px;
 }
-
+.glyphicon-spin {
+    -webkit-animation: spin 1500ms infinite linear;
+    animation: spin 1500ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
 

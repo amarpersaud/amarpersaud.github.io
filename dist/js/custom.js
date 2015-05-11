@@ -63,3 +63,8 @@ if(! readCookie('maincolor')){
   maincol(color);
 }
 }
+
+function loadSettings(){
+    document.getElementById('maincolor').innerHTML = readCookie('maincolor');
+    document.getElementById('loading').remove();
+}

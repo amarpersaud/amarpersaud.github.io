@@ -25,7 +25,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body onload="loadSettings();">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -57,6 +57,7 @@
         <div class="row">
 
             <div class="main">
+                <h2 align="center" id="loading" class="loading">Loading Settings... <span class="glyphicon glyphicon-cog glyphicon-spin"></span></h2>
                 <h1 class="page-header">Other</h1></h1>
                 <hr class="style-eight"/>  
 
@@ -64,7 +65,7 @@
                 <h3>Main Color</h3>
                 <div class="btn-group indentp">
                   <button type="button" class="btn dropdown-toggle btn-template" data-toggle="dropdown" aria-expanded="false">
-                    <color id="maincolor" onload="document.getElementById('maincolor').innerHTML = readCookie('maincolor');">Light Blue </color><span class="caret"></span>
+                    <color id="maincolor">Light Blue </color><span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#" onclick="maincol('success'); document.getElementById('maincolor').innerHTML = 'Green';">Green</a></li>
