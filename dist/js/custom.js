@@ -14,27 +14,10 @@
       }
     }
     function maincol(color){
-      document.getElementById('maincolor').setAttribute('class','btn dropdown-toggle btn-' + color);
-      if(color == 'info'){
-      document.getElementById('maincolor').innerHTML = 'Light Blue <span class="caret"></span>';
-      }
-      if(color == 'danger'){
-      document.getElementById('maincolor').innerHTML = 'Red <span class="caret"></span>';
-      }
-      if(color == 'warning'){
-      document.getElementById('maincolor').innerHTML = 'Orange <span class="caret"></span>';
-      }
-      if(color == 'primary'){
-      document.getElementById('maincolor').innerHTML = 'Blue <span class="caret"></span>';
-      }
-      if(color == 'success'){
-      document.getElementById('maincolor').innerHTML = 'Green <span class="caret"></span>';
-      }
-      if(color == 'default'){
-      document.getElementById('maincolor').innerHTML = 'White <span class="caret"></span>';
+      if(! color){
+        document.getElementById('customtemplate').setAttrubute('href', 'http://amarpersaud.github.io/dist/css/' + color + '.css');
       }
       createCookie('maincolor', color);
-      setButtons(color);
     }
 
     
@@ -61,26 +44,6 @@ function readCookie(name) {
 
 function eraseCookie(name) {
 	createCookie(name,"",-1);
-}
-
-function setButtons(color){
-  var list = document.getElementsByTagName('button');
-  
-  for(var i=0; i<list.length; i++){
-    ca = list[i].getAttribute('class').split(' ');
-    
-    for(var a=0; a<ca.length; a++){
-      if(ca[a] == "btn-primary" || ca[a] == "btn-danger" || ca[a] == "btn-warning" || ca[a] == "btn-info" || ca[a] == "btn-default" || ca[a] == "btn-success" || ca[a] == "undefined"){
-        ca[a] = '';
-      }
-    }
-    classtoput = '';
-    for(var b=0; b<=ca.length; b++){
-      var classtoput = classtoput + " " + ca[b];
-    }
-    
-    list[i].setAttribute('class', classtoput + ' btn-' + color);
-  }
 }
 
 
