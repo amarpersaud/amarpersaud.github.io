@@ -92,3 +92,27 @@ function loadSettings(){
   }
     document.getElementById('loading').remove();
 }
+var w;
+
+function showAlert(lert) {
+    a = "#" + lert;
+    w = 0;
+    $(a).addClass("in");
+     alertprog(10, "seconds");
+     setTimeout(function(){
+      $(a).alert('close');
+     }, 11000);
+
+    }
+    
+    function alertprog(x,y){
+      z=document.getElementById(y);
+      z.innerHTML = x+"s";
+      z.style.width = w + "%";
+      w = w + 10;
+      if(w<=100){
+      setTimeout(function(){
+      alertprog(x-1,y);
+     }, 1000);
+    }
+    }

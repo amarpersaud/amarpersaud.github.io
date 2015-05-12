@@ -24,7 +24,6 @@
 
 }
 
-
 .nav-sidebar > .x-tab > a{
   color: #fff;
   background-color: #111111;
@@ -99,6 +98,10 @@ body {
   -webkit-transition: width 2.5s ease-in-out;
   transition: width 2.5s ease-in-out;
 }
+.progress-bar-medium {
+  -webkit-transition: width 1.0s ease-in-out;
+  transition: width 1.0s ease-in-out;
+}
 .progress-bar-fast {
   -webkit-transition: width 0.1s ease-in-out;
   transition: width 0.1s ease-in-out;
@@ -167,5 +170,9 @@ padding-bottom: 50px;
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg);
     }
+}
+.progress-alert{
+margin-bottom: 0;
+margin-top: 5px;
 }
 
