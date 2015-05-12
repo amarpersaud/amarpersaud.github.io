@@ -98,21 +98,11 @@ function showAlert(lert) {
     a = "#" + lert;
     w = 0;
     $(a).addClass("in");
-     alertprog(10, "seconds");
+    document.getElementById("seconds").style.width = "0%";
      setTimeout(function(){
       $(a).alert('close');
-     }, 11000);
+     }, 10000);
 
     }
     
-    function alertprog(x,y){
-      z=document.getElementById(y);
-      z.innerHTML = x+"s";
-      z.style.width = w + "%";
-      w = w + 10;
-      if(w<=100){
-      setTimeout(function(){
-      alertprog(x-1,y);
-     }, 1000);
-    }
-    }
+
