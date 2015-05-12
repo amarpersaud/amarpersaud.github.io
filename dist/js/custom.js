@@ -19,7 +19,12 @@
       links.id   = 'customtemplate';
       links.rel  = 'stylesheet';
       links.type = 'text/css';
-      links.href = 'http://amarpersaud.github.io/dist/css/' + color + '.css';
+      if(color != null){
+        links.href = 'http://amarpersaud.github.io/dist/css/' + color + '.css';
+      }
+      else{
+        links.href = 'http://amarpersaud.github.io/dist/css/info.css';
+      }
       links.media = 'all';
       head.appendChild(links);
     }

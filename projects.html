@@ -25,7 +25,7 @@
     <![endif]-->
 </head>
 
-<body onload="loadSettings();">
+<body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
@@ -57,26 +57,13 @@
         <div class="row">
 
             <div class="main">
-                <h2 align="center" id="loading" class="loading">Loading Settings... <span class="glyphicon glyphicon-cog glyphicon-spin"></span></h2>
-                <h1 class="page-header">Other</h1></h1>
+                <h1 class="page-header">Projects</h1></h1>
                 <hr class="style-eight"/>  
-
-                <h2 class="sub-header">Appearance</h2>
-                <h3>Main Color</h3>
-                <div class="btn-group indentp">
-                  <button type="button" class="btn dropdown-toggle btn-template" data-toggle="dropdown" aria-expanded="false">
-                    <color id="maincolor">Light Blue </color><span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#" onclick="mcol('success'); document.getElementById('maincolor').innerHTML = 'Green';">Green</a></li>
-                    <li><a href="#" onclick="mcol('danger');  document.getElementById('maincolor').innerHTML = 'Red';">Red</a></li>
-                    <li><a href="#" onclick="mcol('warning');  document.getElementById('maincolor').innerHTML = 'Orange';">Orange</a></li>
-                    <li><a href="#" onclick="mcol('primary');  document.getElementById('maincolor').innerHTML = 'Blue';">Blue</a></li>
-                    <li><a href="#" onclick="mcol('info');  document.getElementById('maincolor').innerHTML = 'Light Blue';">Light Blue</a></li>
-                    <li><a href="#" onclick="mcol('default');  document.getElementById('maincolor').innerHTML = 'White';">White</a></li>
-                  </ul>
+                <h2 class="sub-header">N.E.B.</h2>
+                <div class="indentp">
+                <h3>N.E.B. is a neuroevolutionary simulation of cells.</h3>
+                 <a class="btn btn-template" href="N-E-B/index.html" role="button" >Learn More</a>
                 </div>
-                <button class="btn btn-template" type="button" onclick="saveSettings(); showAlert('salert')">save</button>
             </div>
         </div>
     </div>
@@ -85,13 +72,6 @@
     
     <div class="footer">
       <h5 align="center">&#xa9; 2015 Amar Persaud</h5>
-    </div>
-        <div class="alert alert-success alert-dismissible fade x-alert" role="alert" id="salert" tabindex="-1" aria-hidden="true">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <strong>Success!</strong> Settings have been successfully saved.
-                 <div class="progress progress-alert">
-                  <div class="progress-bar progress-bar-10s active pull-right" id="seconds" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
