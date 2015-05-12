@@ -77,9 +77,15 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  width:100%;
   padding: 2rem;
   background-color: #efefef;
   text-align: center;
+}
+.footer-inverse{
+  background-color: #222;
+  border-color: #080808;
+
 }
 
 .table-centered> thead > tr > th{
@@ -142,12 +148,7 @@ body {
   left:50%;
   transform: translate(-50%, -50%);
 }
-.x-inner{
-padding:15px;
-}
-.mastfoot{
-height:50px;
-}
+
 body{
 padding-bottom: 50px;
 }
