@@ -27,10 +27,10 @@
       links.rel  = 'stylesheet';
       links.type = 'text/css';
       if(color != null){
-        links.href = 'http://amarpersaud.github.io/dist/css/' + color + '.css';
+        links.href = 'https://amarpersaud.github.io/dist/css/' + color + '.css';
       }
       else{
-        links.href = 'http://amarpersaud.github.io/dist/css/info.css';
+        links.href = 'https://amarpersaud.github.io/dist/css/info.css';
       }
       links.media = 'all';
       head.appendChild(links);
