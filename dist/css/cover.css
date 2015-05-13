@@ -112,8 +112,12 @@ body {
 
 .cover {
   padding: 0 20px;
+  
 }
 .cover .btn-lg {
+  padding: 10px 20px;
+  padding: 10px 20px;
+  padding: 10px 20px;
   padding: 10px 20px;
   font-weight: bold;
 }
@@ -148,19 +152,24 @@ body {
     vertical-align: middle;
   }
   /* Handle the widths */
+
+  .mastfoot{
+      width:100%;
+      height:50px;
+  }
   .masthead,
-  .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
-    height:50px;
   }
 }
 
 @media (min-width: 992px) {
+  .mastfoot{
+      width:100%;
+      height:50px;
+  }
   .masthead,
-  .mastfoot,
   .cover-container {
-    width: 100%;
-    height: 50px;
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
