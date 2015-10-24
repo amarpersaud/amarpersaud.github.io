@@ -36,10 +36,14 @@
   color: #fff;
   background-color: #555;
 }
-.indent, .indent>p{
+.indent,
+.indent>p
+.indent>h3{
 text-indent: 2.0em;
 }
-.indent2, .indent2>p{
+.indent2,
+.indent2>p,
+.indent2>h3{
 text-indent: 4.0em;
 }
 .indentp{
