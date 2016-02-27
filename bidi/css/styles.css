@@ -51,87 +51,51 @@
 }
 
 html{
-  height: 100%;
+  height: 100%;  position: relative;
+
 }
 body{
   height: 100%;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   position: relative;
-  margin: 0;
+  margin: 0 0 0px;
   min-height: 100%;
 }
 p{
   font-size: 14px;
   line-height: 1.42857143;
 }
+
+.content{
+  margin-top: 52px;
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+  width: 100%;
+	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 50px; /* .push must be the same height as .footer */
+}
+
 .footer{
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
-  background-color: #222;
-  height:60px;
-  display: flex; 
-  align-items: center; 
-  flex-direction: column;
-  justify-content: center;
+    width: 100%;
+    background-color: #222; 
+    vertical-align: middle;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    clear:both;
+    z-index: 100 !important;
 }
-@media (min-width: 768px) {
-  .footer{
-    position: fixed;
-    bottom: 0;
-    width:100%;
-    height:50px;
-  }
+.wrapper{
+  width: 85%;
+  margin-right: 0;
+  padding-top: 52px;
+  margin-left: auto;
 }
-@media (min-width: 992px) {
-  .footer{
-      width:100%;
-      height:50px;
-  }
-}
-
-
-.side-nav{
-  width:auto;
-}
-.side-nav > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    border: 1px solid #222;
-}
-.side-nav > ul > li a {
-    display: block;
-    color: #9d9d9d;
-    padding: 8px 0 8px 0px;
-    text-decoration: none;
-}
-/* Change the link color on hover */
-.side-nav > ul > li a:hover {
-    background-color: #444;
-    color: white;
-}
-.side-nav > ul > li {
-    text-align: center;
-    border-bottom: 1px solid #222;
-    background-color: #222;
-}
-.side-nav > ul > li:last-child {
-    border-bottom: none;
-}
-
-.side-nav > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #222;
-    height: 100%; /* Full height */
-    position: fixed; /* Make it stick, even on scroll */
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
-}
-
 
 a, a:hover, a:active, a:visited{
   text-decoration: none;
@@ -142,19 +106,26 @@ a, a:hover, a:active, a:visited{
   padding: 15px;
   font-size: 18px;
 }
-a:hover{
+#brand{
+  display: -webkit-flex;
+  display: flex;
+}
+#brand  > a:hover{
   color: white;
 }
-nav{
+.site-nav{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   background-color: #222;
   
-     display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: row; 
-   flex-direction: row;
-   -webkit-justify-content: flex-start;
-   justify-content: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row; 
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
   
   line-height: 20px;
   font-size: 14px;
@@ -206,16 +177,7 @@ nav{
 .nav{
    margin-left: auto;
 }
-.nav>input{
-  font-size: 14px;
-  line-height: 20px;
-  height: 28px;
-  margin: 0 10px 0 10px;
-  border-radius: 5px;
-  border: none;
-  padding: 0 8px 0 8px;
-  outline: none;
-} 
+
 #search-button {
   display: inline-block;
   width: 16px;
@@ -258,6 +220,17 @@ input[type="search"]::-webkit-search-cancel-button:before,
 input[type="search"]::-webkit-search-results-button:before{ 
   content: "\e906";
 }
+.nav>input{
+  font-size: 14px;
+  line-height: 20px;
+  height: 28px;
+  margin: 0 10px 0 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 0 8px 0 8px;
+  outline: none;
+} 
+
 /* On the flex item to pin */
 .left {
    -webkit-align-self: flex-start;
@@ -268,3 +241,67 @@ input[type="search"]::-webkit-search-results-button:before{
    margin-left: auto;
 }
 
+.side-nav{
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding: 20px;
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 0;
+  background-color: #666;
+  
+  float: left;
+  box-sizing: border-box;
+  width: 15%;
+  line-height: 20px;
+  min-height:1px;
+}
+
+.side-nav > ul {
+    list-style-type: none;
+    box-sizing: border-box;
+    display: block;
+    margin: 0px -20px 20px -20px;
+    padding-left: 0px;
+    
+    background-color: #f1f1f1;
+    
+}
+.side-nav > ul > li > a {
+  background-color: #666;
+
+    display: block;
+    line-height: 20px;
+    font-size: 14px;
+    color: #C0C0C0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-right: 4px solid #666;
+}
+/* Change the link color on hover */
+.side-nav > ul > li > a:hover {
+    color: white;
+    border-right-color: #C0C0C0;
+    background-color: #707070;
+}
+.side-nav > ul > li:first-of-type > a{
+  background-color: #181818;
+  border-right-color: #181818;
+}
+.side-nav > ul > li:first-of-type > a:hover{
+  color: white;
+  background-color: #222;
+  border-right-color: #C0C0C0;
+}
+.side-nav > ul > li {
+  text-align: left;
+}
+.side-nav > ul > .active > a,
+.side-nav > ul > .active > a:hover{
+  color: white;
+  border-right-color: white !important;
+}
