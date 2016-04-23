@@ -279,6 +279,9 @@ li>input{
     text-decoration: none;
     border-right: 4px solid #666;
 }
+.side-nav > ul > li {
+  background-color: #666;
+}
 /* Change the link color on hover */
 .side-nav > ul > li > a:hover {
     color: white;
@@ -286,6 +289,10 @@ li>input{
     background-color: #707070;
 }
 .side-nav > ul > li:first-of-type > a{
+  background-color: #181818;
+  border-right-color: #181818;
+}
+.side-nav > ul > li:first-of-type {
   background-color: #181818;
   border-right-color: #181818;
 }
@@ -311,8 +318,8 @@ li>input{
     display: inline-block;
   }
   .side-nav  > ul> li > a:last-of-type{
-  display: none;
-}
+    display:none;
+  }
 @media screen and (max-width: 760px) {
   #brand{
     position: absolute;
