@@ -1,53 +1,184 @@
-  @font-face {
-      font-family: 'icon';
-      src:    url('/bidi/fonts/icon.eot?y1g6ir');
-      src:    url('/bidi/fonts/icon.eot?y1g6ir#iefix') format('embedded-opentype'),
-          url('/bidi/fonts/icon.ttf?y1g6ir') format('truetype'),
-          url('/bidi/fonts/icon.woff?y1g6ir') format('woff'),
-          url('/bidi/fonts/icon.svg?y1g6ir#icon') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-
-  i {
-      /* use !important to prevent issues with browser extensions that change fonts */
-      font-family: 'icon' !important;
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-
-      /* Better Font Rendering =========== */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-  }
-
-  .icon-home:before {
-      content: "\e900";
-  }
-  .icon-edit:before {
-      content: "\e901";
-  }
-  .icon-search:before {
-      content: "\e902";
-  }
-  .icon-settings:before {
-      content: "\e903";
-  }
-  .icon-bug:before {
-      content: "\e904";
-  }
-  .icon-menu:before {
-      content: "\e905";
-  }
-  .icon-cross:before {
-      content: "\e906";
-  }
-
-  *{
+*{
   font-family: Helvetica;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?vx1ssr');
+    src:    url('fonts/icomoon.eot?vx1ssr#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?vx1ssr') format('truetype'),
+        url('fonts/icomoon.woff?vx1ssr') format('woff'),
+        url('fonts/icomoon.svg?vx1ssr#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+    content: "\e900";
+}
+.icon-edit:before {
+    content: "\e901";
+}
+.icon-image:before {
+    content: "\e902";
+}
+.icon-play:before {
+    content: "\e903";
+}
+.icon-wifi:before {
+    content: "\e904";
+}
+.icon-profile:before {
+    content: "\e932";
+}
+.icon-download:before {
+    content: "\e905";
+}
+.icon-dollar:before {
+    content: "\e906";
+}
+.icon-buoy:before {
+    content: "\e907";
+}
+.icon-desktop:before {
+    content: "\e908";
+}
+.icon-laptop:before {
+    content: "\e909";
+}
+.icon-mobile:before {
+    content: "\e90a";
+}
+.icon-mobile2:before {
+    content: "\e90b";
+}
+.icon-tablet:before {
+    content: "\e90c";
+}
+.icon-tv:before {
+    content: "\e90d";
+}
+.icon-search:before {
+    content: "\e90e";
+}
+.icon-lock:before {
+    content: "\e90f";
+}
+.icon-unlocked:before {
+    content: "\e910";
+}
+.icon-gear:before {
+    content: "\e911";
+}
+.icon-bug:before {
+    content: "\e912";
+}
+.icon-bin:before {
+    content: "\e926";
+}
+.icon-lightning:before {
+    content: "\e927";
+}
+.icon-menu:before {
+    content: "\e913";
+}
+.icon-eye:before {
+    content: "\e928";
+}
+.icon-cross:before {
+    content: "\e929";
+}
+.icon-checkmark:before {
+    content: "\e92a";
+}
+.icon-play2:before {
+    content: "\e92b";
+}
+.icon-pause2:before {
+    content: "\e92c";
+}
+.icon-stop2:before {
+    content: "\e92d";
+}
+.icon-circle-up:before {
+    content: "\e92e";
+}
+.icon-circle-right:before {
+    content: "\e92f";
+}
+.icon-circle-down:before {
+    content: "\e930";
+}
+.icon-circle-left:before {
+    content: "\e931";
+}
+.icon-menu2:before {
+    content: "\e914";
+}
+.icon-console:before {
+    content: "\e915";
+}
+.icon-mail:before {
+    content: "\e916";
+}
+.icon-steam:before {
+    content: "\e917";
+}
+.icon-github:before {
+    content: "\e918";
+}
+.icon-linux:before {
+    content: "\e919";
+}
+.icon-apple:before {
+    content: "\e91a";
+}
+.icon-mac:before {
+    content: "\e91b";
+}
+.icon-android:before {
+    content: "\e91c";
+}
+.icon-windows:before {
+    content: "\e91d";
+}
+.icon-windows2:before {
+    content: "\e91e";
+}
+.icon-paypal:before {
+    content: "\e91f";
+}
+.icon-chrome:before {
+    content: "\e920";
+}
+.icon-firefox:before {
+    content: "\e921";
+}
+.icon-IE:before {
+    content: "\e922";
+}
+.icon-edge:before {
+    content: "\e923";
+}
+.icon-safari:before {
+    content: "\e924";
+}
+.icon-opera:before {
+    content: "\e925";
 }
 
 html{
@@ -417,4 +548,3 @@ li>input{
     display: inline-block;
   }
 }
-
