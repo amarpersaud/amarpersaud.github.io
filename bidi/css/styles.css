@@ -547,7 +547,8 @@ li>input{
   }
   .side-nav > ul > li > a:last-of-type{
     display: inline-block;
-    font-size: 32px;
-    padding: 4px 4px 4px 8px;
+    font-size: 22px;
+    width: 22px;
+    padding: 9px 6px 9px 10px;
   }
 }
