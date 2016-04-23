@@ -384,7 +384,7 @@ li>input{
   
   float: left;
   box-sizing: border-box;
-  width: 15%;
+  width: 150px;
   line-height: 20px;
   min-height:1px;
 }
@@ -401,7 +401,7 @@ li>input{
 }
 .side-nav > ul > li > a {
   background-color: #666;
-
+    width: 106px;
     display: block;
     line-height: 20px;
     font-size: 14px;
@@ -450,6 +450,7 @@ li>input{
   }
   .side-nav  > ul> li > a:last-of-type{
     display:none;
+    width:0;
   }
 @media screen and (max-width: 760px) {
   #brand{
@@ -539,12 +540,14 @@ li>input{
   }
   .side-nav{
     top:44px;
-    width: 50px;
+    width: 42px;
   }
   .side-nav > ul > li > a:first-of-type{
     display: none;
   }
   .side-nav > ul > li > a:last-of-type{
     display: inline-block;
+    font-size: 32px;
+    padding: 4px 4px 4px 8px;
   }
 }
