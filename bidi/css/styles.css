@@ -393,5 +393,8 @@ li>input{
   .openbutton:active{
     background: #171717;
   }
+  .side-nav{
+    top:44px;
+  }
 }
 
