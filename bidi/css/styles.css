@@ -307,11 +307,11 @@ li>input{
   display:none;
 }
 
-.side-nav > ul > li > a > i{
+  .side-nav > ul > li > a:first-of-type{
+    display: inline-block;
+  }
+  .side-nav  > ul> li > a:last-of-type{
   display: none;
-}
-.side-nav > ul > li > a > span {
-  display: inline-block;
 }
 @media screen and (max-width: 760px) {
   #brand{
@@ -403,11 +403,11 @@ li>input{
     top:44px;
     width: 50px;
   }
-  .side-nav > ul > li > a > i{
-    display: inline-block;
-  }
-  .side-nav > il > li > a > span {
+  .side-nav > ul > li > a:first-of-type{
     display: none;
+  }
+  .side-nav > ul > li > a:last-of-type{
+    display: inline-block;
   }
 }
 
