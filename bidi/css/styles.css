@@ -403,10 +403,10 @@ li>input{
     top:44px;
     width: 50px;
   }
-  .side-nav > i{
+  .side-nav > ul > li > a > i{
     display: inline-block;
   }
-  .side-nav > span {
+  .side-nav > il > li > a > span {
     display: none;
   }
 }
