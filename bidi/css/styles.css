@@ -297,8 +297,8 @@ li>input{
 .side-nav > ul > li {
   text-align: left;
 }
-.side-nav > ul > .active > a,
-.side-nav > ul > .active > a:hover{
+.side-nav > ul > .active > span > a,
+.side-nav > ul > .active > span > a:hover{
   color: white;
   border-right-color: white !important;
 }
@@ -307,6 +307,12 @@ li>input{
   display:none;
 }
 
+.side-nav > ul > li > a > i{
+  display: none;
+}
+.side-nav > ul > li > a > span {
+  display: inline-block;
+}
 @media screen and (max-width: 760px) {
   #brand{
     position: absolute;
@@ -395,6 +401,13 @@ li>input{
   }
   .side-nav{
     top:44px;
+    width: 50px;
+  }
+  .side-nav > i{
+    display: inline-block;
+  }
+  .side-nav > span {
+    display: none;
   }
 }
 
