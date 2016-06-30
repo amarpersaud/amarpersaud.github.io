@@ -21,7 +21,7 @@
       <button class="openbutton"><i class="icon-menu"></i></button>
       <div class="nav">
         <ul>
-          <li><input type="search" placeholder="Search..."></input></li>
+          <li><input id="searchbox" type="search" placeholder="Search..." ></input><i class="icon-search" id="search-button"></i></li>
           <li id="nav_home"><a href="#">Home</a></li>
           <li id="nav_projects"><a href="#">Projects</a></li>
           <li id="nav_about"><a href="#">About Me</a></li>
@@ -29,7 +29,6 @@
         </ul>
       </div>
     </nav>
-    
     <div class="content">
       <div class="side-nav">
         <ul>
@@ -41,16 +40,39 @@
           <li><a href="#">Errors</a><a href="#"><i class="icon-bug"></i></a></li>
           <li><a href="#">Tutorial</a><a href="#"><i class="icon-play"></i></a></li>
         </ul>
+      </div>  
+      <div class="main-content" style="padding-top: 51px; padding-left: 150px;">
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>hello</p>
+      
+      
+      
+      
+      
+      
       </div>
-     
-      
-      
-    <div class="push"></div>
+    <div class="push">
+    </div>
     </div>
     <div class="footer">
         <p>&#xa9; 2015 - 2016 Amar Persaud</p>
     </div>
     <!-- Added to end to make loading go a bit faster -->
     <script type="text/javascript" src="js/script.js"></script>
+    
+    <script>
+      // TODO: Redirect to search page w/ post request 
+      function search(text){
+          location.href = "/search?s=" + encodeURIComponent(text);
+      }
+      // Bind to onkeyup and onclick to search function
+      document.getElementById("searchbox").onkeyup = function(){
+        if (event.keyCode == 13){
+          search(document.getElementById('searchbox').value);
+        }
+      }
+      document.getElementById('search-button').onclick = function(){
+        search(document.getElementById('searchbox').value);
+      }
+    </script>
   </body>
 </html>
