@@ -62,9 +62,9 @@
       
       
       var idx = lunr(function () {
-            this.field('Title', { boost: 20 })
-            this.field('URI', { boost: 17 })
-            this.field('Desc', { boost: 18 })
+            this.field('Title', { boost: 3 })
+            this.field('URI', { boost: 1 })
+            this.field('Desc', { boost: 2 })
             this.ref('Id')
         });
       function myFunction(arg){
