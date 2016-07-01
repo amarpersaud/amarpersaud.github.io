@@ -471,6 +471,7 @@ hr.d {
     text-align: center;
     margin-right: 30px;
     margin-left: 30px;
+    margin-bottom: 0;
 }
 hr.d:after {
     font-family: 'icomoon';

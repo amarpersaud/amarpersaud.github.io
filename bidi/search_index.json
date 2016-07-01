@@ -2,16 +2,28 @@
   "data": 
     [
       {
-        "Name": "Amar Persaud - Home", 
+        "Title": "Home Page", 
+        "URI": "https://amarpersaud.github.io/",
+        "Desc": "Home page of Amarpersaud.github.io.",
         "Id": 0
       },
       {
-        "Name": "Amar Persaud - Search", 
+        "Title": "Projects Page", 
+        "URI": "https://amarpersaud.github.io/projects",
+        "Desc": "List of active and inactive projects that I have worked on",
         "Id": 1
       },
       {
-        "Name": "Amar Persaud - Projects", 
+        "Title": "About Page", 
+        "URI": "https://amarpersaud.github.io/about",
+        "Desc": "My interests, motivations, etc.",
         "Id": 2
+      },
+      {
+        "Title": "Settings Page", 
+        "URI": "https://amarpersaud.github.io/settings",
+        "Desc": "Settings for things such as the color scheme",
+        "Id": 3
       }
     ]
 }

@@ -9,6 +9,7 @@
     <title>Amar Persaud</title>
     
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/search.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
 
@@ -31,10 +32,22 @@
     </nav>
     <div class="content">
 
-      <div style="padding: 52px 0 0 50px; margin: 0 0 0 0; text-align: left;">
+      <div class="reswrap">
         <h1>Results</h1>
-    
+        <hr class="d"></hr>
+        <p id="count">Showing <b>1</b>-<b>2</b> of <b>2</b> for "amar"</p>
         <ul id="results">
+          <li><a href="#">
+            <span>Home Page</span>
+            <span>https://amarpersaud.github.io/</span>
+            <span>Home page of Amarpersaud.github.io</span>
+          </a></li>
+          
+                    <li><a href="#">
+            <span>Home Page</span>
+            <span>https://amarpersaud.github.io/</span>
+            <span>Home page of Amarpersaud.github.io</span>
+          </a></li>
         </ul>
       </div>  
 
@@ -48,27 +61,11 @@
     <script type="text/javascript" src="js/js.js"></script>
     <script type="text/javascript" src="js/lunr.js"></script>
     <script>
-    searchbarid = "searchbox";
-    searchbuttonid = "search-button";
-    searchbar = document.getElementById(searchbarid);
-    searchbutton = document.getElementById(searchbuttonid);
-    
-      // Bind to onkeyup and onclick to search function
-      searchbar.onkeyup = function(){
-        if (event.keyCode == 13){
-          search(searchbar.value);
-        }
-      }
-      searchbutton.onclick = function(){
-        search(searchbar.value);
-      }
-      
-      
     var txt;
       searchstring = decodeURIComponent(GetURLParameter("q"));
       resultcontainer = document.getElementById('results');
       searchbar.value = searchstring;
-      
+      counter = document.getElementById("count");
       titleelement = document.getElementsByTagName("title")[0];
       titleelement.innerHTML = "A.P. Search - " + searchstring;
       
@@ -76,19 +73,35 @@
       
       
       var idx = lunr(function () {
-            this.field('Name', { boost: 100 })
+            this.field('Title', { boost: 4 })
+            this.field('URI', { boost: 1 })
+            this.field('Desc', { boost: 3 })
             this.ref('Id')
         });
       function myFunction(arg){
-        resultcontainer.innerHTML = "s";
+        resultcontainer.innerHTML = "";
         txt = arg;
         alert(arg);
         for(i=0;i<arg.data.length;i++){
           idx.add(arg.data[i]);
         }
         x = idx.search(searchstring);
-        for(i=0;i<x.length;i++){
-          resultcontainer.innerHTML += "<li><a href='/a/?id="+ x[i].ref +"'>" + arg.data[x[i].ref].Name + "</a></li>";
+        if(x.length == 0){
+          resultcontainer.innerHTML += "No results found.";
+        }
+        else{
+          upper = 1;
+          if(x.length >=15){
+            lower = 15;
+          }
+          else{
+            lower = x.length;
+          }
+        }
+        total = x.length;
+        counter.innerHTML = "Showing <b>" + upper + "</b>-<b>" + lower + "</b> of <b>" + total + "</b> for \"" + txt + "\"";  
+        for(i=0;i<x.length && i<16;i++){
+          resultcontainer.innerHTML += "<li><a href='"+ arg.data[x[i].ref].URI +"'><span>" + arg.data[x[i].ref].Title + "</span><span>" + arg.data[x[i].ref].URI + "</span><span>" + arg.data[x[i].ref].Desc + "</span></a></li>";
         }
       }
       function filter(arg){
