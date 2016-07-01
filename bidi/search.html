@@ -73,15 +73,14 @@
       
       
       var idx = lunr(function () {
-            this.field('Title', { boost: 4 })
-            this.field('URI', { boost: 1 })
-            this.field('Desc', { boost: 3 })
+            this.field('Title', { boost: 100 })
+            this.field('URI', { boost: 75 })
+            this.field('Desc', { boost: 90 })
             this.ref('Id')
         });
       function myFunction(arg){
         resultcontainer.innerHTML = "";
         txt = arg;
-        alert(arg);
         for(i=0;i<arg.data.length;i++){
           idx.add(arg.data[i]);
         }
@@ -99,7 +98,7 @@
           }
         }
         total = x.length;
-        counter.innerHTML = "Showing <b>" + upper + "</b>-<b>" + lower + "</b> of <b>" + total + "</b> for \"" + txt + "\"";  
+        counter.innerHTML = "Showing <b>" + upper + "</b>-<b>" + lower + "</b> of <b>" + total + "</b> for \"" + searchstring + "\"";  
         for(i=0;i<x.length && i<16;i++){
           resultcontainer.innerHTML += "<li><a href='"+ arg.data[x[i].ref].URI +"'><span>" + arg.data[x[i].ref].Title + "</span><span>" + arg.data[x[i].ref].URI + "</span><span>" + arg.data[x[i].ref].Desc + "</span></a></li>";
         }
