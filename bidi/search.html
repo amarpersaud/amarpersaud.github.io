@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="Amar Persaud - Student programmer and game developer">
+    <link rel="icon" href="/favicon.ico">
+    <title>Amar Persaud</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+
+  <body>
+  
+  
+    <!-- Top navigation bar-->
+    <nav class="site-nav">
+      <span id="brand"><a href="#" id="sitelink" class="brand">Amar Persaud</a></span>
+      <button class="openbutton"><i class="icon-menu"></i></button>
+      <div class="nav">
+        <ul>
+          <li><input id="searchbox" type="search" placeholder="Search..." ></input><i class="icon-search" id="search-button"></i></li>
+          <li id="nav_home"><a href="#">Home</a></li>
+          <li id="nav_projects"><a href="#">Projects</a></li>
+          <li id="nav_about"><a href="#">About Me</a></li>
+          <li id="nav_other"><a href="#">Other</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content">
+
+      <div style="padding: 52px 0 0 50px; margin: 0 0 0 0; text-align: left;">
+        <h1>Results</h1>
+    
+        <ul id="results">
+        </ul>
+      </div>  
+
+    <div class="push">
+    </div>
+    </div>
+    <div class="footer">
+        <p>&#xa9; 2015 - 2016 Amar Persaud</p>
+    </div>
+    <!-- Added to end to make loading go a bit faster -->
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/lunr.js"></script>
+    <script>
+    searchbarid = "searchbox";
+    searchbuttonid = "search-button";
+    searchbar = document.getElementById(searchbarid);
+    searchbutton = document.getElementById(searchbuttonid);
+    
+      // TODO: Redirect to search page w/ post request 
+      function search(text){
+          location.href = "search.html?q=" + encodeURIComponent(text);
+      }
+      // Bind to onkeyup and onclick to search function
+      searchbar.onkeyup = function(){
+        if (event.keyCode == 13){
+          search(searchbar.value);
+        }
+      }
+      searchbutton.onclick = function(){
+        search(searchbar.value);
+      }
+      
+      
+    var txt;
+      searchstring = decodeURIComponent(GetURLParameter("q"));
+      resultcontainer = document.getElementById('results');
+      searchbar.value = searchstring;
+      
+      titleelement = document.getElementsByTagName("title")[0];
+      titleelement.innerHTML = "A.P. Search - " + searchstring;
+      
+      
+      
+      
+      var idx = lunr(function () {
+            this.field('Name', { boost: 100 })
+            this.ref('Id')
+        });
+      function myFunction(arg){
+        resultcontainer.innerHTML = "s";
+        txt = arg;
+        alert(arg);
+        for(i=0;i<arg.data.length;i++){
+          idx.add(arg.data[i]);
+        }
+        x = idx.search(searchstring);
+        for(i=0;i<x.length;i++){
+          resultcontainer.innerHTML += "<li><a href='/a/?id="+ x[i].ref +"'>" + arg.data[x[i].ref].Name + "</a></li>";
+        }
+      }
+      function filter(arg){
+        resultcontainer.innerHTML = "";
+        x = idx.search(searchbar.value);
+          for(i=0;i<x.length;i++){
+            resultcontainer.innerHTML += "<li><a href='/a/?id="+ x[i].ref +"'>" + arg.data[x[i].ref].Name + "</a></li>";
+          }
+        titleelement.innerHTML = "A.P. Search - " + searchbar.value;
+      }
+
+      getjson(myFunction, "search_index.json");
+    </script>
+    
+  </body>
+</html>
