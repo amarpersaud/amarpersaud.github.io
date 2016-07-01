@@ -63,7 +63,7 @@
     <script>
       // TODO: Redirect to search page w/ post request 
       function search(text){
-          location.href = "/search?s=" + encodeURIComponent(text);
+          location.href = "search?q=" + encodeURIComponent(text);
       }
       // Bind to onkeyup and onclick to search function
       document.getElementById("searchbox").onkeyup = function(){
