@@ -58,22 +58,6 @@
         <p>&#xa9; 2015 - 2016 Amar Persaud</p>
     </div>
     <!-- Added to end to make loading go a bit faster -->
-    <script type="text/javascript" src="js/script.js"></script>
-    
-    <script>
-      // TODO: Redirect to search page w/ post request 
-      function search(text){
-          location.href = "search?q=" + encodeURIComponent(text);
-      }
-      // Bind to onkeyup and onclick to search function
-      document.getElementById("searchbox").onkeyup = function(){
-        if (event.keyCode == 13){
-          search(document.getElementById('searchbox').value);
-        }
-      }
-      document.getElementById('search-button').onclick = function(){
-        search(document.getElementById('searchbox').value);
-      }
-    </script>
+    <script type="text/javascript" src="js/js.js"></script>
   </body>
 </html>

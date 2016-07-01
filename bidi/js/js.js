@@ -15,17 +15,31 @@ function GetURLParameter(sParam)
     }
   }
   function getjson(func, url){
-    alert("getting");
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var myArg = JSON.parse(xmlhttp.responseText);
-            alert("funcing");
             func(myArg);
         }
     };
-    alert("opening");
     xmlhttp.open("GET", url, true);
-    alert("sending");
     xmlhttp.send();
+  }
+  
+    
+  searchbarid = "searchbox";
+  searchbuttonid = "search-button";
+  searchbar = document.getElementById(searchbarid);
+  searchbutton = document.getElementById(searchbuttonid);
+  function search(text){
+      location.href = "search?q=" + encodeURIComponent(text);
+  }
+  // Bind to onkeyup and onclick to search function
+  searchbar.onkeyup = function(){
+    if (event.keyCode == 13){
+      search(searchbar.value);
+    }
+  }
+  searchbutton.onclick = function(){
+    search(searchbar.value);
   }

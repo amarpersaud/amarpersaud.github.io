@@ -53,10 +53,6 @@
     searchbar = document.getElementById(searchbarid);
     searchbutton = document.getElementById(searchbuttonid);
     
-      // TODO: Redirect to search page w/ post request 
-      function search(text){
-          location.href = "search.html?q=" + encodeURIComponent(text);
-      }
       // Bind to onkeyup and onclick to search function
       searchbar.onkeyup = function(){
         if (event.keyCode == 13){
