@@ -86,9 +86,9 @@
           else{
             lower = x.length;
           }
+          total = x.length;
+          counter.innerHTML = "Showing <b>" + upper + "</b>-<b>" + lower + "</b> of <b>" + total + "</b> for \"" + searchstring + "\"";
         }
-        total = x.length;
-        counter.innerHTML = "Showing <b>" + upper + "</b>-<b>" + lower + "</b> of <b>" + total + "</b> for \"" + searchstring + "\"";  
         for(i=0;i<x.length && i<16;i++){
           resultcontainer.innerHTML += "<li><a href='"+ arg.data[x[i].ref].URI +"'><span>" + arg.data[x[i].ref].Title + "</span><span>" + arg.data[x[i].ref].URI + "</span><span>" + arg.data[x[i].ref].Desc + "</span></a></li>";
         }
