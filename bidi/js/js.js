@@ -1,3 +1,8 @@
+  searchbarid = "searchbox";
+  searchbuttonid = "search-button";
+  searchbar = document.getElementById(searchbarid);
+  searchbutton = document.getElementById(searchbuttonid);
+
   Number.prototype.clamp = function(min, max) {
       return Math.min(Math.max(this, min), max);
   };
@@ -26,11 +31,7 @@ function GetURLParameter(sParam)
     xmlhttp.send();
   }
   
-    
-  searchbarid = "searchbox";
-  searchbuttonid = "search-button";
-  searchbar = document.getElementById(searchbarid);
-  searchbutton = document.getElementById(searchbuttonid);
+  
   function search(text){
       location.href = "search?q=" + encodeURIComponent(text);
   }
@@ -67,3 +68,21 @@ function GetURLParameter(sParam)
   function eraseCookie(name) {
     createCookie(name,"",-1);
   }
+  
+  var pgid = "";
+  if(location.pathname == "/"){
+    pgid = "nav_home";
+  }
+  if(location.pathname == "/projects.html"){
+    pgid = "nav_projects";
+  }
+  if(location.pathname == "/about.html"){
+    pgid = "nav_about";
+  }
+  if(location.pathname == "/settings.html"){
+    pgid = "nav_settings";
+  }
+  if(pgid != ""){
+    document.getElementById(pgid).style.class = "active";
+  }
+  

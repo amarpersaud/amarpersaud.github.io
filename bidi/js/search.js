@@ -6,10 +6,10 @@ counter = document.getElementById("count");
 titleelement = document.getElementsByTagName("title")[0];
 titleelement.innerHTML = "A.P. Search - " + searchstring;
 var idx = lunr(function () {
-      this.field('Title', { boost: 10 })
-      this.field('URI')
-      this.field('Desc')
-      this.ref('Id')
+      this.field('Title', { boost: 10 });
+      this.field('URI');
+      this.field('Desc');
+      this.ref('Id');
   });
 function myFunction(arg){
   resultcontainer.innerHTML = "";
