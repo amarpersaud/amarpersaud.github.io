@@ -2,8 +2,6 @@
   searchbuttonid = "search-button";
   searchbar = document.getElementById(searchbarid);
   searchbutton = document.getElementById(searchbuttonid);
-
-  
   
   Number.prototype.clamp = function(min, max) {
       return Math.min(Math.max(this, min), max);
