@@ -60,15 +60,37 @@
         </div>
         <br/>
                 
-        <div class="alert alert-success alert-dismissible fade x-alert" role="alert" id="salert" tabindex="-1" aria-hidden="true">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Success!</strong> Settings have been successfully saved.
-          <div class="progress progress-alert">
-            <div class="progress-bar progress-bar-10s active pull-right" id="seconds" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
+        <x-alert><button></button><span>Settings have been successfully saved.</span><span><div><div></div></div></span></x-alert>
       </div>
-    
+    <style>
+      x-alert > button{
+        background: none;
+        border:none;
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        position: absolute;
+        top: Calc(50% - 10px);
+        left:4px;
+      }
+      x-alert > button:after{
+        font-family: 'icomoon';
+        content: "\e929";
+        font-size: 18px;
+        color: #fff;
+      }
+      x-alert{
+        padding: 15px 15px 15px 30px;
+        position: absolute;
+        background: #666;
+        border-radius: 5px;
+        border: 0.5px solid #888;
+        color: #fff;
+      }
+      x-alert > span{
+        display:block;
+      }
+    </style>
     <div class="push">
     </div>
     </div>

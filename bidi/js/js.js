@@ -134,3 +134,7 @@ function GetURLParameter(sParam)
     while ((el = el.parentElement) && !el.classList.contains(cls));
     return el;
   }
+  
+  var alertelement = document.registerElement('x-alert', {
+  prototype: Object.create(HTMLDivElement.prototype),
+  extends: 'div'});
