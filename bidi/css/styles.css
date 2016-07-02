@@ -574,9 +574,8 @@ hr.d:after {
 .button{
   height: 34px;
   overflow: hidden;
-  background-color: #d9534f;
   border-radius: 4px;
-  border: 1px solid #d43f3a;
+  border: 1px solid transparent;
   display: inline-block;
   line-height: 34px;
   padding-left: 10px;
