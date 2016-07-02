@@ -12,8 +12,22 @@
     <link rel="icon" href="/favicon.ico">
     <title>Settings</title>
     
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
     <link id="theme" rel="stylesheet" type="text/css" href=""/>
+    <script type="text/javascript" src="js/js.min.js"></script>
+    
+    <script>
+      colordropdown = document.getElementById("mainColorDropdown");
+      colordropdown.addEventListener("dropdownValueChanged", setmaincolor, false);
+      colorbutton = colordropdown.getElementsByTagName("div")[0];
+      //Change color on dropdown select
+      function setmaincolor(e){ maincolor(e.currentTarget.value);}
+      newval = document.querySelectorAll('[data-value="'+document.main_color+'"]')[0];
+      colordropdown.value = newval.value;
+      colorbutton.innerHTML = newval.innerHTML;
+      console.log(document.main_color);
+      console.log(newval.innerHTML);
+    </script>
   </head>
 
   <body>
@@ -76,20 +90,5 @@
     <div class="footer">
         <p>&#xa9; 2015 - 2016 Amar Persaud</p>
     </div>
-    <!-- Added to end to make loading go a bit faster -->
-    <script type="text/javascript" src="js/js.js"></script>
-    
-    <script>
-      colordropdown = document.getElementById("mainColorDropdown");
-      colordropdown.addEventListener("dropdownValueChanged", setmaincolor, false);
-      colorbutton = colordropdown.getElementsByTagName("div")[0];
-      //Change color on dropdown select
-      function setmaincolor(e){ maincolor(e.currentTarget.value);}
-      newval = document.querySelectorAll('[data-value="'+document.main_color+'"]')[0];
-      colordropdown.value = newval.value;
-      colorbutton.innerHTML = newval.innerHTML;
-      console.log(document.main_color);
-      console.log(newval.innerHTML);
-    </script>
   </body>
 </html>

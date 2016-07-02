@@ -139,7 +139,7 @@ function GetURLParameter(sParam)
   }
   
   function maincolor(color){
-    document.getElementById("theme").href = "css/theme/" + color + ".css";
+    document.getElementById("theme").href = "css/theme/" + color + ".min.css";
   }
   
   document.main_color = readCookie("maincolor");
