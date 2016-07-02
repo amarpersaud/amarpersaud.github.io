@@ -1,6 +1,7 @@
 *{
   font-family: Helvetica;
 }
+
 @font-face {
     font-family: 'icomoon';
     src:    url('/bidi/fonts/icomoon.eot?vx1ssr');
@@ -181,12 +182,17 @@ i {
     content: "\e925";
 }
 
+html,
+body{
+  background-color: #333;
+  color: #eee;
+  height: 100%;  
+}
 html{
-  height: 100%;  position: relative;
+  position: relative;
 
 }
 body{
-  height: 100%;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   position: relative;
@@ -495,7 +501,17 @@ hr.d:after {
     line-height: 1.1;
     color: inherit;
 }
-
+.indentp {
+    padding-left: 2.0em;
+}
+.indent, .indent>p .indent>h3 {
+    text-indent: 2.0em;
+}
+.container{
+  padding: 52px 50px 0 50px; 
+  margin: 0 0 0 0;
+  text-align: left;
+}
 @media screen and (max-width: 760px) {
   #brand{
     position: absolute;

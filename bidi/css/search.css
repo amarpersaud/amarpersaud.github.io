@@ -19,12 +19,7 @@
 #count{
   margin: 0 0 10px 0;
 }
-.reswrap{
-  padding: 52px 50px 0 50px; 
-  margin: 0 0 0 0;
-  text-align: left;
-}
-.reswrap > p{
+.container> p{
   font-size:15px;
 }
 a >span{
