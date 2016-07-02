@@ -526,7 +526,9 @@ hr.d:after {
   padding: 8px 10px 8px 20px;
 }
 .dropdown > ul{
-  display:none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.2s linear;
   list-style: none;
   list-style-type: none;
   margin: 0;
@@ -584,6 +586,7 @@ hr.d:after {
 .dropdown > div{
   padding-right: 15px;
 }
+
 @media screen and (max-width: 760px) {
   #brand{
     position: absolute;

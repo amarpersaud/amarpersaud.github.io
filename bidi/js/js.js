@@ -90,24 +90,47 @@ function GetURLParameter(sParam)
       s=document.getElementsByClassName("dropdown");
       for(i=0; i<s.length; i++){
         s[i].active = 0;
-        s[i].getElementsByTagName("ul")[0].setAttribute("style","display: none");
+        s[i].getElementsByTagName("ul")[0].setAttribute("style","visibility: hidden; opacity: 0;");
       }      
     }
   }
+  var dropdownValueChanged = new CustomEvent('dropdownValueChanged');
+  
+  // Bind onclick for dropdowns to toggle their menus and change their values when something is selected.
   s = document.getElementsByClassName("dropdown");
-  for(i=0; i<s.length; s++){
+  for(i=0; i<s.length; i++){
     s[i].active = 0;
+    s[i].value = s[i].getElementsByTagName("div")[0].innerHTML;
+    // open and close the menu when the button is clicked or an item is selected.
     s[i].onclick = function(event){
       if(event.currentTarget.active==1){
         event.currentTarget.active = 0;
-        event.currentTarget.getElementsByTagName("ul")[0].setAttribute("style","display: none");
+        event.currentTarget.getElementsByTagName("ul")[0].setAttribute("style","visibility: hidden; opacity: 0;");
       }
       else{
         event.currentTarget.active = 1;
-        event.currentTarget.getElementsByTagName("ul")[0].setAttribute("style","display:inline-block");
+        event.currentTarget.getElementsByTagName("ul")[0].setAttribute("style","visibility: visible; opacity: 1;");
+      }
+    }
+    g = s[i].getElementsByTagName("ul")[0].getElementsByTagName("a");
+    // for all 'a' tags, add an onclick event to change the text and value of the dropdown
+    for(f = 0; f<g.length; f++){
+      g[f].onclick = function(event){
+        l = findAncestor(event.currentTarget, "dropdown");
+        l.getElementsByTagName("div")[0].innerHTML = event.currentTarget.innerHTML;
+        
+        if(event.currentTarget.getAttribute("value")){
+          l.value = event.currentTarget.getAttribute("value");
+        }
+        else{
+          l.value = event.currentTarget.innerHTML;
+        }
+        
+        l.dispatchEvent(dropdownValueChanged);
       }
     }
   }
+  // find closest ancestor with class cls
   function findAncestor (el, cls) {
     while ((el = el.parentElement) && !el.classList.contains(cls));
     return el;

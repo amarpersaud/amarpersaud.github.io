@@ -43,18 +43,55 @@
         <h2 class="sub-header">Appearance</h2>
         <h3>Main Color</h3>
         <div>
-          <div class="dropdown indentp">
-            <div>Red</div>
+          <div class="dropdown indentp" active="0" id="mainColorDropdown">
+            <div id="colorbutton">Red</div>
             <ul>
-              <a style="background: #d9534f;">Red</a>
-              <a style="background: #5cb85c;">Green</a>
-              <a style="background: #f0ad4e;">Orange</a>
-              <a style="background: #337ab7;">Blue</a>
-              <a style="background: #5bc0de;">Light Blue</a>
-              <a style="background: #fff; color: #222">White</a>
+              <a style="background: #d9534f;" value="danger">Red</a>
+              <a style="background: #5cb85c;" value="success">Green</a>
+              <a style="background: #f0ad4e;" value="warning">Orange</a>
+              <a style="background: #337ab7;" value="primary">Blue</a>
+              <a style="background: #5bc0de;" value="info">Light Blue</a>
+              <a style="background: #fff; color: #222" value="default">White</a>
             </ul>
           </div>
           <div class="button" onclick="saveSettings();">Save</div>
+          <script>
+            colordropdown = document.getElementById("mainColorDropdown");
+            colordropdown.addEventListener("dropdownValueChanged", maincolor, false);
+            colorbutton = colordropdown.getElementsByTagName("div")[0];
+            function maincolor(){
+              colorbutton.setAttribute("class", colordropdown.value);
+            }
+          </script>
+          <style>
+            .success{
+              background: #5cb85c !important;
+              border:none !important;
+            }
+            .warning{
+              background: #f0ad4e !important;              
+              border:none !important;
+            }
+            .primary{
+              background: #337ab7 !important;              
+              border:none !important;
+            }
+            .info{
+              background: #5bc0de !important;              
+              border:none !important;
+            }
+            .default{
+              background: #fff !important;             
+              border:none !important;
+              color: #222 !important;
+            }
+            .danger{
+              background: #d9534f;             
+              border:none !important;
+            }
+          </style>
+          
+          
         </div>
         <br/>
                 
