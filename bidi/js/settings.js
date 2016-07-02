@@ -10,6 +10,6 @@
   function setmaincolor(e){ maincolor(e.currentTarget.value);}
   
   function saveSettings(){
-    createCookie("mainColor", colordropdown.value);
+    createCookie("maincolor", colordropdown.value);
     alert("Settings Saved");
   }
