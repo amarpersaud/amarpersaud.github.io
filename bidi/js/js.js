@@ -121,8 +121,8 @@ function GetURLParameter(sParam)
         l = findAncestor(event.currentTarget, "dropdown");
         l.getElementsByTagName("div")[0].innerHTML = event.currentTarget.innerHTML;
         
-        if(event.currentTarget.getAttribute("value")){
-          l.value = event.currentTarget.getAttribute("value");
+        if(event.currentTarget.getAttribute("data-value")){
+          l.value = event.currentTarget.getAttribute("data-value");
         }
         else{
           l.value = event.currentTarget.innerHTML;
@@ -151,5 +151,4 @@ function GetURLParameter(sParam)
     document.main_color = "primary";
     maincolor("primary");
   }
-  
   
