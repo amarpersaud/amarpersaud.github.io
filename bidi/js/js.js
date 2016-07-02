@@ -3,6 +3,8 @@
   searchbar = document.getElementById(searchbarid);
   searchbutton = document.getElementById(searchbuttonid);
 
+  
+  
   Number.prototype.clamp = function(min, max) {
       return Math.min(Math.max(this, min), max);
   };
@@ -135,3 +137,19 @@ function GetURLParameter(sParam)
     while ((el = el.parentElement) && !el.classList.contains(cls));
     return el;
   }
+  
+  function maincolor(color){
+    document.getElementById("theme").href = "/css/theme/" + color + ".css";
+  }
+  
+  document.main_color = readCookie("maincolor");
+  if(document.main_color){
+    maincolor(document.main_color);
+  }
+  else{
+    createCookie("maincolor", "primary");
+    document.main_color = "primary";
+    maincolor("primary");
+  }
+  
+  

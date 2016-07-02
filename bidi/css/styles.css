@@ -518,9 +518,6 @@ hr.d:after {
   position:relative;
   top: -2px;
 }
-.rotate {
-
-}
 .dropdown > ul > a{
   display: block;
   padding: 8px 10px 8px 20px;
@@ -536,19 +533,22 @@ hr.d:after {
   border-radius: 3px;
   overflow:hidden;
   position: absolute;
-  transform: translateX(-15%);
   width: 150px;
   border: 0.5px solid #333;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0px 4px 12px 1px rgba(255, 255, 255, 0.1);
-  
+}
+.dropdown-right>ul{
+  position:absolute !important;
+  left: 105%;
+  top: -150%;
 }
 .dropdown{
   display: inline-block;
   -webkit-user-select: none; /* Chrome/Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
-
+    position: relative;
   /* Rules below not implemented in browsers yet */
   -o-user-select: none;
   user-select: none;
@@ -574,7 +574,7 @@ hr.d:after {
 .button{
   height: 34px;
   overflow: hidden;
-  background: #d9534f;
+  background-color: #d9534f;
   border-radius: 4px;
   border: 1px solid #d43f3a;
   display: inline-block;
@@ -586,6 +586,145 @@ hr.d:after {
 
 .dropdown > div{
   padding-right: 15px;
+}
+
+.btn-success{
+  color: #fff !important;
+  background-color: #5cb85c !important;
+  border-color: #4cae4c !important;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success.focus{
+  background-color: #449d44 !important;
+  border-color: #398439 !important;
+}
+.btn-success:active,
+.btn-success.active{
+  background-image: none !important;
+  background-color: #5cb85c !important;
+  border-color: #4cae4c !important;
+}
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success{
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-danger{
+  color: #fff !important;
+  background-color: #d9534f !important;
+  border-color: #d43f3a !important;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger.focus{
+  background-color: #c9302c !important;
+  border-color: #ac2925 !important;
+}
+.btn-danger:active,
+.btn-danger.active{
+  background-image: none !important;
+  background-color: #d9534f !important;
+  border-color: #d43f3a !important;
+}
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger{
+  background-color: #222;
+  border-color: #222;
+}
+.btn-info {
+  color: #fff !important;
+  background-color: #5bc0de !important;
+  border-color: #46b8da !important;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info.focus{
+  background-color: #31b0d5 !important;
+  border-color: #269abc !important;
+}
+.btn-info:active,
+.btn-info.active{
+  background-image: none !important;
+  background-color: #5bc0de !important;
+  border-color: #46b8da !important;
+}
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info{
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-primary {
+  color: #fff !important;
+  background-color: #337ab7 !important;
+  border-color: #2e6da4 !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus {
+  background-color: #286090 !important;
+  border-color: #204d74 !important;
+}
+.btn-primary:active,
+.btn-primary.active{
+  background-image: none !important;
+  background-color: #337ab7 !important;
+  border-color: #2e6da4 !important;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary{
+  background-color: #337ab7 !important;
+  border-color: #2e6da4 !important;
+}
+.btn-warning {
+  color: #fff !important;
+  background-color: #f0ad4e !important;
+  border-color: #eea236 !important;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus{
+  background-color: #ec971f !important;
+  border-color: #d58512 !important;
+}
+.btn-warning:active,
+.btn-warning.active{
+  background-image: none !important;
+  background-color: #f0ad4e !important;
+  border-color: #eea236 !important;
+}
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] ..btn-warning{
+  background-color: #f0ad4e !important;
+  border-color: #eea236 !important;
+}
+.btn-default {
+  color: #333 !important;
+  background-color: #fff !important;
+  border-color: #ccc !important;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus {
+  background-color: #e6e6e6 !important;
+  border-color: #adadad !important;
+}
+.btn-default:active,
+.btn-default.active{
+  background-image: none !important;
+  background-color: #fff !important;
+  border-color: #ccc !important;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default{
+  background-color: #fff !important;
+  border-color: #ccc !important;
 }
 
 @media screen and (max-width: 760px) {

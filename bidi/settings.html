@@ -13,6 +13,7 @@
     <title>Settings</title>
     
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href=""/>
   </head>
 
   <body>
@@ -43,59 +44,29 @@
         <h2 class="sub-header">Appearance</h2>
         <h3>Main Color</h3>
         <div>
-          <div class="dropdown indentp" active="0" id="mainColorDropdown">
-            <div id="colorbutton">Red</div>
+          <div class="dropdown indentp dropdown-right" active="0" id="mainColorDropdown">
+            <div id="colorbutton" class="template-color">Red</div>
             <ul>
-              <a style="background: #d9534f;" value="danger">Red</a>
-              <a style="background: #5cb85c;" value="success">Green</a>
-              <a style="background: #f0ad4e;" value="warning">Orange</a>
-              <a style="background: #337ab7;" value="primary">Blue</a>
-              <a style="background: #5bc0de;" value="info">Light Blue</a>
-              <a style="background: #fff; color: #222" value="default">White</a>
+              <a class="btn-danger" value="danger">Red</a>
+              <a class="btn-success" value="success">Green</a>
+              <a class="btn-warning" value="warning">Orange</a>
+              <a class="btn-primary" value="primary">Blue</a>
+              <a class="btn-info" value="info">Light Blue</a>
+              <a class="btn-default" value="default">White</a>
             </ul>
           </div>
-          <div class="button" onclick="saveSettings();">Save</div>
+          <div class="button template-color" onclick="saveSettings();">Save</div>
           <script>
             colordropdown = document.getElementById("mainColorDropdown");
-            colordropdown.addEventListener("dropdownValueChanged", maincolor, false);
+            colordropdown.addEventListener("dropdownValueChanged", setmaincolor, false);
             colorbutton = colordropdown.getElementsByTagName("div")[0];
-            function maincolor(){
-              colorbutton.setAttribute("class", colordropdown.value);
-            }
+            
+            function setmaincolor(e){ maincolor(e.currentTarget.value);}
+            
+            newval = document.querySelector('#mainColorDropdown > ul > [value="' + document.main_color + '"]');
+            colordropdown.value = newval.value;
+            colorbutton.innerHTML = newval.innerHTML;
           </script>
-          <style>
-            .success{
-              background: #5cb85c !important;
-              color: #eee !important;
-              border-color: #4cae4c !important;
-            }
-            .warning{
-              background: #f0ad4e !important; 
-              color: #eee !important;     
-              border-color: #eea236 !important;         
-            }
-            .primary{
-              background: #337ab7 !important; 
-              color: #eee !important; 
-              border-color: #2e6da4 !important;             
-            }
-            .info{
-              background: #5bc0de !important;   
-              color: #eee !important;  
-              border-color: #46b8da !important;            
-            }
-            .default{
-              background: #fff !important;
-              color: #222 !important;
-              border-color: #ccc !important;
-            }
-            .danger{
-              background: #d9534f !important;
-              color: #eee !important;
-              border-color: #d43f3a !important;
-            }
-          </style>
-          
           
         </div>
         <br/>
