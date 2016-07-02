@@ -194,7 +194,6 @@ html{
 }
 body{
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
   position: relative;
   margin: 0 0 0px;
   min-height: 100%;
@@ -581,6 +580,8 @@ hr.d:after {
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
+  text-shadow:none;
+
 }
 
 .dropdown > div{
