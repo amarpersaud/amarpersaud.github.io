@@ -53,7 +53,6 @@ function GetURLParameter(sParam)
 		var expires = "; expires="+date;
     document.cookie = name+"="+value+expires+"; path=/";
   }
-
   function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -134,19 +133,5 @@ function GetURLParameter(sParam)
   function findAncestor (el, cls) {
     while ((el = el.parentElement) && !el.classList.contains(cls));
     return el;
-  }
-  
-  function maincolor(color){
-    document.getElementById("theme").href = "css/theme/" + color + ".min.css";
-  }
-  
-  document.main_color = readCookie("maincolor");
-  if(document.main_color){
-    maincolor(document.main_color);
-  }
-  else{
-    createCookie("maincolor", "primary");
-    document.main_color = "primary";
-    maincolor("primary");
   }
   
