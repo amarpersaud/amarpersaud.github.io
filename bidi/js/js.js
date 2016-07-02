@@ -85,4 +85,30 @@ function GetURLParameter(sParam)
   if(pgid != ""){
     document.getElementById(pgid).style.class = "active";
   }
-  
+  document.onmousedown = function(event){
+    if(!(event.target.classList.contains("dropdown")) && !(findAncestor(event.target, "dropdown"))){
+      s=document.getElementsByClassName("dropdown");
+      for(i=0; i<s.length; i++){
+        s[i].active = 0;
+        s[i].getElementsByTagName("ul")[0].setAttribute("style","display: none");
+      }      
+    }
+  }
+  s = document.getElementsByClassName("dropdown");
+  for(i=0; i<s.length; s++){
+    s[i].active = 0;
+    s[i].onclick = function(event){
+      if(event.currentTarget.active==1){
+        event.currentTarget.active = 0;
+        event.currentTarget.getElementsByTagName("ul")[0].setAttribute("style","display: none");
+      }
+      else{
+        event.currentTarget.active = 1;
+        event.currentTarget.getElementsByTagName("ul")[0].setAttribute("style","display:inline-block");
+      }
+    }
+  }
+  function findAncestor (el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
+  }

@@ -43,102 +43,20 @@
         <h2 class="sub-header">Appearance</h2>
         <h3>Main Color</h3>
         <div>
-        <div class="styled-select indentp">
-          <div class="button dropdown">Red<i class="icon-play rotate"></i></div>
-          <ul class="options">
-            <a style="background: #d9534f;">Red</a>
-            <a style="background: #5cb85c;">Green</a>
-            <a style="background: #f0ad4e;">Orange</a>
-            <a style="background: #337ab7;">Blue</a>
-            <a style="background: #5bc0de;">Light Blue</a>
-            <a style="background: #fff; color: #222">White</a>
-          </ul>
+          <div class="dropdown indentp">
+            <div>Red</div>
+            <ul>
+              <a style="background: #d9534f;">Red</a>
+              <a style="background: #5cb85c;">Green</a>
+              <a style="background: #f0ad4e;">Orange</a>
+              <a style="background: #337ab7;">Blue</a>
+              <a style="background: #5bc0de;">Light Blue</a>
+              <a style="background: #fff; color: #222">White</a>
+            </ul>
+          </div>
+          <div class="button" onclick="saveSettings();">Save</div>
         </div>
-        <div class="button">
-        h</div>
-        </div>
-        <style>
-        .rotate {
-        display: inline-block;
-          /* Safari */
-          -webkit-transform: rotate(90deg);
-
-          /* Firefox */
-          -moz-transform: rotate(90deg);
-
-          /* IE */
-          -ms-transform: rotate(90deg);
-
-          /* Opera */
-          -o-transform: rotate(90deg);
-
-          /* Internet Explorer */
-          filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-          
-          transform: rotate(90deg);
-          transform-origin: 50% 50%;
-        }
-          .options>a{
-            display: block;
-            padding: 8px 10px 8px 20px;
-
-          }
-          .options{
-            list-style: none;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            border-radius: 3px;
-            overflow:hidden;
-            position: relative;
-            top: -1px;
-            left: -25%;
-            width: 150px;
-            border: 0.5px solid #444;
-            /* offset-x | offset-y | blur-radius | spread-radius | color */
-            box-shadow: 0px 4px 12px 0.6px rgba(255, 255, 255, 0.2);
-          }
-          .o{
-            text-align: center;
-            text-align-last:center;
-            color: #222;
-            border: none;
-            outline: none;
-            padding: 4px;
-            margin: 5px;
-          }
-          .styled-select{
-            display: inline-block;
-          } 
-          .button{
-            height: 34px;
-            overflow: hidden;
-            background: #d9534f;
-            border-radius: 4px;
-            border: 1px solid #d43f3a;
-            display: inline-block;
-            line-height: 34px;
-            padding-left: 10px;
-            padding-right: 10px;
-            text-align: center;
-          }
-        </style>
         <br/>
-        <div class="btn-group indentp">
-        <br/>
-          <button type="button" class="btn dropdown-toggle btn-template" data-toggle="dropdown" aria-expanded="false">
-            <color id="maincolor">Light Blue </color><span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#" onclick="mcol('success'); document.getElementById('maincolor').innerHTML = 'Green';">Green</a></li>
-            <li><a href="#" onclick="mcol('danger');  document.getElementById('maincolor').innerHTML = 'Red';">Red</a></li>
-            <li><a href="#" onclick="mcol('warning');  document.getElementById('maincolor').innerHTML = 'Orange';">Orange</a></li>
-            <li><a href="#" onclick="mcol('primary');  document.getElementById('maincolor').innerHTML = 'Blue';">Blue</a></li>
-            <li><a href="#" onclick="mcol('info');  document.getElementById('maincolor').innerHTML = 'Light Blue';">Light Blue</a></li>
-            <li><a href="#" onclick="mcol('default');  document.getElementById('maincolor').innerHTML = 'White';">White</a></li>
-          </ul>
-        </div>
-        <button class="btn btn-template" type="button" onclick="saveSettings(); showAlert('salert')">save</button>
                 
         <div class="alert alert-success alert-dismissible fade x-alert" role="alert" id="salert" tabindex="-1" aria-hidden="true">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
