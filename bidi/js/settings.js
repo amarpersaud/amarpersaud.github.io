@@ -5,8 +5,7 @@
   newval = document.querySelectorAll('[data-value="'+document.main_color+'"]')[0];
   colordropdown.value = newval.value;
   colorbutton.innerHTML = newval.innerHTML;
-  console.log(document.main_color);
-  console.log(newval.innerHTML);
+  document.getElementById("loading").parentNode.removeChild(document.getElementById("loading"));
   function setmaincolor(e){ maincolor(e.currentTarget.value);}
   
   function saveSettings(){
