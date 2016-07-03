@@ -10,5 +10,4 @@
   
   function saveSettings(){
     createCookie("maincolor", colordropdown.value);
-    alert("Settings Saved");
   }
