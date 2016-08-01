@@ -1,6 +1,7 @@
 function maincolor(color){
     document.getElementById("theme").href = "css/theme/" + color + ".min.css";
   }
+  //Cookie handling. Needs to come first so that cookies can be read for the theme.
     function createCookie(name,value) {
     var date = new Date ();
     date.setYear (date.getYear() + 100);
@@ -19,6 +20,10 @@ function maincolor(color){
     }
     return null;
   }
+  function eraseCookie(name) {
+    createCookie(name,"",-1);
+  }
+  
   document.main_color = readCookie("maincolor");
   if(document.main_color){
     maincolor(document.main_color);
