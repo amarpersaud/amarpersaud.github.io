@@ -25,11 +25,19 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.icon-home3:before {
+.icon-gamepad:before {
+  content: "\f11b";
+}
+.icon-child:before {
+  content: "\f1ae";
+}
+.icon-git-branch:before {
+  content: "\f020";
+}
+.icon-home:before {
   content: "\e902";
 }
-.icon-pencil2:before {
+.icon-edit:before {
   content: "\e906";
 }
 .icon-image:before {
@@ -41,13 +49,13 @@ i {
 .icon-camera:before {
   content: "\e90f";
 }
-.icon-connection:before {
+.icon-wifi:before {
   content: "\e91b";
 }
-.icon-file-zip:before {
+.icon-zip:before {
   content: "\e92b";
 }
-.icon-folder-download:before {
+.icon-download:before {
   content: "\e933";
 }
 .icon-qrcode:before {
@@ -101,7 +109,7 @@ i {
 .icon-unlocked:before {
   content: "\e990";
 }
-.icon-equalizer:before {
+.icon-settings:before {
   content: "\e992";
 }
 .icon-gear:before {
@@ -134,7 +142,7 @@ i {
 .icon-magnet:before {
   content: "\e9ab";
 }
-.icon-bin:before {
+.icon-delete:before {
   content: "\e9ac";
 }
 .icon-briefcase:before {
@@ -155,7 +163,7 @@ i {
 .icon-menu:before {
   content: "\e9bd";
 }
-.icon-download3:before {
+.icon-download2:before {
   content: "\e9c7";
 }
 .icon-sphere:before {
@@ -383,6 +391,7 @@ i {
 .icon-codepen:before {
   content: "\eae8";
 }
+
 html,
 body{
   background-color: #333;
