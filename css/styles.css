@@ -750,6 +750,12 @@ fieldset[disabled] .btn-default{
         transform: rotate(359deg);
     }
 }
+.l,
+.l>p{
+  font-size:16px;
+  line-height:1.42857143;
+}
+
 @media screen and (max-width: 760px) {
   #brand{
     position: absolute;
