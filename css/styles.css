@@ -583,7 +583,12 @@ hr.d:after {
   text-shadow:none;
 
 }
-
+a.button{
+  height: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
 .dropdown > div{
   padding-right: 15px;
 }
