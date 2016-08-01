@@ -1,90 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Project Page">
+    <meta name="Keywords" content="projects, current">
+    <meta name="Description" content="Amar Persaud - Current Projects">
     <meta name="author" content="Amar Persaud">
     <meta name="lang" http-equiv="Content-Language" content="en">
-    
-    <title>Projects</title>
+    <link rel="icon" href="/favicon.ico">
+    <title>Amar Persaud - Projects</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href=""/>
+    <script type="text/javascript" src="js/theme.min.js"></script>
+  </head>
 
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dist/css/dashboard.css" rel="stylesheet">
-    <link href="dist/css/custom.css" rel="stylesheet">
-    <script src="dist/js/custom.js"></script>
-    <script type="text/javascript">
-      start();
-    </script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Amar Persaud</a>
-                
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right frontpagenav">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="other.html">Other</a></li>
-                </ul>
-                <form class="navbar-form navbar-right">
-                    <input type="text" class="form-control st-default-search-input" placeholder="Search...">
-                </form>
-            </div>
-        </div>
+  <body>
+  
+  
+    <!-- Top navigation bar-->
+    <nav class="site-nav">
+      <span id="brand"><a href="/" id="sitelink" class="brand">Amar Persaud</a></span>
+      <button class="openbutton"><i class="icon-menu"></i></button>
+      <div class="nav">
+        <ul>
+          <li><input id="searchbox" type="search" placeholder="Search..." ></input><i class="icon-search" id="search-button"></i></li>
+          <li id="nav_home"><a href="/">Home</a></li>
+          <li id="nav_projects"><a href="/projects">Projects</a></li>
+          <li id="nav_about"><a href="/about">About Me</a></li>
+          <li id="nav_settings"><a href="/settings">Settings</a></li>
+        </ul>
+      </div>
     </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="main">
-                <br/>
-                <h1 class="page-header">Projects</h1>
-                <hr class="style-eight"/>  
-                <h2 class="sub-header">RPGSystem</h2>
-                <div class="indentp">
-                <h3>A tool designed for use in writing fiction, specifically RPG oriented ficiton.</h3>
-                 <a class="btn btn-template" href="/RPGSystem" role="button" >Learn More</a>
-                </div><br/>
-                
-                <h2 class="sub-header">More to come</h2>
-                <div class="indentp">
-                <h3>I'm going to add more projects here later when I finish writing up the descriptions and making their pages.</h3>
-                </div>
-                
-            </div>
+    
+    <div class="content">
+      <div class="container">
+        <h1 class="page-header">Projects</h1>
+        <hr class="d"/>  
+        <h2 style="margin:0;">Active</h2>
+        <div class="indentp project" style="border-left:2px dashed #337ab7;">
+          <h2 class="sub-header">RPGT</h2>
+          <div class="indentp">
+            <p><i class="icon-gamepad"></i> | <i class="icon-csharp"></i>  -  A 2d sandbox game where you build a town of plebians and work towards creating an empire.</p>
+            <a class="button template-color" href="/RPGT">Learn More</a>
+          </div>
+          <h2 class="sub-header">This Website</h2>
+          <div class="indentp">
+            <p><i class="icon-html-five2"></i> <i class="icon-css3"></i> <i class="icon-js"></i> <i class="icon-python"></i>  -  My website where I have all of my important things.</p>
+            <a class="button template-color" href="/">Home</a><a class="button template-color" href="https://github.com/amarpersaud/amarpersaud.github.io"><i class="icon-github"></i>  Github</a>
+          </div>
         </div>
+        
+        <h2 style="">Inactive</h2>
+        <div class="indentp project" style="border-left:2px dashed #d9534f;">
+          <h2 class="sub-header">DoorsOS</h2>
+          <div class="indentp">
+            <p><i class="icon-gamepad"></i>  -  A hacking game thing.</p>
+            <a class="button template-color" href="#" title="No page yet.">Learn More</a>
+          </div>
+        </div>
+        
+        <h2 style="">Complete</h2>
+        <div class="indentp  project" style="border-left:2px dashed #5cb85c;">
+          <h2 class="sub-header">Nothing much</h2>
+          <div class="indentp">
+            <p>Still working on adding them here + completing things...</p>
+            <a class="button template-color" href="#" title="No page yet.">Learn More</a>
+          </div>
+        </div>
+      </div>
+    
+    <div class="push">
     </div>
-    
-
-    
+    </div>
     <div class="footer">
-      <h5 align="center">&#xa9; 2015 Amar Persaud</h5>
+        <p>&#xa9; 2015 - 2016 Amar Persaud</p>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-
-</body>
+    <!-- Added to end to make loading go a bit faster -->
+    <script type="text/javascript" src="js/js.min.js"></script>
+  </body>
 </html>

@@ -1,85 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="About page">
+    <meta name="Keywords" content="About, me, motivations, interests">
+    <meta name="Description" content="Amar Persaud - About me, my interests, motivations, etc.">
     <meta name="author" content="Amar Persaud">
     <meta name="lang" http-equiv="Content-Language" content="en">
-    
-    <title>About</title>
+    <link rel="icon" href="/favicon.ico">
+    <title>Amar Persaud - About Me</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href=""/>
+    <script type="text/javascript" src="js/theme.min.js"></script>
+  </head>
 
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dist/css/dashboard.css" rel="stylesheet">
-    <link href="dist/css/custom.css" rel="stylesheet">
-    <script src="dist/js/custom.js"></script>
-    <script type="text/javascript">
-      start();
-    </script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Amar Persaud</a>
-                
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right frontpagenav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li class="active"><a href="about.html">About Me</a></li>
-                    <li><a href="other.html">Other</a></li>
-                </ul>
-                <form class="navbar-form navbar-right">
-                    <input type="text" class="form-control st-default-search-input" placeholder="Search...">
-                </form>
-            </div>
-        </div>
+  <body>
+  
+  
+    <!-- Top navigation bar-->
+    <nav class="site-nav">
+      <span id="brand"><a href="/" id="sitelink" class="brand">Amar Persaud</a></span>
+      <button class="openbutton"><i class="icon-menu"></i></button>
+      <div class="nav">
+        <ul>
+          <li><input id="searchbox" type="search" placeholder="Search..." ></input><i class="icon-search" id="search-button"></i></li>
+          <li id="nav_home"><a href="/">Home</a></li>
+          <li id="nav_projects"><a href="/projects">Projects</a></li>
+          <li id="nav_about"><a href="/about">About Me</a></li>
+          <li id="nav_settings"><a href="/settings">Settings</a></li>
+        </ul>
+      </div>
     </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="main">
-                <br/>
-                <h1 class="page-header">About</h1>
-                <hr class="style-eight"/>  
-                <h2 class="sub-header">Who am I?</h2>
-                <div class="indentp indent">
-                <h3>I am a 15 year old highschool student who likes science, math, and programming. Also games. I play a lot of CS:GO.</h3>
-                <h3>I am currently taking Japanese and Greek, and do coding in my spare time, usually in C# or C++. I am working on multiple games, this website, and a few side-projects, as well as translating from JP→EN. One of the tools I am currently working on pertains to this, as many English speaking authors who want to write a story don't keep track of their characters well.</h3>
-                <h3>I do not plan on adding any contanct information here, especially my phone number. Who knows what people would use that for...</h3>
-                </div>
-            </div>
+    
+    <div class="content">
+      <div class="container">
+        <h1 class="page-header">About</h1>
+        <hr class="d"/>  
+        <h2 class="sub-header">Who am I?</h2>
+        <div class="indentp indent l">
+        <p>I am a 15 year old highschool student who likes science, math, and programming. Also games. I play a lot of CS:GO.</p>
+        <p>I am currently taking Japanese and Greek, and do coding in my spare time, usually in C#, python, js (pure / jQuery-less), and C++. I am working on multiple games, this website, and a few side-projects, as well as occasionally translating from JP→EN.</p>
+        <p>I do not plan on adding any contanct information here, especially my phone number. Who knows what people would use that for...</p>
         </div>
+        <h2 class="sub-header">Major Projects</h2>
+        <div class="indentp indent">
+          <ul>
+            <li>RPGT (active) - A 2d town building strategy sandbox game.</li>
+            <li>DoorsOS (inactive) - A hacking game.</li>
+            <li>This website</li>
+            <li>Other projects under another alias</li>
+          </ul>
+        </div>
+      </div>
+    
+    <div class="push">
     </div>
-    
-
-    
+    </div>
     <div class="footer">
-      <h5 align="center">&#xa9; 2015 Amar Persaud</h5>
+        <p>&#xa9; 2015 - 2016 Amar Persaud</p>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-
-</body>
+    <!-- Added to end to make loading go a bit faster -->
+    <script type="text/javascript" src="js/js.min.js"></script>
+  </body>
 </html>
