@@ -3,11 +3,11 @@
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?ri0ngp');
-  src:  url('../fonts/icomoon.eot?ri0ngp#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?ri0ngp') format('truetype'),
-    url('../fonts/icomoon.woff?ri0ngp') format('woff'),
-    url('../fonts/icomoon.svg?ri0ngp#icomoon') format('svg');
+  src:  url('/fonts/icomoon.eot?ri0ngp');
+  src:  url('/fonts/icomoon.eot?ri0ngp#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?ri0ngp') format('truetype'),
+    url('/fonts/icomoon.woff?ri0ngp') format('woff'),
+    url('/fonts/icomoon.svg?ri0ngp#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
