@@ -3,11 +3,11 @@
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?za6yrw');
-  src:  url('/fonts/icomoon.eot?za6yrw#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.ttf?za6yrw') format('truetype'),
-    url('/fonts/icomoon.woff?za6yrw') format('woff'),
-    url('/fonts/icomoon.svg?za6yrw#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?u76223');
+  src:  url('../fonts/icomoon.eot?u76223#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?u76223') format('truetype'),
+    url('../fonts/icomoon.woff?u76223') format('woff'),
+    url('../fonts/icomoon.svg?u76223#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,21 +20,72 @@ i {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
+  position:relative;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}.icon-csharp:before {
+}
+i:before{
+  top: 2px;
+  position:relative;
+}
+i.i:before{
+  top: 1px;
+}
+
+i:after {
+  font-family: Helvetica;
+  position: absolute;
+  display:none;
+  background: #ddd;
+  color:#222;
+  left:0;
+  top:0;
+  border-radius: 2px;
+  top: -115%;
+  line-height: 18px;
+  font-size: 14px;
+  padding: 2px 4px;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 3px 1px rbga(0,0,0,0.75);
+}
+i:hover:after{
+  display: table;
+}
+td>i:hover:after{
+  display: block;
+}
+.icon-monogame:before {
+  content: "\e904";
+}
+.icon-monogame.t:after{
+  content: "MonoGame";
+}
+
+.icon-csharp:before {
   content: "\e903";
 }
+.icon-csharp.t:after {
+  content: "C# (C Sharp)";
+}
+
 .icon-python:before {
   content: "\e901";
+}
+.icon-python.t:after {
+  content: "Python";
 }
 .icon-js:before {
   content: "\e900";
 }
+.icon-js.t:after {
+  content: "JavaScript";
+}
 .icon-gamepad:before {
   content: "\f11b";
+}
+.icon-gamepad.t:after {
+  content: "Game";
 }
 .icon-child:before {
   content: "\f1ae";
@@ -171,6 +222,9 @@ i {
 .icon-sphere:before {
   content: "\e9c9";
 }
+.icon-sphere.t:after {
+  content: "Web";
+}
 .icon-earth:before {
   content: "\e9ca";
 }
@@ -282,6 +336,12 @@ i {
 .icon-youtube2:before {
   content: "\ea9e";
 }
+
+.icon-youtube.t:after,
+.icon-youtube2.t:after  {
+  content: "YouTube";
+}
+
 .icon-twitch:before {
   content: "\ea9f";
 }
@@ -291,6 +351,12 @@ i {
 .icon-steam:before {
   content: "\eaad";
 }
+
+.icon-steam2.t:after,
+.icon-steam.t:after{
+  content: "Steam";
+}
+
 .icon-dropbox:before {
   content: "\eaae";
 }
@@ -327,6 +393,24 @@ i {
 .icon-windows8:before {
   content: "\eac2";
 }
+
+.icon-linux.t:after {
+  content: "Linux";
+}
+.icon-apple.t:after {
+  content: "Apple";
+}
+.icon-mac.t:after {
+  content: "Mac";
+}
+.icon-android.t:after {
+  content: "Android";
+}
+.icon-windows.t:after,
+.icon-windows8.t:after {
+  content: "Windows";
+}
+
 .icon-skype:before {
   content: "\eac5";
 }
@@ -357,6 +441,7 @@ i {
 .icon-paypal:before {
   content: "\ead8";
 }
+
 .icon-chrome:before {
   content: "\ead9";
 }
@@ -375,14 +460,42 @@ i {
 .icon-opera:before {
   content: "\eade";
 }
+
+.icon-chrome.t:after {
+  content: "Chrome";
+}
+.icon-firefox.t:after {
+  content: "FireFox";
+}
+.icon-IE.t:after {
+  content: "Internet Explorer";
+}
+.icon-edge.t:after {
+  content: "Edge";
+}
+.icon-safari.t:after {
+  content: "Safari";
+}
+.icon-opera.t:after {
+  content: "Opera";
+}
+
 .icon-html-five:before {
   content: "\eae4";
 }
 .icon-html-five2:before {
   content: "\eae5";
 }
+.icon-html-five.t:after,
+.icon-html-five2.t:after{
+  content: "HTML5"
+}
+
 .icon-css3:before {
   content: "\eae6";
+}
+.icon-css3.t:after{
+  content: "CSS3";
 }
 .icon-git:before {
   content: "\eae7";
@@ -397,10 +510,12 @@ i {
   content: "\26a1";
 }
 
+
+
 html,
 body{
   background-color: #333;
-  color: #eee;
+  color: #ddd;
   height: 100%;  
 }
 html{
@@ -414,10 +529,12 @@ body{
   min-height: 100%;
 }
 p{
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
 }
-
+.footer>p{
+  font-size:14px;
+}
 .content{
   margin-top: 52px;
 	min-height: 100%;
@@ -666,8 +783,8 @@ li>input{
 .side-nav > ul > li {
   text-align: left;
 }
-.side-nav > ul > .active > span > a,
-.side-nav > ul > .active > span > a:hover{
+.side-nav > ul > .active > a,
+.side-nav > ul > .active > a:hover{
   color: white;
   border-right-color: white !important;
 }
@@ -693,6 +810,7 @@ hr.d {
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 0;
+    background: #333;
 }
 hr.d:after {
     font-family: 'icomoon';
@@ -702,7 +820,7 @@ hr.d:after {
     top: -0.56em;
     font-size: 1.5em;
     padding: 0 0.25em;
-    background: #333;
+    background: inherit;
     color: #4c4c4c;
     text-shadow: none;
 }
@@ -710,6 +828,26 @@ hr.d:after {
   padding-top: 52px; 
   padding-left: 150px;
 }
+.status{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.status>table{
+  border-collapse:collapse;
+  text-align:left;
+}
+.status>table>tbody>tr>td{
+  border-bottom:1px dashed #aaa;
+  padding: 8px 16px;
+}
+.desc-text{
+  padding: 0 20px;
+}
+.desc-text>p{
+  text-align:left;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     font-weight: 500;
@@ -791,6 +929,12 @@ hr.d:after {
   padding-right: 10px;
   text-align: center;
   text-shadow:none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;   
+  
 }
 a.button{
   height: 20px;
@@ -798,10 +942,19 @@ a.button{
   font-size: 14px;
   line-height: 20px;
   margin: 0 2px;
-  cursor: pointer;
 }
 .dropdown > div{
   padding-right: 15px;
+}
+.p-complete{
+  color: #5cb85c;
+}
+.p-incomplete,
+.p-inactive{
+  color: #d9534f;
+}
+.p-active{
+  color: #337ab7;
 }
 
 .btn-success{
@@ -980,6 +1133,14 @@ fieldset[disabled] .btn-default{
 .project>h2{
   margin-bottom:0;
 }
+.project>div{
+  margin-bottom:25px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #444;
+}
+.project>div:last-of-type{
+  margin-bottom:0;
+}
 .project>div>p{
   font-size:16px;
   margin: 12px 0;
@@ -1066,6 +1227,40 @@ x-alert>span>div>div{
   -ms-transition: all 1.5s ease-in-out, opacity 200ms linear;
   transition: all 1.5s ease-in-out, opacity 200ms linear;
 }
+.coverpage{
+   display: flex;
+}
+.cover-container{
+  box-shadow: inset 0 0 100px 10px rgba(25,25,25,.5);
+  width:100%;
+  padding:0;
+  margin: 52px 0 50px 0;
+  min-height:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.cover-container>.box{
+  max-width:40%;
+}
+.covertag{
+  font-size: 36px;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.coverside{
+  font-size: 21px;
+}
+.coverbutton>a{
+  padding: 10px 20px;
+  margin: 5px;
+  color: #333;
+  background: #ddd;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 760px) {
   #brand{
     position: absolute;

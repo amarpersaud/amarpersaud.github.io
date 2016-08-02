@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="Amar Persaud - Student programmer and game developer">
+    <meta name="author" content="Amar Persaud">
+    <meta name="lang" http-equiv="Content-Language" content="en">
+    <link rel="icon" href="/favicon.ico">
+    <title>Amar Persaud</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.min.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href=""/>
+    <script type="text/javascript" src="/js/theme.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
+  </head>
+
+  <body>
+  
+  
+    <!-- Top navigation bar-->
+    <nav class="site-nav">
+      <span id="brand"><a href="/" id="sitelink" class="brand">Amar Persaud</a></span>
+      <button class="openbutton"><i class="icon-menu"></i></button>
+      <div class="nav">
+        <ul>
+          <li><input id="searchbox" type="search" placeholder="Search..." ></input><i class="icon-search" id="search-button"></i></li>
+          <li id="nav_home"><a href="/">Home</a></li>
+          <li id="nav_projects"><a href="/projects">Projects</a></li>
+          <li id="nav_about"><a href="/about">About Me</a></li>
+          <li id="nav_settings"><a href="/settings">Settings</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="content">
+      <div class="side-nav">
+        <ul>
+          <li class="active"><a href="/rangeslider">Main</a><a href="/rangeslider"><i class="icon-home"></i></a></li>
+          <li><a href="/rangeslider/demo">Demo</a><a href="/rangeslider/demo"><i class="icon-settings"></i></a></li>
+          <li><a href="#">Source</a><a href="#"><i class="icon-embed2"></i></a></li>
+          <li><a href="#">Download</a><a href="#"><i class="icon-download"></i></a></li>
+        </ul>
+      </div>  
+      <div class="main-content">
+         <h1>Div Range Slider</h1>
+         <h4>JQuery-less range slider with minimal JavaScript</h4>
+          <hr class="d"></hr>
+          <div class="center">
+          <div class="div2">
+            <div class="rangeinput input-primary" style="width: 300px;" value="10">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <div class="rangeinput input-danger" style="width: 300px;" value="20">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <div class="rangeinput input-warning" style="width: 300px;" value="30">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <div class="rangeinput input-success" style="width: 300px;" value="40">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <div class="rangeinput input-info" style="width: 300px;" value="50">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <br/>
+            <div class="rangeinput input-primary-inv" style="width: 300px;" value="60">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <div class="rangeinput input-danger-inv" style="width: 300px;" value="70">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <div class="rangeinput input-warning-inv" style="width: 300px;" value="80">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <div class="rangeinput input-success-inv" style="width: 300px;" value="90">
+              <div class="rangeprogress">
+              </div>
+            </div>
+            <div class="rangeinput input-info-inv" style="width: 300px;" value="100">
+              <div class="rangeprogress">
+              </div>
+            </div>
+          </div>
+          
+          <div class="div2">
+          <div class="rangeinput input-primary" style="width: 300px;" value="10">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <div class="rangeinput input-danger" style="width: 300px;" value="20">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <div class="rangeinput input-warning" style="width: 300px;" value="30">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <div class="rangeinput input-success" style="width: 300px;" value="40">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <div class="rangeinput input-info" style="width: 300px;" value="50">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <br/>
+        <div class="rangeinput input-primary-inv" style="width: 300px;" value="60">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <div class="rangeinput input-danger-inv" style="width: 300px;" value="70">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <div class="rangeinput input-warning-inv" style="width: 300px;" value="80">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <div class="rangeinput input-success-inv" style="width: 300px;" value="90">
+          <div class="rangeprogress">
+          </div>
+        </div>
+        <div class="rangeinput input-info-inv" style="width: 300px;" value="100">
+          <div class="rangeprogress">
+        </div>
+        </div>
+        </div>
+        </div>
+        <br/>
+        <script>
+        document.body.style.backgroundColor = "#333";
+          function setColor(){
+            s = document.getElementsByClassName("div2");
+            if(document.body.style.backgroundColor == "rgb(51, 51, 51)"){
+              for(i=0; i<s.length;i++){
+                s[i].style.backgroundColor = "#ddd";
+              }
+              document.body.style.backgroundColor = "#ddd";
+              document.body.style.color = "#222"; 
+              document.getElementsByClassName("footer")[0].style.color = "#ddd";
+              document.getElementsByTagName("hr")[0].style = "background: #ddd";
+            }
+            else{
+              for(i=0; i<s.length;i++){
+                s[i].style.backgroundColor = "#333";
+              }
+              document.body.style.backgroundColor = "#333";
+              document.body.style.color = "#ddd"; 
+              document.getElementsByClassName("footer")[0].style.color = "#ddd";
+              document.getElementsByTagName("hr")[0].style = "background: #333";
+            }
+          }
+        </script>
+        <div class="button template-color" onclick="setColor();">Toggle Background Color</div>
+      </div>
+    <div class="push">
+    </div>
+    </div>
+    <div class="footer">
+        <p>&#xa9; 2015 - 2016 Amar Persaud</p>
+    </div>
+    <!-- Added to end to make loading go a bit faster -->
+    <script type="text/javascript" src="/js/js.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
+  </body>
+</html>
