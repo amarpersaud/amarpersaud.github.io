@@ -1,5 +1,5 @@
 function maincolor(color){
-    document.getElementById("theme").href = "css/theme/" + color + ".min.css";
+    document.getElementById("theme").href = "/css/theme/" + color + ".min.css";
   }
   //Cookie handling. Needs to come first so that cookies can be read for the theme.
     function createCookie(name,value) {
