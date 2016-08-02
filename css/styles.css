@@ -158,6 +158,7 @@ td>i:hover:after{
 }
 .icon-search:before {
   content: "\e986";
+  top: 0 !important;
 }
 .icon-key:before {
   content: "\e98d";
