@@ -50,10 +50,11 @@
           <hr class="d"></hr>
           <div class="center">
           <div class="div2">
-            <div class="rangeinput input-primary" style="width: 300px;" value="10">
+            <div class="rangeinput input-primary" style="width: 300px;" value="10" id="firstinput">
               <div class="rangeprogress">
               </div>
             </div>
+
             <div class="rangeinput input-danger" style="width: 300px;" value="20">
               <div class="rangeprogress">
               </div>
@@ -138,7 +139,19 @@
         </div>
         </div>
         <br/>
-        <script>
+
+        <div class="button template-color" onclick="setColor();">Toggle Background Color</div>
+      </div>
+    <div class="push">
+    </div>
+    </div>
+    <div class="footer">
+        <p>&#xa9; 2015 - 2016 Amar Persaud</p>
+    </div>
+    <!-- Added to end to make loading go a bit faster -->
+    <script type="text/javascript" src="/js/js.min.js"></script>
+    <script type="text/javascript" src="js/script.min.js"></script>
+            <script>
         document.body.style.backgroundColor = "#333";
           function setColor(){
             s = document.getElementsByClassName("div2");
@@ -161,17 +174,7 @@
               document.getElementsByTagName("hr")[0].style = "background: #333";
             }
           }
+          document.getElementById("firstinput").addEventListener("changed", function(e){console.log(e.currentTarget.getAttribute("value"));} ,false);
         </script>
-        <div class="button template-color" onclick="setColor();">Toggle Background Color</div>
-      </div>
-    <div class="push">
-    </div>
-    </div>
-    <div class="footer">
-        <p>&#xa9; 2015 - 2016 Amar Persaud</p>
-    </div>
-    <!-- Added to end to make loading go a bit faster -->
-    <script type="text/javascript" src="/js/js.min.js"></script>
-    <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>
