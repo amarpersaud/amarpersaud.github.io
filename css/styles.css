@@ -3,11 +3,11 @@
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?u76223');
-  src:  url('../fonts/icomoon.eot?u76223#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?u76223') format('truetype'),
-    url('../fonts/icomoon.woff?u76223') format('woff'),
-    url('../fonts/icomoon.svg?u76223#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?ycz3an');
+  src:  url('../fonts/icomoon.eot?ycz3an#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ycz3an') format('truetype'),
+    url('../fonts/icomoon.woff?ycz3an') format('woff'),
+    url('../fonts/icomoon.svg?ycz3an#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -70,7 +70,8 @@ i:after {
   display:none;
   background: #ccc;
   color:#333;
-  left:0;
+  left:50%;
+  transform:translateX(-50%);
   top:0;
   border-radius: 2px;
   top: -100%;
@@ -102,37 +103,21 @@ i:hover:after{
 td>i:hover:after{
   display: inline-block;
 }
+
 .icon-monogame:before {
   content: "\e904";
 }
-.icon-monogame.t:after{
-  content: "MonoGame";
-}
-
 .icon-csharp:before {
   content: "\e903";
 }
-.icon-csharp.t:after {
-  content: "C# (C Sharp)";
-}
-
 .icon-python:before {
   content: "\e901";
-}
-.icon-python.t:after {
-  content: "Python";
 }
 .icon-js:before {
   content: "\e900";
 }
-.icon-js.t:after {
-  content: "JavaScript";
-}
 .icon-gamepad:before {
   content: "\f11b";
-}
-.icon-gamepad.t:after {
-  content: "Game";
 }
 .icon-child:before {
   content: "\f1ae";
@@ -205,7 +190,6 @@ td>i:hover:after{
 }
 .icon-search:before {
   content: "\e986";
-  top: 0 !important;
 }
 .icon-key:before {
   content: "\e98d";
@@ -269,9 +253,6 @@ td>i:hover:after{
 }
 .icon-sphere:before {
   content: "\e9c9";
-}
-.icon-sphere.t:after {
-  content: "Web";
 }
 .icon-earth:before {
   content: "\e9ca";
@@ -384,12 +365,6 @@ td>i:hover:after{
 .icon-youtube2:before {
   content: "\ea9e";
 }
-
-.icon-youtube.t:after,
-.icon-youtube2.t:after  {
-  content: "YouTube";
-}
-
 .icon-twitch:before {
   content: "\ea9f";
 }
@@ -399,12 +374,6 @@ td>i:hover:after{
 .icon-steam:before {
   content: "\eaad";
 }
-
-.icon-steam2.t:after,
-.icon-steam.t:after{
-  content: "Steam";
-}
-
 .icon-dropbox:before {
   content: "\eaae";
 }
@@ -441,24 +410,6 @@ td>i:hover:after{
 .icon-windows8:before {
   content: "\eac2";
 }
-
-.icon-linux.t:after {
-  content: "Linux";
-}
-.icon-apple.t:after {
-  content: "Apple";
-}
-.icon-mac.t:after {
-  content: "Mac";
-}
-.icon-android.t:after {
-  content: "Android";
-}
-.icon-windows.t:after,
-.icon-windows8.t:after {
-  content: "Windows";
-}
-
 .icon-skype:before {
   content: "\eac5";
 }
@@ -489,7 +440,6 @@ td>i:hover:after{
 .icon-paypal:before {
   content: "\ead8";
 }
-
 .icon-chrome:before {
   content: "\ead9";
 }
@@ -508,42 +458,14 @@ td>i:hover:after{
 .icon-opera:before {
   content: "\eade";
 }
-
-.icon-chrome.t:after {
-  content: "Chrome";
-}
-.icon-firefox.t:after {
-  content: "FireFox";
-}
-.icon-IE.t:after {
-  content: "Internet Explorer";
-}
-.icon-edge.t:after {
-  content: "Edge";
-}
-.icon-safari.t:after {
-  content: "Safari";
-}
-.icon-opera.t:after {
-  content: "Opera";
-}
-
 .icon-html-five:before {
   content: "\eae4";
 }
 .icon-html-five2:before {
   content: "\eae5";
 }
-.icon-html-five.t:after,
-.icon-html-five2.t:after{
-  content: "HTML5"
-}
-
 .icon-css3:before {
   content: "\eae6";
-}
-.icon-css3.t:after{
-  content: "CSS3";
 }
 .icon-git:before {
   content: "\eae7";
@@ -557,8 +479,21 @@ td>i:hover:after{
 .icon-lightning:before {
   content: "\26a1";
 }
-
-
+.icon-book:before {
+  content: "\e91f";
+}
+.icon-books:before {
+  content: "\e920";
+}
+.icon-profile:before {
+  content: "\e923";
+}
+.icon-files-empty:before {
+  content: "\e925";
+}
+.icon-file-text2:before {
+  content: "\e926";
+}
 
 html,
 body{
@@ -873,8 +808,7 @@ hr.d:after {
     text-shadow: none;
 }
 .main-content{
-  padding-top: 52px; 
-  padding-left: 150px;
+  padding-top: 52px 20px 0 170px;
 }
 .status{
   display:flex;
@@ -888,9 +822,6 @@ hr.d:after {
 .status>table>tbody>tr>td{
   border-bottom:1px dashed #aaa;
   padding: 8px 16px;
-}
-.desc-text{
-  padding: 0 20px;
 }
 .desc-text>p{
   text-align:left;
@@ -946,6 +877,7 @@ hr.d:after {
   top: -150%;
 }
 .dropdown{
+  outline:none;
   display: inline-block;
   -webkit-user-select: none; /* Chrome/Safari */        
   -moz-user-select: none; /* Firefox */
@@ -967,6 +899,7 @@ hr.d:after {
 }
 .dropdown > div,
 .button{
+  outline:none;
   height: 34px;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -984,6 +917,7 @@ hr.d:after {
   
 }
 a.button{
+  outline:none;
   height: 20px;
   padding: 6px 12px;
   font-size: 14px;
@@ -1408,7 +1342,9 @@ x-alert>span>div>div{
     padding: 9px 6px 9px 10px;
   }
   .main-content{
-    padding-top: 45px; 
-    padding-left: 42px;
+    padding: 45px 18px 20px 60px;
+  }
+  .cover-container>.box{
+    max-width: 80%;
   }
 }

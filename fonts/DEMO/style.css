@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?u76223');
-  src:  url('fonts/icomoon.eot?u76223#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?u76223') format('truetype'),
-    url('fonts/icomoon.woff?u76223') format('woff'),
-    url('fonts/icomoon.svg?u76223#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ycz3an');
+  src:  url('fonts/icomoon.eot?ycz3an#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ycz3an') format('truetype'),
+    url('fonts/icomoon.woff?ycz3an') format('woff'),
+    url('fonts/icomoon.svg?ycz3an#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -398,5 +398,20 @@ i {
 }
 .icon-lightning:before {
   content: "\26a1";
+}
+.icon-book:before {
+  content: "\e91f";
+}
+.icon-books:before {
+  content: "\e920";
+}
+.icon-profile:before {
+  content: "\e923";
+}
+.icon-files-empty:before {
+  content: "\e925";
+}
+.icon-file-text2:before {
+  content: "\e926";
 }
 
