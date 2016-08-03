@@ -45,13 +45,17 @@ function GetURLParameter(sParam)
     search(searchbar.value);
   }
    
+   var navopen = false;
+   
   document.getElementsByClassName("openbutton")[0].onclick = function(){
     navigation = document.getElementsByClassName("nav")[0].getElementsByTagName("ul")[0];
     if(navigation.style.display=="block"){
       navigation.style.display="none";
+      navopen = false;
     }
     else{
       navigation.style.display="block";
+      navopen = true;
     }
   };
 
@@ -80,7 +84,7 @@ function GetURLParameter(sParam)
         s[i].getElementsByTagName("ul")[0].setAttribute("style","visibility: hidden; opacity: 0;");
       }      
     }
-    if(!(event.target.classList.contains("openbutton")) && !(findAncestor(event.target, "openbutton"))){
+    if(navopen && (!(event.target.classList.contains("openbutton")) && !(findAncestor(event.target, "openbutton"))) && (!(event.target.classList.contains("nav")) && !(findAncestor(event.target, "nav")))){
       document.getElementsByClassName("nav")[0].getElementsByTagName("ul")[0].style.display="none";
     }
   }
