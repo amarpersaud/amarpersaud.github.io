@@ -38,9 +38,10 @@
     <div class="content">
       <div class="side-nav">
         <ul>
-          <li class="active"><a href="/project/rangeslider">Main</a><a href="/project/rangeslider"><i class="icon-home"></i></a></li>
-          <li><a href="/project/rangeslider/demo">Demo</a><a href="/project/rangeslider/demo"><i class="icon-settings"></i></a></li>
+          <li><a href="/project/rangeslider">Main</a><a href="/project/rangeslider"><i class="icon-home"></i></a></li>
+          <li class="active"><a href="/project/rangeslider/demo">Demo</a><a href="/project/rangeslider/demo"><i class="icon-settings"></i></a></li>
           <li><a href="#">Source</a><a href="#"><i class="icon-embed2"></i></a></li>
+          <li><a href="#">Documentation</a><a href="#"><i class="icon-books"></i></a></li>
           <li><a href="#">Download</a><a href="#"><i class="icon-download"></i></a></li>
         </ul>
       </div>  
@@ -50,10 +51,11 @@
           <hr class="d"></hr>
           <div class="center">
           <div class="div2">
-            <div class="rangeinput input-primary" style="width: 300px;" value="10">
+            <div class="rangeinput input-primary" style="width: 300px;" value="10" id="firstinput">
               <div class="rangeprogress">
               </div>
             </div>
+
             <div class="rangeinput input-danger" style="width: 300px;" value="20">
               <div class="rangeprogress">
               </div>
@@ -138,31 +140,8 @@
         </div>
         </div>
         <br/>
-        <script>
-        document.body.style.backgroundColor = "#333";
-          function setColor(){
-            s = document.getElementsByClassName("div2");
-            if(document.body.style.backgroundColor == "rgb(51, 51, 51)"){
-              for(i=0; i<s.length;i++){
-                s[i].style.backgroundColor = "#ddd";
-              }
-              document.body.style.backgroundColor = "#ddd";
-              document.body.style.color = "#222"; 
-              document.getElementsByClassName("footer")[0].style.color = "#ddd";
-              document.getElementsByTagName("hr")[0].style = "background: #ddd";
-            }
-            else{
-              for(i=0; i<s.length;i++){
-                s[i].style.backgroundColor = "#333";
-              }
-              document.body.style.backgroundColor = "#333";
-              document.body.style.color = "#ddd"; 
-              document.getElementsByClassName("footer")[0].style.color = "#ddd";
-              document.getElementsByTagName("hr")[0].style = "background: #333";
-            }
-          }
-        </script>
-        <div class="button template-color" onclick="setColor();">Toggle Background Color</div>
+
+        <div class="button template-color" onclick="setColor();" tooltip="Warning: Large contrast between dark and light colors">Toggle Background Color</div>
       </div>
     <div class="push">
     </div>
@@ -173,5 +152,32 @@
     <!-- Added to end to make loading go a bit faster -->
     <script type="text/javascript" src="/js/js.min.js"></script>
     <script type="text/javascript" src="js/script.min.js"></script>
+            <script>
+        document.body.style.backgroundColor = "#333";
+          function setColor(){
+            s = document.getElementsByClassName("div2");
+            if(document.body.style.backgroundColor == "rgb(51, 51, 51)"){
+              for(i=0; i<s.length;i++){
+                s[i].style.backgroundColor = "#ddd";
+              }
+              document.getElementsByClassName("main-content")[0].style.backgroundColor = "#ddd";
+              document.body.style.backgroundColor = "#ddd";
+              document.body.style.color = "#222"; 
+              document.getElementsByClassName("footer")[0].style.color = "#ddd";
+              document.getElementsByTagName("hr")[0].style = "background: #ddd";
+            }
+            else{
+              for(i=0; i<s.length;i++){
+                s[i].style.backgroundColor = "#333";
+              }
+              document.body.style.backgroundColor = "#333";
+              document.getElementsByClassName("main-content")[0].style.backgroundColor = "#333";
+              document.body.style.color = "#ddd"; 
+              document.getElementsByClassName("footer")[0].style.color = "#ddd";
+              document.getElementsByTagName("hr")[0].style = "background: #333";
+            }
+          }
+          document.getElementById("firstinput").addEventListener("changed", function(e){console.log(e.currentTarget.getAttribute("value"));} ,false);
+        </script>
   </body>
 </html>

@@ -44,7 +44,17 @@ function GetURLParameter(sParam)
   searchbutton.onclick = function(){
     search(searchbar.value);
   }
-  
+   
+  document.getElementsByClassName("openbutton")[0].onclick = function(){
+    navigation = document.getElementsByClassName("nav")[0].getElementsByTagName("ul")[0];
+    if(navigation.style.display=="block"){
+      navigation.style.display="none";
+    }
+    else{
+      navigation.style.display="block";
+    }
+  };
+
 
   var pgid = "";
   if(location.pathname == "/"){
@@ -60,7 +70,7 @@ function GetURLParameter(sParam)
     pgid = "nav_settings";
   }
   if(pgid != ""){
-    document.getElementById(pgid).style.class = "active";
+    document.getElementById(pgid).style.className = "active";
   }
   document.onmousedown = function(event){
     if(!(event.target.classList.contains("dropdown")) && !(findAncestor(event.target, "dropdown"))){
@@ -69,6 +79,9 @@ function GetURLParameter(sParam)
         s[i].active = 0;
         s[i].getElementsByTagName("ul")[0].setAttribute("style","visibility: hidden; opacity: 0;");
       }      
+    }
+    if(!(event.target.classList.contains("openbutton")) && !(findAncestor(event.target, "openbutton"))){
+      document.getElementsByClassName("nav")[0].getElementsByTagName("ul")[0].style.display="none";
     }
   }
   var dropdownValueChanged = new CustomEvent('dropdownValueChanged');
