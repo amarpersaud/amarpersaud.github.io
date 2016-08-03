@@ -1347,4 +1347,7 @@ x-alert>span>div>div{
   .cover-container>.box{
     max-width: 80%;
   }
+  .cover-container{
+    margin-top:46px;
+  }
 }
