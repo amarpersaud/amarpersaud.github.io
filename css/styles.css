@@ -327,6 +327,9 @@ p{
   padding-top: 52px;
   margin-left: auto;
 }
+div>ul{
+ text-indent:0;
+}
 
 a, a:hover, a:active, a:visited{
   text-decoration: none;
@@ -1034,6 +1037,9 @@ x-alert>span>div>div{
   }
   .indentp {
       padding-left: 1.0em;
+  }
+  .indent, .indent>p .indent>h3 {
+    text-indent: 1.0em;
   }
   .site-nav{
     position: fixed;
