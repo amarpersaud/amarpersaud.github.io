@@ -109,82 +109,408 @@ outline: 0;
 .icon-monogame:before {
   content: "\e904";
 }
-.icon-monogame.t:after{
-  content: "MonoGame";
-}
-
 .icon-csharp:before {
   content: "\e903";
 }
-.icon-csharp.t:after {
-  content: "C# (C Sharp)";
-}
-
 .icon-python:before {
   content: "\e901";
-}
-.icon-python.t:after {
-  content: "Python";
 }
 .icon-js:before {
   content: "\e900";
 }
-.icon-js.t:after {
-  content: "JavaScript";
-}
 .icon-gamepad:before {
   content: "\f11b";
-}
-.icon-gamepad.t:after {
-  content: "Game";
 }
 .icon-child:before {
   content: "\f1ae";
 }
+.icon-git-branch:before {
+  content: "\f020";
+}
+.icon-home:before {
+  content: "\e902";
+}
+.icon-edit:before {
+  content: "\e906";
+}
+.icon-image:before {
+  content: "\e90d";
+}
+.icon-images:before {
+  content: "\e90e";
+}
+.icon-camera:before {
+  content: "\e90f";
+}
+.icon-wifi:before {
+  content: "\e91b";
+}
+.icon-zip:before {
+  content: "\e92b";
+}
+.icon-download:before {
+  content: "\e933";
+}
+.icon-qrcode:before {
+  content: "\e938";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-coin-euro:before {
+  content: "\e93c";
+}
+.icon-coin-pound:before {
+  content: "\e93d";
+}
+.icon-coin-yen:before {
+  content: "\e93e";
+}
+.icon-lifebuoy:before {
+  content: "\e941";
+}
+.icon-printer:before {
+  content: "\e954";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-laptop:before {
+  content: "\e957";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-mobile2:before {
+  content: "\e959";
+}
+.icon-tablet:before {
+  content: "\e95a";
+}
+.icon-tv:before {
+  content: "\e95b";
+}
 .icon-search:before {
   content: "\e986";
-  top: 0 !important;
 }
 .icon-key:before {
   content: "\e98d";
 }
+.icon-lock:before {
+  content: "\e98f";
+}
+.icon-unlocked:before {
+  content: "\e990";
+}
+.icon-settings:before {
+  content: "\e992";
+}
+.icon-gear:before {
+  content: "\e994";
+}
+.icon-cogs:before {
+  content: "\e995";
+}
+.icon-bug:before {
+  content: "\e999";
+}
+.icon-stats-dots:before {
+  content: "\e99b";
+}
+.icon-gift:before {
+  content: "\e99f";
+}
+.icon-meter:before {
+  content: "\e9a6";
+}
+.icon-fire:before {
+  content: "\e9a9";
+}
+.icon-lab:before {
+  content: "\e9aa";
+}
+.icon-magnet:before {
+  content: "\e9ab";
+}
+.icon-delete:before {
+  content: "\e9ac";
+}
+.icon-briefcase:before {
+  content: "\e9ae";
+}
+.icon-airplane:before {
+  content: "\e9af";
+}
+.icon-truck:before {
+  content: "\e9b0";
+}
+.icon-switch:before {
+  content: "\e9b6";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-download2:before {
+  content: "\e9c7";
+}
 .icon-sphere:before {
   content: "\e9c9";
-}
-.icon-sphere.t:after {
-  content: "Web";
 }
 .icon-earth:before {
   content: "\e9ca";
 }
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-sun:before {
+  content: "\e9d4";
+}
+.icon-star-empty:before {
+  content: "\e9d7";
+}
+.icon-star-half:before {
+  content: "\e9d8";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+.icon-warning:before {
+  content: "\ea07";
+}
+.icon-notification:before {
+  content: "\ea08";
+}
+.icon-info:before {
+  content: "\ea0c";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+.icon-blocked:before {
+  content: "\ea0e";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-play2:before {
+  content: "\ea15";
+}
+.icon-pause:before {
+  content: "\ea16";
+}
+.icon-stop:before {
+  content: "\ea17";
+}
+.icon-play:before {
+  content: "\ea1c";
+}
+.icon-pause2:before {
+  content: "\ea1d";
+}
+.icon-stop2:before {
+  content: "\ea1e";
+}
+.icon-volume-high:before {
+  content: "\ea26";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-paragraph-justify:before {
+  content: "\ea7a";
+}
+.icon-embed:before {
+  content: "\ea7f";
+}
+.icon-embed2:before {
+  content: "\ea80";
+}
+.icon-terminal:before {
+  content: "\ea81";
+}
+.icon-share2:before {
+  content: "\ea82";
+}
+.icon-mail:before {
+  content: "\ea83";
+}
+.icon-amazon:before {
+  content: "\ea87";
+}
+.icon-google-drive:before {
+  content: "\ea8f";
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-vine:before {
+  content: "\ea97";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
 .icon-youtube2:before {
   content: "\ea9e";
 }
-
-.icon-youtube.t:after,
-.icon-youtube2.t:after  {
-  content: "YouTube";
-}
-
 .icon-twitch:before {
   content: "\ea9f";
+}
+.icon-steam2:before {
+  content: "\eaac";
 }
 .icon-steam:before {
   content: "\eaad";
 }
-
-.icon-steam2.t:after,
-.icon-steam.t:after{
-  content: "Steam";
-}
-
 .icon-dropbox:before {
   content: "\eaae";
+}
+.icon-onedrive:before {
+  content: "\eaaf";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-wordpress:before {
+  content: "\eab4";
+}
+.icon-tumblr:before {
+  content: "\eab9";
+}
+.icon-tumblr2:before {
+  content: "\eaba";
+}
+.icon-linux:before {
+  content: "\eabd";
+}
+.icon-apple:before {
+  content: "\eabe";
+}
+.icon-mac:before {
+  content: "\eabf";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-windows:before {
+  content: "\eac1";
 }
 .icon-windows8:before {
   content: "\eac2";
 }
-
+.icon-skype:before {
+  content: "\eac5";
+}
+.icon-reddit:before {
+  content: "\eac6";
+}
+.icon-wikipedia:before {
+  content: "\eac8";
+}
+.icon-stumbleupon:before {
+  content: "\eace";
+}
+.icon-stumbleupon2:before {
+  content: "\eacf";
+}
+.icon-stackoverflow:before {
+  content: "\ead0";
+}
+.icon-pinterest:before {
+  content: "\ead1";
+}
+.icon-pinterest2:before {
+  content: "\ead2";
+}
+.icon-yelp:before {
+  content: "\ead7";
+}
+.icon-paypal:before {
+  content: "\ead8";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-firefox:before {
+  content: "\eada";
+}
+.icon-IE:before {
+  content: "\eadb";
+}
+.icon-edge:before {
+  content: "\eadc";
+}
+.icon-safari:before {
+  content: "\eadd";
+}
+.icon-opera:before {
+  content: "\eade";
+}
+.icon-html-five:before {
+  content: "\eae4";
+}
+.icon-html-five2:before {
+  content: "\eae5";
+}
+.icon-css3:before {
+  content: "\eae6";
+}
+.icon-git:before {
+  content: "\eae7";
+}
+.icon-codepen:before {
+  content: "\eae8";
+}
+.icon-chevron-down:before {
+  content: "\f0a3";
+}
+.icon-lightning:before {
+  content: "\26a1";
+}
+.icon-book:before {
+  content: "\e91f";
+}
+.icon-books:before {
+  content: "\e920";
+}
+.icon-profile:before {
+  content: "\e923";
+}
+.icon-files-empty:before {
+  content: "\e925";
+}
+.icon-file-text2:before {
+  content: "\e926";
+}
+.icon-monogame.t:after{
+  content: "MonoGame";
+}
+.icon-csharp.t:after {
+  content: "C# (C Sharp)";
+}
+.icon-python.t:after {
+  content: "Python";
+}
+.icon-js.t:after {
+  content: "JavaScript";
+}
+.icon-gamepad.t:after {
+  content: "Game";
+}
 .icon-linux.t:after {
   content: "Linux";
 }
@@ -201,21 +527,13 @@ outline: 0;
 .icon-windows8.t:after {
   content: "Windows";
 }
-
-.icon-skype:before {
-  content: "\eac5";
+.icon-youtube.t:after,
+.icon-youtube2.t:after  {
+  content: "YouTube";
 }
-.icon-paypal:before {
-  content: "\ead8";
+.icon-sphere.t:after {
+  content: "Web";
 }
-
-.icon-chrome:before {
-  content: "\ead9";
-}
-.icon-opera:before {
-  content: "\eade";
-}
-
 .icon-chrome.t:after {
   content: "Chrome";
 }
@@ -234,48 +552,18 @@ outline: 0;
 .icon-opera.t:after {
   content: "Opera";
 }
-
-.icon-html-five:before {
-  content: "\eae4";
+.icon-steam2.t:after,
+.icon-steam.t:after{
+  content: "Steam";
 }
-.icon-html-five2:before {
-  content: "\eae5";
+.icon-css3.t:after{
+  content: "CSS3";
 }
 .icon-html-five.t:after,
 .icon-html-five2.t:after{
   content: "HTML5"
 }
 
-.icon-css3:before {
-  content: "\eae6";
-}
-.icon-css3.t:after{
-  content: "CSS3";
-}
-.icon-git:before {
-  content: "\eae7";
-}
-
-.icon-lightning:before {
-  content: "\26a1";
-}
-
-
-.icon-book:before {
-  content: "\e91f";
-}
-.icon-books:before {
-  content: "\e920";
-}
-.icon-profile:before {
-  content: "\e923";
-}
-.icon-files-empty:before {
-  content: "\e925";
-}
-.icon-file-text2:before {
-  content: "\e926";
-}
 
 html,
 body{
