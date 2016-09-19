@@ -1,6 +1,6 @@
 *{
   font-family: Helvetica;
-  outline:none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 @font-face {
   font-family: 'icomoon';
@@ -709,7 +709,7 @@ a, a:hover, a:active, a:visited{
   font-size:14px;
   position: relative;
   left: -22px;
-  top: 1px;
+  top: -1px;
   color: #222;
   cursor: pointer;
 }
@@ -763,8 +763,18 @@ li>input{
   border-radius: 5px;
   border: none;
   padding: 0 8px 0 8px;
+  outline: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  border: 1px solid transparent;
 } 
-
+li>input:focus
+.button:focus{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
 /* On the flex item to pin */
 .left {
    -webkit-align-self: flex-start;
@@ -910,9 +920,9 @@ hr.d:after {
 .indentp{
     padding-left: 2.0em;
 }
-.dropdown.indentp{
-  margin-left:1.0em;
-}
+  .dropdown.indentp{
+    margin-left:1.0em;
+  }
 .indent, .indent>p .indent>h3 {
     text-indent: 2.0em;
 }
@@ -1327,6 +1337,7 @@ x-alert>span>div>div{
     text-indent: 1.0em;
   }
   .dropdown.indentp{
+    padding-left: 0;
     margin-left:1.0em;
   }
   
