@@ -1,6 +1,6 @@
 *{
   font-family: Helvetica;
-  outline:none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 @font-face {
   font-family: 'icomoon';
@@ -910,9 +910,9 @@ hr.d:after {
 .indentp{
     padding-left: 2.0em;
 }
-.dropdown.indentp{
-  margin-left:1.0em;
-}
+  .dropdown.indentp{
+    margin-left:1.0em;
+  }
 .indent, .indent>p .indent>h3 {
     text-indent: 2.0em;
 }
@@ -1327,6 +1327,7 @@ x-alert>span>div>div{
     text-indent: 1.0em;
   }
   .dropdown.indentp{
+    padding-left: 0;
     margin-left:1.0em;
   }
   
