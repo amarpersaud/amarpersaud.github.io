@@ -1,5 +1,6 @@
 *{
   font-family: Helvetica;
+  outline:none;
 }
 @font-face {
   font-family: 'icomoon';
@@ -103,8 +104,8 @@ i:hover:after{
 td>i:hover:after{
   display: inline-block;
 }
-:focus {
-outline: 0;
+:focus{
+  outline: none;
 }
 .icon-monogame:before {
   content: "\e904";
@@ -906,8 +907,11 @@ hr.d:after {
     line-height: 1.1;
     color: inherit;
 }
-.indentp {
+.indentp{
     padding-left: 2.0em;
+}
+.dropdown.indentp{
+  margin-left:1.0em;
 }
 .indent, .indent>p .indent>h3 {
     text-indent: 2.0em;
@@ -959,7 +963,6 @@ hr.d:after {
   -o-user-select: none;
   user-select: none;
   cursor: pointer;
-  outline:none;
 } 
 .dropdown > div:after{
   font-family: 'icomoon';
@@ -969,9 +972,11 @@ hr.d:after {
   font-size: 12px;
   position:relative;
   right: -6px;
+
 }
 .dropdown > div,
 .button{
+  background-image:none;
   height: 34px;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -1015,7 +1020,6 @@ a.button{
   border-color: #4cae4c !important;
 }
 .btn-success:hover,
-.btn-success:focus,
 .btn-success.focus{
   background-color: #449d44 !important;
   border-color: #398439 !important;
@@ -1038,7 +1042,6 @@ fieldset[disabled] .btn-success{
   border-color: #d43f3a !important;
 }
 .btn-danger:hover,
-.btn-danger:focus,
 .btn-danger.focus{
   background-color: #c9302c !important;
   border-color: #ac2925 !important;
@@ -1061,7 +1064,6 @@ fieldset[disabled] .btn-danger{
   border-color: #46b8da !important;
 }
 .btn-info:hover,
-.btn-info:focus,
 .btn-info.focus{
   background-color: #31b0d5 !important;
   border-color: #269abc !important;
@@ -1084,7 +1086,6 @@ fieldset[disabled] .btn-info{
   border-color: #2e6da4 !important;
 }
 .btn-primary:hover,
-.btn-primary:focus,
 .btn-primary.focus {
   background-color: #286090 !important;
   border-color: #204d74 !important;
@@ -1107,7 +1108,6 @@ fieldset[disabled] .btn-primary{
   border-color: #eea236 !important;
 }
 .btn-warning:hover,
-.btn-warning:focus,
 .btn-warning.focus{
   background-color: #ec971f !important;
   border-color: #d58512 !important;
@@ -1130,7 +1130,6 @@ fieldset[disabled] ..btn-warning{
   border-color: #ccc !important;
 }
 .btn-default:hover,
-.btn-default:focus,
 .btn-default.focus {
   background-color: #e6e6e6 !important;
   border-color: #adadad !important;
@@ -1321,12 +1320,16 @@ x-alert>span>div>div{
     margin: 0 0 0 0;
     text-align: left;
   }
-  .indentp {
+  .indentp{
       padding-left: 1.0em;
   }
   .indent, .indent>p .indent>h3 {
     text-indent: 1.0em;
   }
+  .dropdown.indentp{
+    margin-left:1.0em;
+  }
+  
   .site-nav{
     position: fixed;
     top: 0;
