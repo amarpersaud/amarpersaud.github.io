@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<include href="INC/header.html" />
     <meta name="Keywords" content="">
     <meta name="Description" content="Amar Persaud - Student programmer and game developer">
-    <link rel="icon" href="/favicon.ico">
     <title>Amar Persaud</title>
-    
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="css/search.css" />
+    <link rel="stylesheet" type="text/css" href="css/search.min.css" />
   </head>
 
   <body>
-  
-  
     <!-- Top navigation bar-->
-    <nav class="site-nav">
-      <span id="brand"><a href="/" id="sitelink" class="brand">Amar Persaud</a></span>
-      <button class="openbutton"><i class="icon-menu"></i></button>
-      <div class="nav">
-        <ul>
-          <li><input id="searchbox" type="search" placeholder="Search..." ></input><i class="icon-search" id="search-button"></i></li>
-          <li id="nav_home"><a href="/">Home</a></li>
-          <li id="nav_projects"><a href="/projects">Projects</a></li>
-          <li id="nav_about"><a href="/about">About Me</a></li>
-          <li id="nav_settings"><a href="/settings">Settings</a></li>
-        </ul>
-      </div>
-    </nav>
+    <include href="INC/nav.html" />
     
     <div class="content">
       <div class="container">
@@ -41,13 +23,11 @@
     <div class="push">
     </div>
     </div>
-    <div class="footer">
-        <p>&#xa9; 2015 - 2016 Amar Persaud</p>
-    </div>
+	<include href="INC/footer.html" />
     <!-- Added to end to make loading go a bit faster -->
-    <script type="text/javascript" src="js/js.js"></script>
-    <script type="text/javascript" src="js/lunr.js"></script>
-    <script type="text/javascript" src ="js/search.js"></script>
+    <script type="text/javascript" src="js/js.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min.js"></script>
+    <script type="text/javascript" src ="js/search.min.js"></script>
     
   </body>
 </html>
