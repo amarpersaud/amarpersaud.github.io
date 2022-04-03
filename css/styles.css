@@ -468,17 +468,34 @@ hr.d {
     margin-bottom: 0;
     background: #333;
 }
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}
 hr.d:after {
     font-family: 'icomoon';
-    content:"\26a1";
+    content:"\f2dd";
     display: inline-block;
     position: relative;
-    top: -0.56em;
+    top: -0.80em;
     font-size: 1.5em;
-    padding: 0 0.25em;
+    padding: 0.25em;
+	aspect-ratio: 1 / 1;
+    height: 1em;
     background: inherit;
-    color: #4c4c4c;
+    color: #5c5c5c;
+	animation: rotation 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
     text-shadow: none;
+    border-radius: 50%;
 }
 .main-content{
   padding-top: 52px 20px 0 170px;
