@@ -1,0 +1,26 @@
+{
+  "data": 
+    [
+      {
+        "Title": "Portable Eurorack Compatible Synthesizer with Voice Cards", 
+        "Desc": "A portable, battery powered synthesizer featuring a voltage controlled amplifier, band-pass voltage controlled filter (independent cutoff frequency) with resonance, voltage controlled amplifier, and voltage controlled ADSR envelope generator. The device is comprised of one or more stackable voice cards, backplane PCB with input potentiometers and switches, and a modular lithium cell power supply with USB-PD charging and ±12V and ±5V output rails. The input PCB also features a microcontroller which communicates with each voice card to allow polyphony.",
+        "ProjectIcon": "icon-microchip",
+		"TechnologyIcons":[],
+		"Buttons": 
+		[
+			{
+				"Text": "<i class="icon-github"></i>  Github"
+				"Link": "https://github.com/amarpersaud",
+				"Tooltip": "GitHub Page"
+			}
+		
+		],
+		"Tags": [
+			"Electronics",
+			"Programming"
+		],
+		"Status": "Complete"
+		"Id": 0
+      },
+    ]
+}
