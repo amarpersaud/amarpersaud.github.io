@@ -4,7 +4,7 @@
   font-family: Helvetica;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   
-  --primary-background-color: #333;
+  --primary-background-color: #333339;
   --primary-color: #eee;
   
   --nav-background-color: #222;
@@ -27,8 +27,8 @@
   --search-color: #333;  
   
   --navbar-height: 52px;
-  --content-shift: 20px;
-  --content-padding-top: calc(var(--content-shift) + var(--navbar-height));
+  --container-shift: 20px;
+  --container-padding-top: calc(var(--container-shift) + var(--navbar-height));
   
   --footer-height: 50px;
 }
@@ -224,7 +224,7 @@ p{
   font-size:14px;
 }
 .content{
-	margin-top: var(--content-padding-top);
+	margin-top: var(--navbar-height);
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
@@ -511,7 +511,7 @@ hr.d {
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 0;
-    background: #333;
+    background: var(--primary-background-color);
 	overflow:visible;
 }
 @keyframes rotation {
@@ -582,7 +582,7 @@ hr.s::after{
     text-indent: 2.0em;
 }
 .container{
-  padding: 52px 15% 50px 15%;
+  padding: var(--container-padding-top) 15% var(--footer-height) 15%;
   margin: 0 0 0 0;
   text-align: left;
 }
