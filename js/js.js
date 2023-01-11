@@ -129,37 +129,3 @@ function GetURLParameter(sParam)
     while ((el = el.parentElement) && !el.classList.contains(cls));
     return el;
   }
-  
-  var alertelement = document.registerElement('x-alert', {
-  prototype: Object.create(HTMLDivElement.prototype),
-  extends: 'div'});
-  
-  function callback(id){
-    document.getElementById(id).parentNode.parentNode.parentNode.parentNode.removeChild(document.getElementById(id).parentNode.parentNode.parentNode);
-  }
-  function makeid(len)
-  {
-      var text = "";
-      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-      for( var i=0; i < len; i++ ){
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-      }
-      return text;
-  }
-
-  //time - seconds
-  function createAlert(text, time){
-    t = "<button></button><span>" + text + "</span><span><div><div></div></div></span>";
-    prgid = makeid(10);
-    ddd = document.createElement('x-alert');
-    ddd.innerHTML = t;
-    ss = ddd.getElementsByTagName('span')[1].getElementsByTagName("div")[0].getElementsByTagName("div")[0];
-    ss.style.transitionDuration = time + "s";
-    ss.id = prgid;
-    ss.style.width = "100%";
-    document.getElementsByClassName("alertcontainer")[0].insertBefore(ddd,document.getElementsByClassName("alertcontainer")[0].firstChild);
-    ddd.getElementsByTagName("button")[0].onclick = function(e){callback(e.currentTarget.parentNode.getElementsByTagName('span')[1].getElementsByTagName("div")[0].getElementsByTagName("div")[0].id)};
-    (function(b){setTimeout(function(){callback(b);}, Number(time)*1000);})(prgid);
-    (function(b){setTimeout(function(){document.getElementById(b).parentNode.parentNode.parentNode.style.opacity="0";}, (Number(time)*1000)-400);})(prgid);
-    (function(b){setTimeout(function(){document.getElementById(b).style.width = "0%";},0);})(prgid);
-  }

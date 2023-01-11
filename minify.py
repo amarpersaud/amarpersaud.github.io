@@ -12,48 +12,23 @@ class cd:
   def __exit__(self, etype, value, traceback):
     os.chdir(self.savedPath)
 
-with cd("css"):
-  x=[]
-  for file in os.listdir("./"):
-    if file.endswith(".css") & (".min." not in file):
-      x.append(file);
-      print("- " + file)
-  print ""
-  for s in x:
-    g = open(s, 'r')
-    f = g.read()
-    d = compress(f)
-    a = open(s[:s.rfind(".css")] + ".min.css", 'w')
-    a.write(d)
-    print("Succeeded in compressing: " + s)
-print ""
-with cd("css/theme"):
-  x=[]
-  for file in os.listdir("./"):
-    if file.endswith(".css") & (".min." not in file):
-      x.append(file);
-      print("- " + file)
-  print ""
-  for s in x:
-    g = open(s, 'r')
-    f = g.read()
-    d = compress(f)
-    a = open(s[:s.rfind(".css")] + ".min.css", 'w')
-    a.write(d)
-    print("Succeeded in compressing: " + s)
-print ""
-with cd("js"):
-  x=[]
-  for file in os.listdir("./"):
-    if file.endswith(".js") & (".min." not in file):
-      x.append(file);
-      print("- " + file)
-  print ""
-  for s in x:
-    g = open(s, 'r')
-    f = g.read()
-    d = jsmin(f)
-    a = open(s[:s.rfind(".js")] + ".min.js", 'w')
-    a.write(d)
-    print("Succeeded in compressing: " + s)
-p = raw_input()
+for root, subdirs, files in os.walk("./"):
+    if '.git' in subdirs:
+        subdirs.remove('.git')
+    for filename in files:
+        if(filename.endswith(".css") & (".min." not in filename)):
+            cssfpath = os.path.join(root, filename)
+            g = open(cssfpath, 'r')
+            f = g.read()
+            d = compress(f)
+            with open(os.path.join(root, filename[:filename.rfind(".css")] + ".min.css"), 'w') as a:
+                a.write(d)
+            print("Succeeded in compressing: " + filename)
+        elif (filename.endswith(".js") & (".min." not in filename)):
+            cssfpath = os.path.join(root, filename)
+            g = open(cssfpath, 'r')
+            f = g.read()
+            d = jsmin(f)
+            with open(os.path.join(root, filename[:filename.rfind(".js")] + ".min.js"), 'w') as a:
+                a.write(d)
+            print("Succeeded in compressing: " + filename)

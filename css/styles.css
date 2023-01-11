@@ -1,31 +1,38 @@
+@import url("../fonts/style.min.css");
+
 *{
   font-family: Helvetica;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  
+  --primary-background-color: #333;
+  --primary-color: #eee;
+  
+  --nav-background-color: #222;
+  --nav-color: #9d9d9d;
+  --nav-color-hover: white;
+  
+  --nav-button-color: 
+  
+  --element-background-color: #ddd;
+  --element-color: #333;
+  
+  --tooltip-background-color: #eee;
+  --tooltip-color: #666;
+  
+  --brand-color: #9d9d9d;
+  --brand-color-hover: white;
+  
+  --search-button-color: #222;
+  --search-color-def: #444;
+  --search-color: #333;  
+  
+  --navbar-height: 52px;
+  --content-shift: 20px;
+  --content-padding-top: calc(var(--content-shift) + var(--navbar-height));
+  
+  --footer-height: 50px;
 }
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?ycz3an');
-  src:  url('../fonts/icomoon.eot?ycz3an#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?ycz3an') format('truetype'),
-    url('../fonts/icomoon.woff?ycz3an') format('woff'),
-    url('../fonts/icomoon.svg?ycz3an#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-i {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  position:relative;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 i:before{
   top: 2px;
   position:relative;
@@ -69,8 +76,8 @@ i:after {
   white-space: nowrap;
   position: absolute;
   display:none;
-  background: #ccc;
-  color:#333;
+  background: var(--tooltip-background-color);
+  color: var(--tooltip-color);
   left:50%;
   transform:translateX(-50%);
   top:0;
@@ -79,10 +86,10 @@ i:after {
   line-height: 18px;
   font-size: 14px;
   padding: 2px 4px;
-  border: 1px solid #333;
+  border: 1px solid var(--tooltip-color);
   box-shadow: 3px 5px 6px 0.2px rgba(30,30,30,0.5);
   opacity: 0;
-  text-shadow : 0 0 0 #333;
+  text-shadow : 0 0 0 var(--tooltip-color);
 }
 *[tooltip]{
   position:relative;
@@ -107,396 +114,12 @@ td>i:hover:after{
 :focus{
   outline: none;
 }
-.icon-monogame:before {
-  content: "\e904";
-}
-.icon-csharp:before {
-  content: "\e903";
-}
-.icon-python:before {
-  content: "\e901";
-}
-.icon-js:before {
-  content: "\e900";
-}
-.icon-gamepad:before {
-  content: "\f11b";
-}
-.icon-child:before {
-  content: "\f1ae";
-}
-.icon-git-branch:before {
-  content: "\f020";
-}
-.icon-home:before {
-  content: "\e902";
-}
-.icon-edit:before {
-  content: "\e906";
-}
-.icon-image:before {
-  content: "\e90d";
-}
-.icon-images:before {
-  content: "\e90e";
-}
-.icon-camera:before {
-  content: "\e90f";
-}
-.icon-wifi:before {
-  content: "\e91b";
-}
-.icon-zip:before {
-  content: "\e92b";
-}
-.icon-download:before {
-  content: "\e933";
-}
-.icon-qrcode:before {
-  content: "\e938";
-}
-.icon-coin-dollar:before {
-  content: "\e93b";
-}
-.icon-coin-euro:before {
-  content: "\e93c";
-}
-.icon-coin-pound:before {
-  content: "\e93d";
-}
-.icon-coin-yen:before {
-  content: "\e93e";
-}
-.icon-lifebuoy:before {
-  content: "\e941";
-}
-.icon-printer:before {
-  content: "\e954";
-}
-.icon-display:before {
-  content: "\e956";
-}
-.icon-laptop:before {
-  content: "\e957";
-}
-.icon-mobile:before {
-  content: "\e958";
-}
-.icon-mobile2:before {
-  content: "\e959";
-}
-.icon-tablet:before {
-  content: "\e95a";
-}
-.icon-tv:before {
-  content: "\e95b";
-}
-.icon-search:before {
-  content: "\e986";
-}
-.icon-key:before {
-  content: "\e98d";
-}
-.icon-lock:before {
-  content: "\e98f";
-}
-.icon-unlocked:before {
-  content: "\e990";
-}
-.icon-settings:before {
-  content: "\e992";
-}
-.icon-gear:before {
-  content: "\e994";
-}
-.icon-cogs:before {
-  content: "\e995";
-}
-.icon-bug:before {
-  content: "\e999";
-}
-.icon-stats-dots:before {
-  content: "\e99b";
-}
-.icon-gift:before {
-  content: "\e99f";
-}
-.icon-meter:before {
-  content: "\e9a6";
-}
-.icon-fire:before {
-  content: "\e9a9";
-}
-.icon-lab:before {
-  content: "\e9aa";
-}
-.icon-magnet:before {
-  content: "\e9ab";
-}
-.icon-delete:before {
-  content: "\e9ac";
-}
-.icon-briefcase:before {
-  content: "\e9ae";
-}
-.icon-airplane:before {
-  content: "\e9af";
-}
-.icon-truck:before {
-  content: "\e9b0";
-}
-.icon-switch:before {
-  content: "\e9b6";
-}
-.icon-menu:before {
-  content: "\e9bd";
-}
-.icon-download2:before {
-  content: "\e9c7";
-}
-.icon-sphere:before {
-  content: "\e9c9";
-}
-.icon-earth:before {
-  content: "\e9ca";
-}
-.icon-link:before {
-  content: "\e9cb";
-}
-.icon-sun:before {
-  content: "\e9d4";
-}
-.icon-star-empty:before {
-  content: "\e9d7";
-}
-.icon-star-half:before {
-  content: "\e9d8";
-}
-.icon-star-full:before {
-  content: "\e9d9";
-}
-.icon-warning:before {
-  content: "\ea07";
-}
-.icon-notification:before {
-  content: "\ea08";
-}
-.icon-info:before {
-  content: "\ea0c";
-}
-.icon-cancel-circle:before {
-  content: "\ea0d";
-}
-.icon-blocked:before {
-  content: "\ea0e";
-}
-.icon-cross:before {
-  content: "\ea0f";
-}
-.icon-checkmark:before {
-  content: "\ea10";
-}
-.icon-play2:before {
-  content: "\ea15";
-}
-.icon-pause:before {
-  content: "\ea16";
-}
-.icon-stop:before {
-  content: "\ea17";
-}
-.icon-play:before {
-  content: "\ea1c";
-}
-.icon-pause2:before {
-  content: "\ea1d";
-}
-.icon-stop2:before {
-  content: "\ea1e";
-}
-.icon-volume-high:before {
-  content: "\ea26";
-}
-.icon-circle-up:before {
-  content: "\ea41";
-}
-.icon-circle-right:before {
-  content: "\ea42";
-}
-.icon-circle-down:before {
-  content: "\ea43";
-}
-.icon-circle-left:before {
-  content: "\ea44";
-}
-.icon-paragraph-justify:before {
-  content: "\ea7a";
-}
-.icon-embed:before {
-  content: "\ea7f";
-}
-.icon-embed2:before {
-  content: "\ea80";
-}
-.icon-terminal:before {
-  content: "\ea81";
-}
-.icon-share2:before {
-  content: "\ea82";
-}
-.icon-mail:before {
-  content: "\ea83";
-}
-.icon-amazon:before {
-  content: "\ea87";
-}
-.icon-google-drive:before {
-  content: "\ea8f";
-}
-.icon-facebook:before {
-  content: "\ea91";
-}
-.icon-twitter:before {
-  content: "\ea96";
-}
-.icon-vine:before {
-  content: "\ea97";
-}
-.icon-youtube:before {
-  content: "\ea9d";
-}
-.icon-youtube2:before {
-  content: "\ea9e";
-}
-.icon-twitch:before {
-  content: "\ea9f";
-}
-.icon-steam2:before {
-  content: "\eaac";
-}
-.icon-steam:before {
-  content: "\eaad";
-}
-.icon-dropbox:before {
-  content: "\eaae";
-}
-.icon-onedrive:before {
-  content: "\eaaf";
-}
-.icon-github:before {
-  content: "\eab0";
-}
-.icon-wordpress:before {
-  content: "\eab4";
-}
-.icon-tumblr:before {
-  content: "\eab9";
-}
-.icon-tumblr2:before {
-  content: "\eaba";
-}
-.icon-linux:before {
-  content: "\eabd";
-}
-.icon-apple:before {
-  content: "\eabe";
-}
-.icon-mac:before {
-  content: "\eabf";
-}
-.icon-android:before {
-  content: "\eac0";
-}
-.icon-windows:before {
-  content: "\eac1";
-}
-.icon-windows8:before {
-  content: "\eac2";
-}
-.icon-skype:before {
-  content: "\eac5";
-}
-.icon-reddit:before {
-  content: "\eac6";
-}
-.icon-wikipedia:before {
-  content: "\eac8";
-}
-.icon-stumbleupon:before {
-  content: "\eace";
-}
-.icon-stumbleupon2:before {
-  content: "\eacf";
-}
-.icon-stackoverflow:before {
-  content: "\ead0";
-}
-.icon-pinterest:before {
-  content: "\ead1";
-}
-.icon-pinterest2:before {
-  content: "\ead2";
-}
-.icon-yelp:before {
-  content: "\ead7";
-}
-.icon-paypal:before {
-  content: "\ead8";
-}
-.icon-chrome:before {
-  content: "\ead9";
-}
-.icon-firefox:before {
-  content: "\eada";
-}
-.icon-IE:before {
-  content: "\eadb";
-}
-.icon-edge:before {
-  content: "\eadc";
-}
-.icon-safari:before {
-  content: "\eadd";
-}
-.icon-opera:before {
-  content: "\eade";
-}
-.icon-html-five:before {
-  content: "\eae4";
-}
-.icon-html-five2:before {
-  content: "\eae5";
-}
-.icon-css3:before {
-  content: "\eae6";
-}
-.icon-git:before {
-  content: "\eae7";
-}
-.icon-codepen:before {
-  content: "\eae8";
-}
-.icon-chevron-down:before {
-  content: "\f0a3";
-}
-.icon-lightning:before {
-  content: "\26a1";
-}
-.icon-book:before {
-  content: "\e91f";
-}
-.icon-books:before {
-  content: "\e920";
-}
-.icon-profile:before {
-  content: "\e923";
-}
-.icon-files-empty:before {
-  content: "\e925";
-}
-.icon-file-text2:before {
-  content: "\e926";
-}
+
+.t,.t::before{
+	color: var(--primary-color);
+	fill: var(--primary-color);
+}
+
 .icon-monogame.t:after{
   content: "MonoGame";
 }
@@ -562,14 +185,25 @@ td>i:hover:after{
 }
 .icon-html-five.t:after,
 .icon-html-five2.t:after{
-  content: "HTML5"
+  content: "HTML5";
 }
+
+.icon-tensorflow.t:after{
+	content:"TensorFlow";
+}
+.icon-globe.t:after{
+	content:"Web";
+}
+.icon-terminal.t:after{
+	content: "CLI";
+}
+
 
 
 html,
 body{
-  background-color: #333;
-  color: #ddd;
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
   height: 100%;  
 }
 html{
@@ -584,38 +218,39 @@ body{
 }
 p{
   font-size: 16px;
-  line-height: 1.42857143;
+  line-height: 1.5;
 }
 .footer>p{
   font-size:14px;
 }
 .content{
-  margin-top: 52px;
+	margin-top: var(--content-padding-top);
 	min-height: 100%;
-	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: auto !important;
 	height: 100%;
-  width: 100%;
-	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+	width: 100%;
+	margin: 0 auto calc(0px - var(--footer-height)); /* the bottom margin is the negative value of the footer's height */
 }
 .footer, .push {
-	height: 50px; /* .push must be the same height as .footer */
+	height: var(--footer-height); /* .push must be the same height as .footer */
 }
 
 .footer{
-    width: 100%;
-    background-color: #222; 
-    vertical-align: middle;
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    clear:both;
-    z-index: 100 !important;
+	width: 100%;
+	background-color: var(--nav-background-color); 
+	color: var(--nav-color);
+	vertical-align: middle;
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: center;
+	clear:both;
+	z-index: 100 !important;
 }
 .wrapper{
   width: 85%;
   margin-right: 0;
-  padding-top: 52px;
+  padding-top: var(--navbar-height);
   margin-left: auto;
 }
 div>ul{
@@ -627,7 +262,7 @@ a, a:hover, a:active, a:visited{
 }
 .brand{
   font-size: 25px;
-  color: #9d9d9d;
+  color: var(--brand-color);
   padding: 15px;
   font-size: 18px;
 }
@@ -636,14 +271,14 @@ a, a:hover, a:active, a:visited{
   display: flex;
 }
 #brand  > a:hover{
-  color: white;
+  color: var(--brand-color-hover);
 }
 .site-nav{
   position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
-  background-color: #222;
+  background-color: var(--nav-background-color);
   
   display: -webkit-flex;
   display: flex;
@@ -664,7 +299,7 @@ a, a:hover, a:active, a:visited{
     display:inline-table;
     margin: 0 0 0 10px;
     padding: 0;
-    background-color: #222;
+    background-color: var(--nav-background-color);
     height: 50px;
 }
 .nav > ul > li > a {
@@ -679,21 +314,21 @@ a, a:hover, a:active, a:visited{
 .nav > ul > li {
     display: inline-block;
     text-align: center;
-    background-color: #222;
-    color: #9d9d9d;
+    background-color: var(--nav-background-color);
+    color: var(--nav-color);
     min-width: 50px;
     margin: 0;
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid var(--nav-background-color);
 }
 .nav > ul > li:not(:first-child):hover {
     color: white;
-    border-bottom: 2px solid #9d9d9d;
+    border-bottom: 2px solid var(--nav-color);
 }
 .nav > ul > .active,
 .nav > ul > .active:hover{
-    color: white;
-    text-color:white;
-    border-bottom: 2px solid white;
+    color: var(--nav-color-hover);
+    text-color: var(--nav-color-hover);
+    border-bottom: 2px solid var(--nav-color-hover);
     margin: 0;
 }
 
@@ -708,9 +343,9 @@ a, a:hover, a:active, a:visited{
   line-height: 16px;
   font-size:14px;
   position: relative;
-  left: -22px;
+  left: -25px;
   top: -1px;
-  color: #222;
+  color: var(--search-button-color);
   cursor: pointer;
 }
 
@@ -720,7 +355,7 @@ input[type=search]::-ms-clear {
   height: 16px;
   line-height: 16px;
   font-family: 'icomoon' !important;
-  color:#444;
+  color: var(--search-color);
   padding-left:4px;
   margin-right: -4px;
   font-size: 8px; 
@@ -728,9 +363,8 @@ input[type=search]::-ms-clear {
 
 input[type=search]::-ms-clear:before{
   font-family: 'icomoon' !important;
-
   content: "\e906";
-    width: 16px;
+  width: 16px;
   height: 16px;
 }
 input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
@@ -741,7 +375,7 @@ input[type="search"]::-webkit-search-results-button{
   height: 16px;
   line-height: 16px;
   font-family: 'icomoon' !important;
-  color:#444;
+  color:var(--search-color);
   padding-left:0px;
   margin-right: 4px;
   font-size: 12px;
@@ -750,9 +384,8 @@ input[type="search"]::-webkit-search-results-button{
 input[type="search"]::-webkit-search-cancel-button:before,
 input[type="search"]::-webkit-search-results-button:before{ 
   font-family: 'icomoon' !important;
-
   content: "\e906";
-    width: 16px;
+  width: 16px;
   height: 16px;
 }
 li>input{
@@ -768,7 +401,8 @@ li>input{
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
   -o-transition: all 0.30s ease-in-out;
-  border: 1px solid transparent;
+  border: 1px solid #999;
+  border-width: 0px 1px 1px 0px;
 } 
 li>input:focus
 .button:focus{
@@ -815,7 +449,7 @@ li>input:focus
     
 }
 .side-nav > ul > li > a {
-  background-color: #666;
+	background-color: #666;
     width: 106px;
     display: block;
     line-height: 20px;
@@ -878,18 +512,39 @@ hr.d {
     margin-left: 30px;
     margin-bottom: 0;
     background: #333;
+	overflow:visible;
 }
-hr.d:after {
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}
+hr.d::after {
     font-family: 'icomoon';
-    content:"\26a1";
+    content:"\f2dd";
     display: inline-block;
     position: relative;
-    top: -0.56em;
+    top: -0.80em;
     font-size: 1.5em;
-    padding: 0 0.25em;
+    padding: 0.25em;
+	aspect-ratio: 1 / 1;
+    height: 1em;
     background: inherit;
-    color: #4c4c4c;
+    color: #5c5c5c;
+	animation: rotation 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
     text-shadow: none;
+    border-radius: 50%;
+}
+hr.s::after{
+	content:"\ece7";
 }
 .main-content{
   padding-top: 52px 20px 0 170px;
@@ -1210,6 +865,8 @@ fieldset[disabled] .btn-default{
   font-size: 20px;
   position:relative;
   top:2px;
+  justify-content: center;
+	display: inline-flex;
 }
 x-alert > button{
   background: none;
@@ -1315,8 +972,8 @@ x-alert>span>div>div{
 .coverbutton>a{
   padding: 10px 20px;
   margin: 5px;
-  color: #333;
-  background: #ddd;
+  color: var(--primary-background-color);
+  background: var(--primary-color);
   font-size: 16px;
   font-weight: bold;
 }
@@ -1346,7 +1003,7 @@ x-alert>span>div>div{
     top: 0;
     z-index: 1000;
     width: 100%;
-    background-color: #222;
+    background-color: var(--nav-background-color);
     
     display: -webkit-flex;
     display: flex;
@@ -1365,7 +1022,7 @@ x-alert>span>div>div{
       width: 80%;
   }
   .nav > ul > li{
-    border-bottom-color: #222;
+    border-bottom-color: var(--nav-background-color);
   }
   .nav > ul > li.active{
     border-bottom-color: #fff;
@@ -1376,7 +1033,7 @@ x-alert>span>div>div{
       display:none;
       margin: 0;
       padding: 0;
-      background-color: #222;
+      background-color: var(--nav-background-color);
       height: 43px;
       width: 100%;
   }
@@ -1394,9 +1051,9 @@ x-alert>span>div>div{
   .nav > ul > li {
       display:list-item;
       text-align: center;
-      background-color: #222;
+      background-color: var(--nav-background-color);
       height:100%;
-      color: #9d9d9d;
+      color: var(--brand-color);
       margin: 0;
       width: 100%;
       border-top: 1px solid #262626;
