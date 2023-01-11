@@ -24,7 +24,13 @@
   
   --search-button-color: #222;
   --search-color-def: #444;
-	--search-color: #333;  
+  --search-color: #333;  
+  
+  --navbar-height: 52px;
+  --content-shift: 20px;
+  --content-padding-top: calc(var(--content-shift) + var(--navbar-height));
+  
+  --footer-height: 50px;
 }
 
 i:before{
@@ -218,15 +224,15 @@ p{
   font-size:14px;
 }
 .content{
-	margin-top: 52px;
+	margin-top: var(--content-padding-top);
 	min-height: 100%;
-	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: auto !important;
 	height: 100%;
 	width: 100%;
-	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto calc(0px - var(--footer-height)); /* the bottom margin is the negative value of the footer's height */
 }
 .footer, .push {
-	height: 50px; /* .push must be the same height as .footer */
+	height: var(--footer-height); /* .push must be the same height as .footer */
 }
 
 .footer{
@@ -244,7 +250,7 @@ p{
 .wrapper{
   width: 85%;
   margin-right: 0;
-  padding-top: 52px;
+  padding-top: var(--navbar-height);
   margin-left: auto;
 }
 div>ul{
@@ -337,7 +343,7 @@ a, a:hover, a:active, a:visited{
   line-height: 16px;
   font-size:14px;
   position: relative;
-  left: -22px;
+  left: -25px;
   top: -1px;
   color: var(--search-button-color);
   cursor: pointer;
@@ -516,7 +522,7 @@ hr.d {
     transform: rotate(-359deg);
   }
 }
-hr.d:after {
+hr.d::after {
     font-family: 'icomoon';
     content:"\f2dd";
     display: inline-block;
@@ -536,6 +542,9 @@ hr.d:after {
 	-o-transform: rotate(-30deg);
     text-shadow: none;
     border-radius: 50%;
+}
+hr.s::after{
+	content:"\ece7";
 }
 .main-content{
   padding-top: 52px 20px 0 170px;
