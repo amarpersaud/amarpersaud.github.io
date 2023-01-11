@@ -843,20 +843,20 @@ fieldset[disabled] .btn-default{
 .nm{
   margin-bottom: 0;
 }
-.project{
+.projectlist{
 
 }
 .project>h2{
   margin-bottom:0;
 }
-.project>div{
+.project{
   margin-bottom:25px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #666;
 }
 
 
-.project>div:last-of-type{
+.projectlist>.project:last-of-type{
   margin-bottom:0;
   border-bottom: none;
 }
@@ -869,7 +869,7 @@ fieldset[disabled] .btn-default{
   position:relative;
   top:2px;
   justify-content: center;
-	display: inline-flex;
+  display: inline-flex;
 }
 x-alert > button{
   background: none;
