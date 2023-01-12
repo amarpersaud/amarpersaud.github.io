@@ -363,7 +363,7 @@ input[type=search]::-ms-clear {
 
 input[type=search]::-ms-clear:before{
   font-family: 'icomoon' !important;
-  content: "\e906";
+  content: "\ed8e";
   width: 16px;
   height: 16px;
 }
@@ -384,7 +384,7 @@ input[type="search"]::-webkit-search-results-button{
 input[type="search"]::-webkit-search-cancel-button:before,
 input[type="search"]::-webkit-search-results-button:before{ 
   font-family: 'icomoon' !important;
-  content: "\e906";
+  content: "\ed8e";
   width: 16px;
   height: 16px;
 }
