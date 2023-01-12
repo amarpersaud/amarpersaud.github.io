@@ -575,9 +575,9 @@ hr.s::after{
 .indentp{
     padding-left: 2.0em;
 }
-  .dropdown.indentp{
+.dropdown.indentp{
     margin-left:1.0em;
-  }
+}
 .indent, .indent>p .indent>h3 {
     text-indent: 2.0em;
 }
@@ -631,13 +631,15 @@ hr.s::after{
 } 
 .dropdown > div:after{
   font-family: 'icomoon';
-  content: "\f0a3";
+  content: "\edc4";
   text-shadow: none;
   display: inline-block;
   font-size: 12px;
   position:relative;
-  right: -6px;
-
+  right: -4px;
+}
+.dropdown-right:after{
+  content: "\edc3";
 }
 .dropdown > div,
 .button{
@@ -666,7 +668,7 @@ a.button{
   margin: 0 2px;
 }
 .dropdown > div{
-  padding-right: 15px;
+  padding-right: 12px;
 }
 .p-complete{
   color: #5cb85c;
