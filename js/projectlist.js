@@ -1,12 +1,18 @@
+let allProjects = [];
 
 function filterProjectList(){
+	var template = document.querySelector("#projecttemplate");
 	
-	console.log("filtering projects");
+	//Count for number of projects in each category
+	var numActiveProjects = 0;
+	var numInactiveProjects = 0;
+	var numCompletedProjects = 0;
+	
 }
 
 
 function getProjectList(arg){
-	console.log("Loaded json");
+	allProjects = arg;
 	filterProjectList();
 }
 
