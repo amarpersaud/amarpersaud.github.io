@@ -11,7 +11,7 @@ var idx = lunr(function () {
       this.field('Desc');
       this.ref('Id');
   });
-function myFunction(arg){
+function findSearchResults(arg){
   resultcontainer.innerHTML = "";
   txt = arg;
   for(i=0;i<arg.data.length;i++){
@@ -45,4 +45,4 @@ function filter(arg){
     }
   titleelement.innerHTML = "A.P. Search - " + searchbar.value;
 }
-getjson(myFunction, "search_index.json");
+getjson(findSearchResults, "search_index.json");
