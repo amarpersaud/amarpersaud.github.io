@@ -97,7 +97,8 @@
 
 			],
 			"Tags": [
-				"Programming"
+				"Programming",
+				"Web"
 			],
 			"Status": "Active",
 			"Importance": "Major",
@@ -176,7 +177,8 @@
 
 			],
 			"Tags": [
-				"Programming"
+				"Programming",
+				"Web"
 			],
 			"Status": "Complete",
 			"Importance": "Minor",
