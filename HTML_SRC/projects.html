@@ -15,6 +15,27 @@
       <div class="container">
         <h1 class="page-header">Projects</h1>
         <hr class="d"/>  
+		<div class="filterbar">
+				Importance:
+				<div class="dropdown" active="0" id="projectImportance">
+					<div class="button"></div>
+					<ul>
+					  <li><a class="btn-success" data-value="major" data-cs="btn-success">Major</a></li>
+					  <li><a class="btn-info" data-value="minor" data-cs="btn-info">Minor</a></li>
+					  <li><a class="btn-default" data-value="all" data-cs="btn-default">All</a></li>
+					</ul>
+				</div>
+				<span style="padding-left: 8px;">Project type:</span>
+				<div class="dropdown" active="0" id="projectType">
+					<div class="button"></div>
+					<ul>
+					  <li><a class="btn-success" data-value="electronics" data-cs="btn-success">Electronics</a></li>
+					  <li><a class="btn-warning" data-value="programming" data-cs="btn-warning">Programming</a></li>
+					  <li><a class="btn-info" data-value="web" data-cs="btn-info">Web</a></li>
+					  <li><a class="btn-default" data-value="all" data-cs="btn-default">All</a></li>
+					</ul>
+				</div>
+		</div>
         <div id="CompletedProjectContainer">
 			<h2>Complete</h2>
 			<div class="indentp projectlist" style="border-left:2px dashed #5cb85c;" id="CompletedProjectList"> 
