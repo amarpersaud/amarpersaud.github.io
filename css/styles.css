@@ -187,7 +187,6 @@ td>i:hover:after{
 .icon-html-five2.t:after{
   content: "HTML5";
 }
-
 .icon-tensorflow.t:after{
 	content:"TensorFlow";
 }
@@ -195,7 +194,10 @@ td>i:hover:after{
 	content:"Web";
 }
 .icon-terminal.t:after{
-	content: "CLI";
+	content: "Programming";
+}
+.icon-microchip.t:after{
+	content: "Electronics";
 }
 
 
@@ -866,7 +868,7 @@ fieldset[disabled] .btn-default{
   font-size:16px;
   margin: 12px 0;
 }
-.project>div>p>i{
+.projecticon{
   font-size: 20px;
   position:relative;
   top:2px;
