@@ -1,12 +1,24 @@
+  
+  /* elements */
+  
   searchbarid = "searchbox";
   searchbuttonid = "search-button";
   searchbar = document.getElementById(searchbarid);
   searchbutton = document.getElementById(searchbuttonid);
   
+  /* Functions */
+  
   Number.prototype.clamp = function(min, max) {
       return Math.min(Math.max(this, min), max);
   };
-function GetURLParameter(sParam)
+  
+  // find closest ancestor with class cls
+  function findAncestor (el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
+  }
+  //Get parameter from URL
+  function GetURLParameter(sParam)
   {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
@@ -19,6 +31,8 @@ function GetURLParameter(sParam)
       }
     }
   }
+  
+  //Get json from url and process in function func
   function getjson(func, url){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -31,10 +45,14 @@ function GetURLParameter(sParam)
     xmlhttp.send();
   }
   
-  
+  //Redirect to search 
   function search(text){
       location.href = "search?q=" + encodeURIComponent(text);
   }
+  
+  
+  /* run on load */
+
   // Bind to onkeyup and onclick to search function
   searchbar.onkeyup = function(){
     if (event.keyCode == 13){
@@ -45,7 +63,7 @@ function GetURLParameter(sParam)
     search(searchbar.value);
   }
    
-   var navopen = false;
+  var navopen = false;
    
   document.getElementsByClassName("openbutton")[0].onclick = function(){
     navigation = document.getElementsByClassName("nav")[0].getElementsByTagName("ul")[0];
@@ -76,6 +94,8 @@ function GetURLParameter(sParam)
   if(pgid != ""){
     document.getElementById(pgid).style.className = "active";
   }
+  
+  //Detect click on dropdowns
   document.onmousedown = function(event){
     if(!(event.target.classList.contains("dropdown")) && !(findAncestor(event.target, "dropdown"))){
       s=document.getElementsByClassName("dropdown");
@@ -124,8 +144,4 @@ function GetURLParameter(sParam)
       }
     }
   }
-  // find closest ancestor with class cls
-  function findAncestor (el, cls) {
-    while ((el = el.parentElement) && !el.classList.contains(cls));
-    return el;
-  }
+  
