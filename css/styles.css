@@ -594,9 +594,9 @@ hr.s::after{
   position:relative;
   top: -2px;
 }
-.dropdown > ul > a{
+.dropdown > ul > li > a{
   display: block;
-  padding: 8px 10px 8px 20px;
+  padding: 8px 20px 8px 20px;
 }
 .dropdown > ul{
   cursor: pointer;
@@ -610,7 +610,7 @@ hr.s::after{
   border-radius: 3px;
   overflow:hidden;
   position: absolute;
-  width: 150px;
+  /*min-width: 100px; */
   border: 0.5px solid #333;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0px 4px 12px 1px rgba(255, 255, 255, 0.1);
@@ -637,8 +637,8 @@ hr.s::after{
   text-shadow: none;
   display: inline-block;
   font-size: 12px;
-  position:relative;
-  right: -4px;
+  position:absolute;
+  right: 10px;
 }
 .dropdown-right:after{
   content: "\edc3";
@@ -663,14 +663,16 @@ hr.s::after{
   
 }
 a.button{
-  height: 20px;
+  height: 22px;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 22px;
   margin: 0 2px;
 }
 .dropdown > div{
   padding-right: 12px;
+  padding-left: 14px;
+  text-align: left;
 }
 .p-complete{
   color: #5cb85c;
@@ -984,6 +986,19 @@ x-alert>span>div>div{
   font-size: 16px;
   font-weight: bold;
 }
+.filterbar{
+  padding: 9px 15px;
+  border: 1px solid #222;
+  max-width: 80%;
+  margin: 0 auto;
+  background: #222230;
+  border-radius: 7px;
+}
+.filterbar span:first-of-type{
+	margin-right:auto;
+}
+
+
 
 @media screen and (max-width: 760px) {
   #brand{
