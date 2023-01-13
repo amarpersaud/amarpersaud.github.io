@@ -11,7 +11,12 @@
   Number.prototype.clamp = function(min, max) {
       return Math.min(Math.max(this, min), max);
   };
-  
+  function showElem(elem){
+	elem.setAttribute("style","visibility: visible; opacity: 1;");
+  }  
+  function hideElem(elem){
+	elem.setAttribute("style","visibility: hidden; opacity: 0; display:none;");
+  }
   // find closest ancestor with class cls
   function findAncestor (el, cls) {
     while ((el != null) && !el.classList.contains(cls) && (el = el.parentElement));
@@ -187,7 +192,14 @@
 			ddb.setAttribute("class", ddb.getAttribute("defaultClass") + " " + event.currentTarget.getAttribute("data-cs")); //Add on the item's data-cs attribute to the class
 		}
 		
-        dd.dispatchEvent(dropdownValueChanged);
+        dd.dispatchEvent(dropdownValueChanged);				//Trigger custom event
+        if ("createEvent" in document) {					//Trigger onchange event: https://stackoverflow.com/questions/2856513/how-can-i-trigger-an-onchange-event-manually
+			var evt = document.createEvent("HTMLEvents");
+			evt.initEvent("change", false, true);
+			dd.dispatchEvent(evt);
+		}
+		else
+			dd.fireEvent("onchange");
       }
     }
 	var style = dropdownButton.currentStyle || window.getComputedStyle(dropdownButton);
