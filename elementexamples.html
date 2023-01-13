@@ -10,10 +10,10 @@
   <link href="css/styles.min.css" rel="stylesheet" type="text/css">
    <link href="css/theme/info.min.css" rel="stylesheet" type="text/css"/>
   </link>
-  <meta content="About, me, motivations, interests" name="Keywords"/>
-  <meta content="Amar Persaud - About me: Interests, Motivations, Qualifications" name="Description"/>
+  <meta content="example, HTML, elements" name="Keywords"/>
+  <meta content="Amar Persaud - Example HTML Elements" name="Description"/>
   <title>
-   Amar Persaud - About Me
+   Amar Persaud - Projects
   </title>
  </head>
  <body>
@@ -56,38 +56,39 @@
   <div class="content">
    <div class="container">
     <h1 class="page-header">
-     About
+     Example Elements
     </h1>
     <hr class="d"/>
-    <h2 class="sub-header">
-     Who am I?
+    <h2>
+     Dropdown
     </h2>
-    <div class="indentp indent l">
-     <p>
-      I am a 22 year old university student who likes science, math, electronics and programming.
-     </p>
-     <p>
-      I currently attend SUNY Stony Brook University, pursuing a degree in Electrical Engineering.
-     </p>
-    </div>
-    <h2 class="sub-header">
-     Major Projects
-    </h2>
-    <div class="indentp indent">
+    <div active="0" class="dropdown indentp" id="mainColorDropdown">
+     <div class="btn-default" id="colorbutton">
+      Red
+     </div>
      <ul>
-      <li>
-       Feed Forward Neural Network and TensorFlow based autoencoder
-      </li>
-      <li>
-       Portable Eurorack Compatible Synthesizer
-      </li>
-      <li>
-       This website
-      </li>
+      <a class="btn-danger" data-value="danger">
+       Red
+      </a>
+      <a class="btn-success" data-value="success">
+       Green
+      </a>
+      <a class="btn-warning" data-value="warning">
+       Orange
+      </a>
+      <a class="btn-primary" data-value="primary">
+       Blue
+      </a>
+      <a class="btn-info" data-value="info">
+       Light Blue
+      </a>
+      <a class="btn-default" data-value="default">
+       White
+      </a>
      </ul>
     </div>
-   </div>
-   <div class="push">
+    <div class="push">
+    </div>
    </div>
   </div>
   <div class="footer">
@@ -96,7 +97,7 @@
    </p>
   </div>
   <!-- Added to end to make loading go a bit faster -->
-  <script src="js/js.min.js" type="text/javascript">
+  <script src="/js/js.min.js" type="text/javascript">
   </script>
  </body>
 </html>

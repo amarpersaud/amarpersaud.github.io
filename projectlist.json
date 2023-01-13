@@ -1,0 +1,188 @@
+{
+  "data": 
+    [
+		{
+			"Title": "Portable Eurorack Compatible Synthesizer with Voice Cards", 
+			"Desc": "A portable, battery powered synthesizer featuring a voltage controlled amplifier, band-pass voltage controlled filter (independent cutoff frequency) with resonance, voltage controlled amplifier, and voltage controlled ADSR envelope generator. The device is comprised of one or more stackable voice cards, backplane PCB with input potentiometers and switches, and a modular lithium cell power supply with USB-PD charging and ±12V and ±5V output rails. The input PCB also features a microcontroller which communicates with each voice card to allow polyphony.",
+			"ProjectIcon": "icon-microchip",
+			"TechnologyIcons":[],
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Electronics",
+				"Programming"
+			],
+			"Status": "Complete",
+			"Importance": "Major",
+			"Id": 0
+		},
+		{
+			"Title": "Low cost electronic braille display module", 
+			"Desc": "A low cost design for an electronic braille display module. The module uses latching solenoids actuated with H-bridge drivers, incorporating a low cost embedded microcontroller to communicate over SPI, I²C or USART as a slave device.",
+			"ProjectIcon": "icon-microchip",
+			"TechnologyIcons":[],
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Electronics",
+				"Programming",
+				"CAD"
+			],
+			"Status": "Complete",
+			"Importance": "Major",
+			"Id": 1
+		},		
+		{
+			"Title": "Back Propagation Feed Forward Neural Network", 
+			"Desc": "A feed-forward neural network trained using back propagation. Written in C#, and run on the CPU. The example shows the network trained to identify which 2x2 image is displayed (dot in a corner, diagonal, vertical or horizonal lines). Though the example does not use a separate verification set due to the small network size and simplicity, one could run a separate verification step.",
+			"ProjectIcon": "icon-terminal",
+			"TechnologyIcons":
+			[
+				"icon-python",
+				"icon-tensorflow"
+			],
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud/TFFaceAutoEncoder",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Programming"
+			],
+			"Status": "Complete",
+			"Importance": "Major",
+			"Id": 2
+		},		
+		{
+			"Title": "This Website", 
+			"Desc": "A feed-forward neural network trained using back propagation. Written in C#, and run on the CPU. The example shows the network trained to identify which 2x2 image is displayed (dot in a corner, diagonal, vertical or horizonal lines). Though the example does not use a separate verification set due to the small network size and simplicity, one could run a separate verification step.",
+			"ProjectIcon": "icon-sphere",
+			"TechnologyIcons":
+			[
+				"icon-html-five2",
+				"icon-css3",
+				"icon-js",
+				"icon-python"
+			],
+			"Buttons": 
+			[	
+				{
+					"Text": "Home",
+					"Link": "https://amarpersaud.github.io",
+					"Tooltip": "Home Page"
+				},
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud/amarpersaud.github.io",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Programming",
+				"Web"
+			],
+			"Status": "Active",
+			"Importance": "Major",
+			"Id": 3
+		},
+		{
+			"Title": "Quine", 
+			"Desc": "A simple quine written in C#. Quines are programs whose output is identical to their source code.",
+			"ProjectIcon": "icon-terminal",
+			"TechnologyIcons":
+			[
+				"icon-csharp"
+			],
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud/Quine",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Programming"
+			],
+			"Status": "Complete",
+			"Importance": "Minor",
+			"Id": 4
+		},
+		{
+			"Title": "A* Maze Solver", 
+			"Desc": "A maze solver written in C#, using the A* pathfinding algorithm. Takes a PNG file as input and outputs a PNG file with the path solving the maze.",
+			"ProjectIcon": "icon-terminal",
+			"TechnologyIcons":
+			[
+				"icon-csharp"
+			],
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud/MazeSolver",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Programming"
+			],
+			"Status": "Complete",
+			"Importance": "Minor",
+			"Id": 5
+		},
+		{
+			"Title": "Div Range Sliders", 
+			"Desc": "Range sliders made from divs with very little javascript. No external libraries required (no jQuery).",
+			"ProjectIcon": "icon-sphere",
+			"TechnologyIcons":
+			[
+				"icon-html-five2",
+				"icon-css3",
+				"icon-js"
+			],
+			"Buttons": 
+			[
+				{
+					"Text": "Demo",
+					"Link": "/project/rangeslider/",
+					"Tooltip": "Div Range Slider Demo"
+				},
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "#",
+					"Tooltip": "No GitHub Page yet"
+				}
+
+			],
+			"Tags": [
+				"Programming",
+				"Web"
+			],
+			"Status": "Complete",
+			"Importance": "Minor",
+			"Id": 6
+		}
+    ]
+}
