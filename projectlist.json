@@ -77,7 +77,7 @@
 			"ProjectIcon": "icon-sphere",
 			"TechnologyIcons":
 			[
-				"icon-html-five2"
+				"icon-html-five2",
 				"icon-css3",
 				"icon-js",
 				"icon-python"
@@ -85,7 +85,7 @@
 			"Buttons": 
 			[	
 				{
-					"Text": 'Home',
+					"Text": "Home",
 					"Link": "https://amarpersaud.github.io",
 					"Tooltip": "Home Page"
 				},
@@ -109,7 +109,7 @@
 			"ProjectIcon": "icon-terminal",
 			"TechnologyIcons":
 			[
-				"icon-csharp",
+				"icon-csharp"
 			],
 			"Buttons": 
 			[
@@ -133,7 +133,7 @@
 			"ProjectIcon": "icon-terminal",
 			"TechnologyIcons":
 			[
-				"icon-csharp",
+				"icon-csharp"
 			],
 			"Buttons": 
 			[
@@ -157,14 +157,14 @@
 			"ProjectIcon": "icon-sphere",
 			"TechnologyIcons":
 			[
-				"icon-html-five2"
+				"icon-html-five2",
 				"icon-css3",
 				"icon-js"
 			],
 			"Buttons": 
 			[
 				{
-					"Text": 'Demo',
+					"Text": "Demo",
 					"Link": "/project/rangeslider/",
 					"Tooltip": "Div Range Slider Demo"
 				},
@@ -181,6 +181,6 @@
 			"Status": "Complete",
 			"Importance": "Minor",
 			"Id": 6
-		},
+		}
     ]
 }
