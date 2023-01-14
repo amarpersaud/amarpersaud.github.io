@@ -5,20 +5,26 @@ searchbar.value = searchstring;
 counter = document.getElementById("count");
 titleelement = document.getElementsByTagName("title")[0];
 titleelement.innerHTML = "A.P. Search - " + searchstring;
-var idx = lunr(function () {
-      this.field('Title', { boost: 10 });
-      this.field('URI');
-      this.field('Desc');
-      this.field('Keywords');
-      this.ref('Id');
-  });
 
 var loadedPages = [];
 var pid = 0;
 
 function findSearchResults(){
   resultcontainer.innerHTML = "";
-	
+  
+  var idx = lunr(function () {
+      this.field('Title', { boost: 10 });
+      this.field('URI');
+      this.field('Desc');
+      this.field('Keywords');
+      this.ref('Id');
+	  console.log(loadedPages);
+	  
+	  loadedPages.forEach(function (doc) {
+		this.add(doc)
+	  }, this);
+  });
+  
   x = idx.search(searchstring);
   if(x.length == 0){
     resultcontainer.innerHTML += "No results found.";
@@ -51,7 +57,6 @@ function filter(arg){
 function addSearchResults(arg){
 	loadedPages = arg.data;
 	for(i=0;i<arg.data.length;i++){
-		idx.add(arg.data[i]);
 		if(arg.data[i].Id >= pid){
 			pid=arg.data[i].Id+1;
 		}
@@ -68,7 +73,6 @@ function addProjectSearchResults(arg){
 				Id: pid
 			};
 			loadedPages.push(newResult);
-			idx.add(newResult);
 			pid = pid+1;
 		}
 	}
