@@ -140,21 +140,32 @@
 	var dropdownButton = s[i].querySelector("div");				//Find the button
 	
 	if(items.length > 0){
-		firstItem = items[0].querySelector("a");					//Find the first item
+		var itm = null;
 		
-		
+		if(!s[i].hasAttribute("data-default")){
+			itm = items[0].querySelector("a");					//Find the first item
+		}
+		else{
+			for(j=0; j < items.length; j++){					//Find the default item
+				if(items[j].querySelector("a").getAttribute("data-value") == s[i].getAttribute("data-default"))					
+				{
+					itm = items[j].querySelector("a");
+					break;
+				}
+			}
+		}
 		dropdownButton.setAttribute("defaultClass", dropdownButton.getAttribute("class"));											//Cache the button's class in defaultClass attribute
 		
-		if(firstItem.hasAttribute("data-cs")){
-			dropdownButton.setAttribute("class",dropdownButton.getAttribute("defaultClass") + " " + firstItem.getAttribute("data-cs")); //Add on the first item's data-cs attribute to the class
+		if(itm.hasAttribute("data-cs")){
+			dropdownButton.setAttribute("class",dropdownButton.getAttribute("defaultClass") + " " + itm.getAttribute("data-cs")); //Add on the first item's data-cs attribute to the class
 		}
 		
-		dropdownButton.innerHTML = firstItem.innerHTML;																				// Pull the text from the first item	
-		if(firstItem.hasAttribute("data-value")){
-			s[i].setAttribute("value", firstItem.getAttribute("data-value"));														// set the default value to the first item's value		
+		dropdownButton.innerHTML = itm.innerHTML;																				// Pull the text from the first item	
+		if(itm.hasAttribute("data-value")){
+			s[i].setAttribute("value", itm.getAttribute("data-value"));														// set the default value to the first item's value		
 		}
 		else{			
-			s[i].setAttribute("value", firstItem.innerHTML);		
+			s[i].setAttribute("value", itm.innerHTML);		
 		}
 	}
     // open and close the menu when the button is clicked or an item is selected.
