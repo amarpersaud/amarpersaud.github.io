@@ -968,6 +968,8 @@ x-alert>span>div>div{
   display:flex;
   align-items: center;
   justify-content: center;
+  position:relative;
+  z-index: 2;
 }
 .cover-container>.box{
   max-width:40%;
@@ -1000,6 +1002,12 @@ x-alert>span>div>div{
 .filterbar>div{
 	display: inline-block;
 	padding: 4px 5px 4px 0;
+}
+
+.frontanimicon{
+	font-size: 20px;
+	position: fixed;
+	z-index: 1;
 }
 
 @media screen and (max-width: 760px) {
