@@ -21,6 +21,7 @@
 				"Electronics",
 				"Programming"
 			],
+			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, Portable, battery, eurorack, CV, filter, high pass, low pass, high-pass, low-pass, amplifier, ADSR, envelope generator, VCO, VCA, VCF, keyboard, microcontroller, mcu, embedded",
 			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 0
@@ -46,6 +47,7 @@
 				"Programming",
 				"CAD"
 			],
+			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, wire, steel, cost, electromagnet, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus",
 			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 1
@@ -73,6 +75,7 @@
 			"Tags": [
 				"Programming"
 			],
+			"Keywords" : "programming, coding, code, program, python, AI, machine learning, neural network, auto encoder, auto-encoder, back propagation, tensorflow, tensor flow, TF, object-oriented, object oriented",
 			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 2
@@ -109,6 +112,7 @@
 				"Programming",
 				"Web"
 			],
+			"Keywords" : "programming, coding, code, program, web, website, site, html, css, js, javascript, python, server, compiler, compile, minify, script",
 			"Status": "Active",
 			"Importance": "Major",
 			"Id": 3
@@ -136,6 +140,7 @@
 			"Tags": [
 				"Programming"
 			],
+			"Keywords" : "programming, coding, code, program, quine, virus, self replicating, replication, source, output, input, terminal, cmd, CLI",
 			"Status": "Complete",
 			"Importance": "Minor",
 			"Id": 4
@@ -162,6 +167,7 @@
 			"Tags": [
 				"Programming"
 			],
+			"Keywords" : "programming, coding, code, program, terminal, CLI, CMD, maze, solver, path, pathfinder, pathfinding, algorithm, A star, Astar, A-star, maze, image,",
 			"Status": "Complete",
 			"Importance": "Minor",
 			"Id": 5
@@ -196,6 +202,7 @@
 				"Programming",
 				"Web"
 			],
+			"Keywords" : "programming, coding, code, program, web, website, site, html, css, js, javascript, script, library, jQuery, range slider, sliders, div, thumb",
 			"Status": "Complete",
 			"Importance": "Minor",
 			"Id": 6
