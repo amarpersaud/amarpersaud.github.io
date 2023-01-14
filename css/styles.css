@@ -602,7 +602,7 @@ hr.s::after{
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.5s, opacity 0.2s linear;
+  transition: visibility 0.2s, opacity 0.2s;
   list-style: none;
   list-style-type: none;
   margin: 0;
@@ -614,6 +614,7 @@ hr.s::after{
   border: 0.5px solid #333;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0px 4px 12px 1px rgba(255, 255, 255, 0.1);
+  z-index: 10;
 }
 .dropdown-right>ul{
   position:absolute !important;
@@ -987,18 +988,17 @@ x-alert>span>div>div{
   font-weight: bold;
 }
 .filterbar{
-  padding: 9px 15px;
+  padding: 4px 15px;
   border: 1px solid #222;
   max-width: 80%;
   margin: 0 auto;
   background: #222230;
   border-radius: 7px;
 }
-.filterbar span:first-of-type{
-	margin-right:auto;
+.filterbar>div{
+	display: inline-block;
+	padding: 4px 5px 4px 0;
 }
-
-
 
 @media screen and (max-width: 760px) {
   #brand{
