@@ -52,7 +52,7 @@
   
   //Redirect to search 
   function search(text){
-      location.href = "search?q=" + encodeURIComponent(text);
+      location.href = "search.html?q=" + encodeURIComponent(text);
   }
   
   
