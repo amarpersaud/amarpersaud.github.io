@@ -6,6 +6,8 @@
 			"Desc": "A portable, battery powered synthesizer featuring a voltage controlled amplifier, band-pass voltage controlled filter (independent cutoff frequency) with resonance, voltage controlled amplifier, and voltage controlled ADSR envelope generator. The device is comprised of one or more stackable voice cards, backplane PCB with input potentiometers and switches, and a modular lithium cell power supply with USB-PD charging and ±12V and ±5V output rails. The input PCB also features a microcontroller which communicates with each voice card to allow polyphony.",
 			"ProjectIcon": "icon-microchip",
 			"TechnologyIcons":[],
+			"IncludeInSearch": true,
+			"MainPage": "https://github.com/amarpersaud",
 			"Buttons": 
 			[
 				{
@@ -24,10 +26,12 @@
 			"Id": 0
 		},
 		{
-			"Title": "Low cost electronic braille display module", 
+			"Title": "Low Cost Electronic Braille Display Module", 
 			"Desc": "A low cost design for an electronic braille display module. The module uses latching solenoids actuated with H-bridge drivers, incorporating a low cost embedded microcontroller to communicate over SPI, I²C or USART as a slave device.",
 			"ProjectIcon": "icon-microchip",
 			"TechnologyIcons":[],
+			"IncludeInSearch": true,
+			"MainPage": "https://github.com/amarpersaud",
 			"Buttons": 
 			[
 				{
@@ -55,6 +59,8 @@
 				"icon-python",
 				"icon-tensorflow"
 			],
+			"IncludeInSearch": true,
+			"MainPage": "https://github.com/amarpersaudTFFaceAutoEncoder",
 			"Buttons": 
 			[
 				{
@@ -73,7 +79,7 @@
 		},		
 		{
 			"Title": "This Website", 
-			"Desc": "A feed-forward neural network trained using back propagation. Written in C#, and run on the CPU. The example shows the network trained to identify which 2x2 image is displayed (dot in a corner, diagonal, vertical or horizonal lines). Though the example does not use a separate verification set due to the small network size and simplicity, one could run a separate verification step.",
+			"Desc": "This Website. Includes several Python scripts for static compilation of HTML (includes), minification of CSS/JS, and a local server for development use.",
 			"ProjectIcon": "icon-sphere",
 			"TechnologyIcons":
 			[
@@ -82,6 +88,9 @@
 				"icon-js",
 				"icon-python"
 			],
+			"IncludeInSearch": true,
+			"SearchTitle": "amarpersaud.github.io GitHub Page",
+			"MainPage": "https://github.com/amarpersaud/amarpersaud.github.io",
 			"Buttons": 
 			[	
 				{
@@ -105,13 +114,16 @@
 			"Id": 3
 		},
 		{
-			"Title": "Quine", 
+			"Title": "C# Quine", 
 			"Desc": "A simple quine written in C#. Quines are programs whose output is identical to their source code.",
 			"ProjectIcon": "icon-terminal",
 			"TechnologyIcons":
 			[
 				"icon-csharp"
 			],
+			"IncludeInSearch": true,
+			"SearchTitle": "C# Quine",
+			"MainPage": "https://github.com/amarpersaud/Quine",
 			"Buttons": 
 			[
 				{
@@ -136,6 +148,8 @@
 			[
 				"icon-csharp"
 			],
+			"IncludeInSearch": true,
+			"MainPage": "https://github.com/amarpersaud/MazeSolve",
 			"Buttons": 
 			[
 				{
@@ -162,6 +176,8 @@
 				"icon-css3",
 				"icon-js"
 			],
+			"IncludeInSearch": true,
+			"MainPage": "/project/rangeslider/",
 			"Buttons": 
 			[
 				{
