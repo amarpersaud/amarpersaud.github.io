@@ -4,19 +4,22 @@
       {
         "Title": "Home Page", 
         "URI": "https://amarpersaud.github.io/",
-        "Desc": "Home page",
+        "Desc": "Home page for this website",
+		"Keywords": "home, page, website, site, web, amar persaud, front",
         "Id": 0
       },
       {
         "Title": "Projects Page", 
         "URI": "https://amarpersaud.github.io/projects",
         "Desc": "List of personal and professional projects",
+		"Keywords": "projects, electronics, electronic, program, programming, coding, code, project, web, js, javascript, c#, csharp, c sharp, python, tensorflow, github, html, css",
         "Id": 1
       },
       {
         "Title": "About Page", 
         "URI": "https://amarpersaud.github.io/about",
         "Desc": "About me, my interests, motivations, etc.",
+		"Keywords": "About, CV, skills, education, information, experience, contact, email, e-mail, skill, phone number, address,",
         "Id": 2
       }
     ]
