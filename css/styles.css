@@ -987,18 +987,17 @@ x-alert>span>div>div{
   font-weight: bold;
 }
 .filterbar{
-  padding: 9px 15px;
+  padding: 2px 15px;
   border: 1px solid #222;
   max-width: 80%;
   margin: 0 auto;
   background: #222230;
   border-radius: 7px;
 }
-.filterbar span:first-of-type{
-	margin-right:auto;
+.filterbar>div{
+	display: inline-block;
+	padding: 5px 5px 5px 0;
 }
-
-
 
 @media screen and (max-width: 760px) {
   #brand{

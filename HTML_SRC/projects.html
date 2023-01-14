@@ -16,8 +16,8 @@
         <h1 class="page-header">Projects</h1>
         <hr class="d"/>  
 		<div class="filterbar">
-				Importance:
-				<div class="dropdown" active="0" id="projectImportance">
+			<div>Importance:
+				<div class="dropdown" active="0" id="projectImportance" data-default="major">
 					<div class="button"></div>
 					<ul>
 					  <li><a class="btn-success" data-value="major" data-cs="btn-success">Major</a></li>
@@ -25,8 +25,9 @@
 					  <li><a class="btn-default" data-value="all" data-cs="btn-default">All</a></li>
 					</ul>
 				</div>
-				<span style="padding-left: 8px;">Project type:</span>
-				<div class="dropdown" active="0" id="projectType">
+			</div>
+			<div>Project type:
+				<div class="dropdown" active="0" id="projectType" data-default="all">
 					<div class="button"></div>
 					<ul>
 					  <li><a class="btn-success" data-value="electronics" data-cs="btn-success">Electronics</a></li>
@@ -35,6 +36,7 @@
 					  <li><a class="btn-default" data-value="all" data-cs="btn-default">All</a></li>
 					</ul>
 				</div>
+			</div>
 		</div>
         <div id="CompletedProjectContainer">
 			<h2>Complete</h2>
