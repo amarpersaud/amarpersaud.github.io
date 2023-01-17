@@ -2,6 +2,7 @@
 
 *{
   font-family: Calibri, Helvetica, Sans-Serif;
+  letter-spacing: 0.0125rem;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   
   --primary-background-color: #353844;
