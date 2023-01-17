@@ -28,16 +28,16 @@
 		},
 		{
 			"Title": "Low Cost Electronic Braille Display Module", 
-			"Desc": "A low cost design for an electronic braille display module. The module uses latching solenoids actuated with H-bridge drivers, incorporating a low cost embedded microcontroller to communicate over SPI, I²C or USART as a slave device.",
+			"Desc": "A low cost design for an electronic braille display module. The module uses latching solenoids actuated with H-bridge drivers, incorporating a low cost embedded microcontroller to communicate over SPI, I²C or USART as a standby/sub device.",
 			"ProjectIcon": "icon-microchip",
 			"TechnologyIcons":[],
 			"IncludeInSearch": true,
-			"MainPage": "https://github.com/amarpersaud",
+			"MainPage": "https://github.com/amarpersaud/BrailleDisplay",
 			"Buttons": 
 			[
 				{
 					"Text": "<i class='icon-github'></i> Github",
-					"Link": "https://github.com/amarpersaud",
+					"Link": "https://github.com/amarpersaud/BrailleDisplay",
 					"Tooltip": "GitHub Page"
 				}
 
@@ -47,8 +47,8 @@
 				"Programming",
 				"CAD"
 			],
-			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, wire, steel, cost, electromagnet, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus",
-			"Status": "Complete",
+			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, wire, steel, cost, electromagnet, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus, I2C, TWI, USART, UART, slave, controller, processor, microprocessor, standby, sub, chip, select, SPI",
+			"Status": "Active",
 			"Importance": "Major",
 			"Id": 1
 		},		
