@@ -4,14 +4,16 @@
   font-family: Helvetica;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   
-  --primary-background-color: #333339;
+  --primary-background-color: #353844;
   --primary-color: #eee;
   
-  --nav-background-color: #222228;
+  --separator-color: #5b6066;
+  
+  --nav-background-color: #20202d;
   --nav-color: #9d9d9d;
   --nav-color-hover: white;
   
-  --nav-button-color: 
+  --nav-button-color: #ddd;
   
   --element-background-color: #ddd;
   --element-color: #333;
@@ -32,7 +34,9 @@
   
   --footer-height: 50px;
   
-  --filterbar-color: #222228;
+  --filterbar-color: #242433;
+  
+  
 }
 
 i:before{
@@ -509,8 +513,8 @@ li>input:focus
 hr.d {
     padding: 0;
     border: none;
-    border-top: medium double #4c4c4c;
-    color: #4c4c4c;
+    border-top: medium double var(--separator-color);
+    color: var(--separator-color);
     text-align: center;
     margin-right: 30px;
     margin-left: 30px;
@@ -537,7 +541,7 @@ hr.d::after {
 	aspect-ratio: 1 / 1;
     height: 1em;
     background: inherit;
-    color: #5c5c5c;
+    color: var(--separator-color);
 	animation: rotation 10s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -993,7 +997,6 @@ x-alert>span>div>div{
 }
 .filterbar{
   padding: 4px 15px;
-  border: 1px solid #222;
   max-width: 80%;
   margin: 0 auto;
   background: var(--filterbar-color);
