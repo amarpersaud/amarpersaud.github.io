@@ -29,6 +29,7 @@ function createIcon(){
 		y: ((Math.random() * (spawnMaxHeight - spawnMinHeight)) + spawnMinHeight), 
 		vx: 0, 
 		vy: (Math.random() * vmax), 
+		z: 0,
 		angle: Math.random(), 
 		iconclass:"icon-csharp", 
 		idn: currentId, 
