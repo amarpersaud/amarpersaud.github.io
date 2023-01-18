@@ -33,7 +33,7 @@ function createIcon(){
 		angle: Math.random(), 
 		iconclass:"icon-csharp", 
 		idn: currentId, 
-		eid:("si"+String(currentId))
+		eid:(`si${currentId}`)
 	}; //todo: better randomize properties
 	
 	//Increment id for next icon
@@ -46,7 +46,7 @@ function createIcon(){
 	let newElem = document.createElement("i");
 	newElem.setAttribute("class", "frontanimicon " + newicon.iconclass);
 	newElem.setAttribute("id",  newicon.eid);
-	newElem.setAttribute("style", "left: "+newicon.x.toFixed(3) + "px; top: " + newicon.y.toFixed(3) + "px;");
+	newElem.setAttribute("style", `left: ${newicon.x.toFixed(3)}px; top: ${newicon.y.toFixed(3)}px;`);
 	
 	contentElem.appendChild(newElem);
 }
@@ -78,7 +78,7 @@ function updateIcons(){
 		ic.y += ic.vy * dt;
 		
 		//find element
-		let iconElem = document.querySelector("#"+ic.eid.toString());
+		let iconElem = document.querySelector(`#${ic.eid.toString()}`);
 		
 		//delete the element if its off the screen
 		if(ic.y >= screenH){
@@ -92,7 +92,7 @@ function updateIcons(){
 		snowicons[i] = ic;
 		
 		//update element position
-		iconElem.setAttribute("style", "left: " + ic.x.toFixed(3) + "px; top: " + ic.y.toFixed(3) + "px;");
+		iconElem.setAttribute("style", `left: ${ic.x.toFixed(3)}px; top: ${ic.y.toFixed(3)}px;`);
 		
 	}
 	
