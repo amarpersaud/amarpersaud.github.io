@@ -878,7 +878,8 @@ fieldset[disabled] .btn-default{
   font-size:16px;
   margin: 12px 0;
 }
-.projecticon{
+.projecticon,
+.projecticon::before{
   font-size: 20px;
   position:relative;
   top:2px;
@@ -1008,8 +1009,11 @@ x-alert>span>div>div{
 	padding: 4px 5px 4px 0;
 }
 
-.frontanimicon{
+.frontanimicon,
+.frontanimicon::after{
 	font-size: 20px;
+	color: var(--primary-color) !important;
+	fill: var(--primary-color) !important;
 	position: fixed;
 	z-index: 1;
 }
