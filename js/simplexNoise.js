@@ -4,11 +4,11 @@ Adapted from
 https://github.com/weswigham/simplex/blob/master/c/src/simplex.c
 
 **/
-gradients3d = [[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0],
+var gradients3d = [[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0],
 [1,0,1],[-1,0,1],[1,0,-1],[-1,0,-1],
 [0,1,1],[0,-1,1],[0,1,-1],[0,-1,-1]];
 
-gradients4d = [
+var gradients4d = [
 	[0,1,1,1], 
 	[0,1,1,-1], 
 	[0,1,-1,1], 
@@ -43,7 +43,7 @@ gradients4d = [
 	[-1,-1,-1,0]
 ];
 
-p = [151,160,137,91,90,15,
+var p = [151,160,137,91,90,15,
 131,13,201,95,96,53,194,233,7,225,140,36,103,30,69,142,8,99,37,240,21,10,23,
 190, 6,148,247,120,234,75,0,26,197,62,94,252,219,203,117,35,11,32,57,177,33,
 88,237,149,56,87,174,20,125,136,171,168, 68,175,74,165,71,134,139,48,27,166,
@@ -59,31 +59,31 @@ p = [151,160,137,91,90,15,
 
 function createPermArray(parr) {
 	let perm = Array(512).fill(0);
+	let i=0;
     for (i = 0; i < 255; i++) {
         perm[i] = parr[i];
         perm[i+256] = parr[i];
     }
-	console.log(perm);
 	return perm;
 }
 
 function createPermArrayRand() {
-	let pre = p;
+	let pre = [...p];
 
 	let perm = Array(512).fill(0);
-
+	let i=0;
     for (i = 0; i < 255; i++) {
-		randChoice = Math.floor(Math.random() * pre.length);
+		let randChoice = Math.floor(Math.random() * pre.length);
 
-        perm[i] = pre.pop(randChoice);
-        perm[i+256] = perm[i];
+        perm[i] = pre[randChoice];
+        perm[i+256] = pre[randChoice];
+		pre.splice(i,1);
     }
-	console.log(perm);
 	return perm;
 }
 
 
-simplex = [
+var simplex = [
 	[0,1,2,3],[0,1,3,2],[0,0,0,0],[0,2,3,1],[0,0,0,0],[0,0,0,0],[0,0,0,0],[1,2,3,0],
 	[0,2,1,3],[0,0,0,0],[0,3,1,2],[0,3,2,1],[0,0,0,0],[0,0,0,0],[0,0,0,0],[1,3,2,0],
 	[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],
@@ -270,7 +270,7 @@ function Noise3D(xin, yin, zin, perm)
     
     // Calculate the contribution from the four corners
     let t0 = 0.5 - x0*x0 - y0*y0 - z0*z0;
-    
+	
     if (t0<0){
         n0 = 0.0;
     }
@@ -322,7 +322,7 @@ function Noise4D(x, y, z, w, perm)
     // The skewing and unskewing factors are hairy again for the 4D case
     let F4 = (Math.sqrt(5.0)-1.0)/4.0;
     let G4 = (5.0-Math.sqrt(5.0))/20.0;
-    let n0, n1, n2, n3, n4; // Noise contributions from the five corners
+    let n0, n1, n2, n3, n4 = 0; // Noise contributions from the five corners
     // Skew the (x,y,z,w) space to determine which cell of 24 simplices we're in
     let s = (x + y + z + w) * F4; // Factor for 4D skewing
     let i = Math.floor(x + s);
@@ -508,10 +508,13 @@ function nfunc(inputs, perm, rot){
 function FractalSumNoise(iter, perm, inputs, tdim=-1)
 {
     let ret = nfunc(inputs, perm, 0);
+	
+	let i=0;
+	
     for (i = 1; i <= iter; i++){
         let num = Math.pow(2,iter);
         let scaled = inputs;
-		
+		let j=0;
         for (j = 0; j < inputs.length; j++) {
 			if(j!=tdim){
 				scaled[j] = inputs[j]*(num/i);
@@ -530,3 +533,4 @@ function componentToHex(c) {
 function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
+
