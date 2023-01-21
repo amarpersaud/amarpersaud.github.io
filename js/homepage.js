@@ -1,5 +1,5 @@
 var bodyElem = document.querySelector("body");
-var contentElem = document.querySelector(".cover-container");
+var contentElem = document.querySelector("body");
 
 var snowicons = [];
 
@@ -8,17 +8,120 @@ var screenH = contentElem.offsetHeight;
 
 var currentId = 0;
 
-var t = 0;
+var time = 0;
 const dt = 0.2;
-const g = 75;
-const vmax = 250;
+const a_g = 90;
+const vmax = 200;
 
-const maxIcons = 50;
-const iconSpawnDelay = 1.4;
+const maxIcons = 100;
+const iconSpawnDelay = 0.5;
 var lastIconSpawnTime = 0;
 
 var spawnMinHeight = -20;
 var spawnMaxHeight = 40;
+
+
+var validIconClasses = [
+	"icon-monogame",
+	"icon-csharp",
+	"icon-python",
+	"icon-js",
+	"icon-gamepad",
+	"icon-linux",
+	"icon-apple",
+	"icon-mac",
+	"icon-android",
+	"icon-windows",
+	"icon-windows8",
+	"icon-youtube",
+	"icon-youtube2",
+	"icon-sphere",
+	"icon-chrome",
+	"icon-firefox",
+	"icon-IE",
+	"icon-edge",
+	"icon-safari",
+	"icon-opera",
+	"icon-html-five",
+	"icon-html-five2",
+	"icon-globe",
+	"icon-terminal",
+	"icon-microchip",
+	"icon-usb",
+	"icon-id-card",
+	"icon-id-card-o",
+	"icon-hourglass",
+	"icon-creative-commons",
+	"icon-battery-three-quarters",
+	"icon-heartbeat",
+	"icon-child",
+	"icon-laptop1",
+	"icon-android",
+	"icon-desktop",
+	"icon-mobile-phone",
+	"icon-superpowers",
+	"icon-snowflake-o",
+	"icon-thermometer-2",
+	"icon-droplet",
+	"icon-camera",
+	"icon-video-camera",
+	"icon-mic",
+	"icon-book",
+	"icon-books",
+	"icon-file-zip",
+	"icon-folder-open",
+	"icon-lifebuoy",
+	"icon-envelop",
+	"icon-compass2",
+	"icon-map",
+	"icon-location",
+	"icon-alarm",
+	"icon-clock",
+	"icon-printer",
+	"icon-floppy-disk",
+	"icon-bubbles",
+	"icon-cog",
+	"icon-key",
+	"icon-lock",
+	"icon-unlocked",
+	"icon-bug",
+	"icon-pie-chart",
+	"icon-gift",
+	"icon-trophy",
+	"icon-lab",
+	"icon-fire",
+	"icon-bin",
+	"icon-briefcase",
+	"icon-magnet",
+	"icon-airplane",
+	"icon-truck",
+	"icon-target",
+	"icon-power",
+	"icon-switch",
+	"icon-tree",
+	"icon-link",
+	"icon-earth",
+	"icon-eye",
+	"icon-flag",
+	"icon-star-full",
+	"icon-heart",
+	"icon-point-right",
+	"icon-cancel-circle",
+	"icon-blocked",
+	"icon-checkmark",
+	"icon-info",
+	"icon-warning",
+	"icon-volume-high",
+	"icon-shuffle",
+	"icon-infinite",
+	"icon-loop2",
+	"icon-scissors",
+	"icon-omega",
+	"icon-sigma",
+	"icon-section",
+	"icon-svg"
+];
+
 
 function createIcon(){
 	//create object with position, velocity, classes to use
@@ -29,7 +132,7 @@ function createIcon(){
 		vy: (Math.random() * vmax), 
 		z: 0,
 		angle: Math.random(), 
-		iconclass:"icon-csharp", 
+		iconclass: validIconClasses[Math.floor(Math.random() * validIconClasses.length)], 
 		idn: currentId, 
 		eid:(`si${currentId}`)
 	}; //todo: better randomize properties
@@ -54,15 +157,44 @@ function updateScreenDimensions(){
 	screenH = contentElem.offsetHeight;
 }
 
+var permA = createPermArray(p);
+var sw = 100;
+
+var windAccelMax = 2;
+
+
+function magnitude(a, b){
+	return Math.sqrt(a*a+b*b);
+}
+
 function updateIcons(){
 	updateScreenDimensions();
 	
+	let i=0;
 	//run across array backwards to remove elements
-	for(i = snowicons.length - 1; i >= 0; i--){
+	for(i = snowicons.length-1; i >=0; i--){
 		let ic = snowicons[i];
 		
 		//Apply acceleration
-		ic.vy = g * dt;
+		ic.vy = a_g * dt;
+		
+		let valuesA = [(ic.vx)/sw, (ic.vy)/sw, time];
+		let valuesB = [((ic.vx) + screenW)/sw, (ic.vy)/sw, time];
+		let valuesC = [((ic.vx) + screenW*2)/sw, (ic.vy)/sw, time];
+		
+		let dirx = (FractalSumNoise(4, permA, valuesA, 2) / 0.7);
+		let diry = (FractalSumNoise(4, permA, valuesB, 2) / 0.7);
+		
+		dirx = dirx/magnitude(dirx, diry);
+		diry = diry/magnitude(dirx, diry);
+		
+		let strength = (((FractalSumNoise(5, permA, valuesC, 2) / 0.7) / 2.0) + 0.5) * windAccelMax; // strength is 0-windAccelMax
+		
+		let windAccelx = strength * dirx;
+		let windAccely = strength * diry;
+		
+		ic.vx += windAccelx * dt;
+		ic.vy += windAccely * dt;
 		
 		//clamp velocity
 		let vel = Math.sqrt((ic.vx * ic.vx) + (ic.vy * ic.vy));
@@ -76,7 +208,8 @@ function updateIcons(){
 		ic.y += ic.vy * dt;
 		
 		//find element
-		let iconElem = document.querySelector(`#${ic.eid.toString()}`);
+
+		let iconElem = document.querySelector("#" + ic.eid.toString());
 		
 		//delete the element if its off the screen
 		if(ic.y >= screenH){
@@ -84,21 +217,21 @@ function updateIcons(){
 			snowicons.splice(i, 1);
 			continue;
 		}
-		
-		//update in icon list
-		snowicons[i] = ic;
-		
-		//update element position
-		iconElem.setAttribute("style", `left: ${ic.x.toFixed(3)}px; top: ${ic.y.toFixed(3)}px;`);
-		
+		else{
+			//update in icon list
+			snowicons[i] = ic;
+			
+			//update element position
+			iconElem.setAttribute("style", `left: ${ic.x.toFixed(3)}px; top: ${ic.y.toFixed(3)}px;`);
+		}
 	}
 	
-	t += dt;
+	time += dt;
 	
 	//Spawn a new eleemnt if its time to spawn one
-	if(t >= lastIconSpawnTime + iconSpawnDelay && snowicons.length < maxIcons){
+	if(time >= lastIconSpawnTime + iconSpawnDelay && snowicons.length < maxIcons){
 		createIcon();
-		lastIconSpawnTime = t;
+		lastIconSpawnTime = time;
 	}
 	
 }
@@ -108,52 +241,3 @@ for(i = 0; i<20; i++){
 }
 
 setInterval(updateIcons, 20);
-
-
-
-/*
-canvasElem = document.querySelector("canvas");
-var ctx = canvasElem.getContext("2d");
-ctx.canvas.width  = window.innerWidth;
-ctx.canvas.height = window.innerHeight;
-
-pw = 5;
-w = 50;
-sw = 10;
-time = 1.2;
-dt = 0.05;
-
-sx = -0.5;
-sy = -0.5;
-
-permA = createPermArray(p);
-permB = createPermArrayRand();
-
-function updateImage(){
-	time += dt;
-	for(y = 0; y < w; y++){
-		for(x = 0; x < w; x++){
-			let values = [x/sw, y/sw, time];
-			let nval = FractalSumNoise(4, permA, values, 2);
-			nval = (nval + 2.0) / 4.0;
-			
-			brightness = Math.floor(255 * nval);
-
-			ctx.fillStyle = rgbToHex(brightness,brightness,brightness);
-			ctx.fillRect(x*pw, y*pw, pw, pw);
-			
-			values = [x/sw, y/sw, time];
-			nval = FractalSumNoise(4, permB, values, 2);
-			nval = (nval + 2.0) / 4.0;
-			
-			brightness = Math.floor(255 * nval);
-
-			ctx.fillStyle = rgbToHex(brightness,brightness,brightness);
-			ctx.fillRect(x*pw + w*pw + pw, y*pw, pw, pw);
-		}
-	}
-}
-
-setInterval(updateImage, 100);
-
-*/
