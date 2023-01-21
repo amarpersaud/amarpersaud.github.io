@@ -10,17 +10,15 @@ var currentId = 0;
 
 var t = 0;
 const dt = 0.2;
-const g = 200;
-const vmax = 2000;
+const g = 75;
+const vmax = 250;
 
-const maxIcons = 20;
-const iconSpawnDelay = 2.5;
+const maxIcons = 50;
+const iconSpawnDelay = 1.4;
 var lastIconSpawnTime = 0;
 
 var spawnMinHeight = -20;
 var spawnMaxHeight = 40;
-
-
 
 function createIcon(){
 	//create object with position, velocity, classes to use
@@ -84,7 +82,6 @@ function updateIcons(){
 		if(ic.y >= screenH){
 			iconElem.remove();
 			snowicons.splice(i, 1);
-			console.log("icon deleted");
 			continue;
 		}
 		
@@ -101,14 +98,62 @@ function updateIcons(){
 	//Spawn a new eleemnt if its time to spawn one
 	if(t >= lastIconSpawnTime + iconSpawnDelay && snowicons.length < maxIcons){
 		createIcon();
-		console.log("Creating an icon");
 		lastIconSpawnTime = t;
 	}
 	
 }
 
-for(i = 0; i<10; i++){
+for(i = 0; i<20; i++){
 	createIcon();
 }
 
 setInterval(updateIcons, 20);
+
+
+
+/*
+canvasElem = document.querySelector("canvas");
+var ctx = canvasElem.getContext("2d");
+ctx.canvas.width  = window.innerWidth;
+ctx.canvas.height = window.innerHeight;
+
+pw = 5;
+w = 50;
+sw = 10;
+time = 1.2;
+dt = 0.05;
+
+sx = -0.5;
+sy = -0.5;
+
+permA = createPermArray(p);
+permB = createPermArrayRand();
+
+function updateImage(){
+	time += dt;
+	for(y = 0; y < w; y++){
+		for(x = 0; x < w; x++){
+			let values = [x/sw, y/sw, time];
+			let nval = FractalSumNoise(4, permA, values, 2);
+			nval = (nval + 2.0) / 4.0;
+			
+			brightness = Math.floor(255 * nval);
+
+			ctx.fillStyle = rgbToHex(brightness,brightness,brightness);
+			ctx.fillRect(x*pw, y*pw, pw, pw);
+			
+			values = [x/sw, y/sw, time];
+			nval = FractalSumNoise(4, permB, values, 2);
+			nval = (nval + 2.0) / 4.0;
+			
+			brightness = Math.floor(255 * nval);
+
+			ctx.fillStyle = rgbToHex(brightness,brightness,brightness);
+			ctx.fillRect(x*pw + w*pw + pw, y*pw, pw, pw);
+		}
+	}
+}
+
+setInterval(updateImage, 100);
+
+*/
