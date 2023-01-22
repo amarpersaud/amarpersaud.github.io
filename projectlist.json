@@ -18,8 +18,7 @@
 
 			],
 			"Tags": [
-				"Electronics",
-				"Programming"
+				"Electronics"
 			],
 			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, Portable, battery, eurorack, CV, filter, high pass, low pass, high-pass, low-pass, amplifier, ADSR, envelope generator, VCO, VCA, VCF, keyboard, microcontroller, mcu, embedded",
 			"Status": "Complete",
@@ -28,16 +27,16 @@
 		},
 		{
 			"Title": "Low Cost Electronic Braille Display Module", 
-			"Desc": "A low cost design for an electronic braille display module. The module uses latching solenoids actuated with H-bridge drivers, incorporating a low cost embedded microcontroller to communicate over SPI, I²C or USART as a slave device.",
+			"Desc": "A low cost design for an electronic braille display module. The module uses latching solenoids actuated with H-bridge drivers, incorporating a low cost embedded microcontroller to communicate over SPI, I²C or USART as a standby/sub device.",
 			"ProjectIcon": "icon-microchip",
 			"TechnologyIcons":[],
 			"IncludeInSearch": true,
-			"MainPage": "https://github.com/amarpersaud",
+			"MainPage": "https://github.com/amarpersaud/BrailleDisplay",
 			"Buttons": 
 			[
 				{
 					"Text": "<i class='icon-github'></i> Github",
-					"Link": "https://github.com/amarpersaud",
+					"Link": "https://github.com/amarpersaud/BrailleDisplay",
 					"Tooltip": "GitHub Page"
 				}
 
@@ -47,14 +46,14 @@
 				"Programming",
 				"CAD"
 			],
-			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, wire, steel, cost, electromagnet, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus",
-			"Status": "Complete",
+			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, wire, steel, cost, electromagnet, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus, I2C, TWI, USART, UART, slave, controller, processor, microprocessor, standby, sub, chip, select, SPI",
+			"Status": "Active",
 			"Importance": "Major",
 			"Id": 1
 		},		
 		{
-			"Title": "Back Propagation Feed Forward Neural Network", 
-			"Desc": "A feed-forward neural network trained using back propagation. Written in C#, and run on the CPU. The example shows the network trained to identify which 2x2 image is displayed (dot in a corner, diagonal, vertical or horizonal lines). Though the example does not use a separate verification set due to the small network size and simplicity, one could run a separate verification step.",
+			"Title": "TensorFlow Face Autoencoder", 
+			"Desc": "An autoencoder TensorFlow model trained to recreate faces by compressing images into a latent space and then decompressing them to recover the original image. An input in the latent space can then be decoded to create faces not in the dataset. Trained on the NIST Celeb A dataset.",
 			"ProjectIcon": "icon-terminal",
 			"TechnologyIcons":
 			[
@@ -62,7 +61,7 @@
 				"icon-tensorflow"
 			],
 			"IncludeInSearch": true,
-			"MainPage": "https://github.com/amarpersaudTFFaceAutoEncoder",
+			"MainPage": "https://github.com/amarpersaud/TFFaceAutoEncoder",
 			"Buttons": 
 			[
 				{
@@ -75,7 +74,7 @@
 			"Tags": [
 				"Programming"
 			],
-			"Keywords" : "programming, coding, code, program, python, AI, machine learning, neural network, auto encoder, auto-encoder, back propagation, tensorflow, tensor flow, TF, object-oriented, object oriented",
+			"Keywords" : "programming, coding, code, program, python, AI, machine learning, neural network, auto encoder, auto-encoder, back propagation, tensorflow, tensor flow, TF, object-oriented, object oriented, face, latent space, image, images, NIST",
 			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 2
@@ -174,7 +173,7 @@
 		},
 		{
 			"Title": "Div Range Sliders", 
-			"Desc": "Range sliders made from divs with very little javascript. No external libraries required (no jQuery).",
+			"Desc": "Range sliders made from div elements with very little JavaScript, and no external libraries required. Useful for selection within a range of values, and styles can be modified to suit a theme or style.",
 			"ProjectIcon": "icon-sphere",
 			"TechnologyIcons":
 			[
@@ -204,8 +203,88 @@
 			],
 			"Keywords" : "programming, coding, code, program, web, website, site, html, css, js, javascript, script, library, jQuery, range slider, sliders, div, thumb",
 			"Status": "Complete",
-			"Importance": "Minor",
+			"Importance": "Major",
 			"Id": 6
+		},
+		{
+			"Title": "N-body Simulation", 
+			"Desc": "N-Body simulation using OpenGL and OpenCL to accelerate computation using GPUs. Uses the Barnes-Hut quadtree optimization algorithm, and Verlet integration method.",
+			"ProjectIcon": "icon-terminal",
+			"TechnologyIcons":
+			[
+				"icon-csharp"
+			],
+			"IncludeInSearch": true,
+			"MainPage": "#",
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "#",
+					"Tooltip": "No GitHub Page yet"
+				}
+
+			],
+			"Tags": [
+				"Programming"
+			],
+			"Keywords" : "programming, coding, code, program, c sharp, c-sharp, c#, n-body, nbody, n body, gravity, simulation, opengl, opencl, GPU, gpus, compute, simulate, integrate, velocity verlet, barnes hut, quad tree, quadtree, octree",
+			"Status": "Complete",
+			"Importance": "Major",
+			"Id": 7
+		},
+		{
+			"Title": "High Current Multi-Phase Buck Converter", 
+			"Desc": "Senior design project 2022-23. Design and fabrication of a high current, low-cost, multi-phase buck converter with variable input voltage ranging from 5-12V and a fixed output of 1V, supporting an output current of 100A, and with efficiency of 90%",
+			"ProjectIcon": "icon-microchip",
+			"TechnologyIcons":
+			[
+			],
+			"IncludeInSearch": true,
+			"MainPage": "#",
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "#",
+					"Tooltip": "No GitHub Page yet"
+				}
+
+			],
+			"Tags": [
+				"Electronics"
+			],
+			"Keywords" : "voltage, buck converter, high current, multi phase, multi-phase, multiphase, dc-dc, dcdc, dc dc, drop, efficient, efficiency",
+			"Status": "Active",
+			"Importance": "Major",
+			"Id": 8
+		},
+		{
+			"Title": "Back Propagation Feed Forward Neural Network", 
+			"Desc": "A feed-forward neural network trained using back propagation. Written in C#, and run on the CPU. The example shows the network trained to identify which 2x2 image is displayed (dot in a corner, diagonal, vertical or horizonal lines). Though the example does not use a separate verification set due to the small network size and simplicity, one could run a separate verification step.",
+			"ProjectIcon": "icon-terminal",
+			"TechnologyIcons":
+			[
+				"icon-csharp"
+			],
+			"IncludeInSearch": true,
+			"MainPage": "https://github.com/amarpersaud/NeuralNetworkBase",
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud/NeuralNetworkBase",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Programming"
+			],
+			"Keywords" : "programming, coding, code, program, python, AI, machine learning, neural network, back propagation, object-oriented, object oriented, c-sharp, c sharp, csharp, c#, neuron, model, train, identify, image, perceptron, layer, epoch",
+			"Status": "Complete",
+			"Importance": "Major",
+			"Id": 9
 		}
     ]
 }

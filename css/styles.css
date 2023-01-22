@@ -1,17 +1,20 @@
 @import url("../fonts/style.min.css");
 
 *{
-  font-family: Helvetica;
+  font-family: Calibri, Helvetica, Sans-Serif;
+  letter-spacing: 0.0125rem;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   
-  --primary-background-color: #333339;
+  --primary-background-color: #353844;
   --primary-color: #eee;
   
-  --nav-background-color: #222;
+  --separator-color: #5b6066;
+  
+  --nav-background-color: #20202d;
   --nav-color: #9d9d9d;
   --nav-color-hover: white;
   
-  --nav-button-color: 
+  --nav-button-color: #ddd;
   
   --element-background-color: #ddd;
   --element-color: #333;
@@ -31,13 +34,21 @@
   --container-padding-top: calc(var(--container-shift) + var(--navbar-height));
   
   --footer-height: 50px;
+  
+  --filterbar-color: #242433;
+  --front-anim-icon-color: #dde;
+  
 }
 
-i:before{
+i::before{
   top: 2px;
   position:relative;
 }
-i.i:before{
+i,i::before,i::after{
+	font-smooth: 2em;
+}
+
+i.i::before{
   top: 1px;
 }
 
@@ -507,8 +518,8 @@ li>input:focus
 hr.d {
     padding: 0;
     border: none;
-    border-top: medium double #4c4c4c;
-    color: #4c4c4c;
+    border-top: medium double var(--separator-color);
+    color: var(--separator-color);
     text-align: center;
     margin-right: 30px;
     margin-left: 30px;
@@ -535,7 +546,7 @@ hr.d::after {
 	aspect-ratio: 1 / 1;
     height: 1em;
     background: inherit;
-    color: #5c5c5c;
+    color: var(--separator-color);
 	animation: rotation 10s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -871,7 +882,8 @@ fieldset[disabled] .btn-default{
   font-size:16px;
   margin: 12px 0;
 }
-.projecticon{
+.projecticon,
+.projecticon::before{
   font-size: 20px;
   position:relative;
   top:2px;
@@ -966,6 +978,8 @@ x-alert>span>div>div{
   display:flex;
   align-items: center;
   justify-content: center;
+  position:relative;
+  z-index: 2;
 }
 .cover-container>.box{
   max-width:40%;
@@ -989,15 +1003,25 @@ x-alert>span>div>div{
 }
 .filterbar{
   padding: 4px 15px;
-  border: 1px solid #222;
   max-width: 80%;
   margin: 0 auto;
-  background: #222230;
+  background: var(--filterbar-color);
   border-radius: 7px;
 }
 .filterbar>div{
 	display: inline-block;
 	padding: 4px 5px 4px 0;
+}
+
+.frontanimicon,
+.frontanimicon::after{
+	font-size: 20px;
+	color: var(--front-anim-icon-color) !important;
+	fill: var(--front-anim-icon-color) !important;
+	position: fixed;
+	z-index: 1;
+	font-smooth: 2em;
+	transition: left 0.2s linear, top 0.2s linear;
 }
 
 @media screen and (max-width: 760px) {
