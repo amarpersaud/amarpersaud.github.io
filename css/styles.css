@@ -38,6 +38,10 @@
   --filterbar-color: #242433;
   --front-anim-icon-color: #dde;
   
+  
+  --visited-link-color: #d45be6;
+  --link-color: #3ebdfb;
+  
 }
 
 i::before{
@@ -51,6 +55,14 @@ i,i::before,i::after{
 i.i::before{
   top: 1px;
 }
+
+a{
+	color: var(--link-color);
+}
+a:visited{
+	color: var(--visited-link-color);
+}
+
 
 @keyframes fadein {
     from { opacity: 0; }
