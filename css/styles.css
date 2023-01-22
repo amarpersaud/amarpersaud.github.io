@@ -36,15 +36,19 @@
   --footer-height: 50px;
   
   --filterbar-color: #242433;
-  
+  --front-anim-icon-color: #dde;
   
 }
 
-i:before{
+i::before{
   top: 2px;
   position:relative;
 }
-i.i:before{
+i,i::before,i::after{
+	font-smooth: 2em;
+}
+
+i.i::before{
   top: 1px;
 }
 
@@ -1012,10 +1016,13 @@ x-alert>span>div>div{
 .frontanimicon,
 .frontanimicon::after{
 	font-size: 20px;
-	color: var(--primary-color) !important;
-	fill: var(--primary-color) !important;
+	color: var(--front-anim-icon-color) !important;
+	fill: var(--front-anim-icon-color) !important;
 	position: fixed;
 	z-index: 1;
+	font-smooth: 2em;
+	transition: right 0.2s linear;
+	transition: top 0.2s linear;
 }
 
 @media screen and (max-width: 760px) {

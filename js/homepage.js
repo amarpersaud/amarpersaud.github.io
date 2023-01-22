@@ -9,7 +9,7 @@ var screenH = contentElem.offsetHeight;
 var currentId = 0;
 
 var time = 0;
-const dt = 0.2;
+const dt = 0.3;
 const a_g = 90;
 const vmax = 200;
 
@@ -152,6 +152,36 @@ function createIcon(){
 	contentElem.appendChild(newElem);
 }
 
+function createIconRandom(){
+	//create object with position, velocity, classes to use
+	let newicon = {
+		x: (Math.random() * screenW), 
+		y: (Math.random() * screenH), 
+		vx: 0, 
+		vy: (Math.random() * vmax), 
+		z: 0,
+		angle: Math.random(), 
+		iconclass: validIconClasses[Math.floor(Math.random() * validIconClasses.length)], 
+		idn: currentId, 
+		eid:(`si${currentId}`)
+	}; //todo: better randomize properties
+	
+	//Increment id for next icon
+	currentId++;
+	
+	//Add to the list
+	snowicons.push(newicon);
+	
+	// create icon to add to the page
+	let newElem = document.createElement("i");
+	newElem.setAttribute("class", "frontanimicon " + newicon.iconclass);
+	newElem.setAttribute("id",  newicon.eid);
+	newElem.setAttribute("style", `left: ${newicon.x.toFixed(3)}px; top: ${newicon.y.toFixed(3)}px;`);
+	
+	contentElem.appendChild(newElem);
+}
+
+
 function updateScreenDimensions(){
 	screenW = contentElem.offsetWidth;
 	screenH = contentElem.offsetHeight;
@@ -222,7 +252,7 @@ function updateIcons(){
 			snowicons[i] = ic;
 			
 			//update element position
-			iconElem.setAttribute("style", `left: ${ic.x.toFixed(3)}px; top: ${ic.y.toFixed(3)}px;`);
+			iconElem.setAttribute("style", `left: ${ic.x.toFixed(3)}px; top: ${ic.y.toFixed(3)}px; transform: rotate(${ic.angle*360}deg);`);
 		}
 	}
 	
@@ -236,8 +266,8 @@ function updateIcons(){
 	
 }
 
-for(i = 0; i<20; i++){
-	createIcon();
+for(i = 0; i<maxIcons * 0.75; i++){
+	createIconRandom();
 }
 
-setInterval(updateIcons, 20);
+setInterval(updateIcons, 200);
