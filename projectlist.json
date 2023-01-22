@@ -285,6 +285,34 @@
 			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 9
+		},
+		{
+			"Title": "Discord Python Bot for Scraping Reddit Posts", 
+			"Desc": "A Discord bot written using Discord.py and asyncpraw to scrape the newest posts from a subreddit, and send the appropriate posts to a discord channel for notifications. The discord channel also allows for adding, removing, viewing, subscribing and unsubscribing keywords which are searched for in the post's title and body.",
+			"ProjectIcon": "icon-terminal",
+			"TechnologyIcons":
+			[
+				"icon-python",
+				"icon-discord"
+			],
+			"IncludeInSearch": true,
+			"MainPage": "https://github.com/amarpersaud/RedditScrapingDiscordBot",
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud/RedditScrapingDiscordBot",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Programming"
+			],
+			"Keywords" : "programming, coding, code, program, python, discord, discord.py, praw, asyncpraw, dotenv, python-dotenv, python3, pip, pip3, package, bot, bots, channel, notification, ping, keyword, keywords, key word, words, sub, reddit, subreddit, r/, r, ",
+			"Status": "Complete",
+			"Importance": "Minor",
+			"Id": 10
 		}
     ]
 }
