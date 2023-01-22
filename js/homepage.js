@@ -17,9 +17,12 @@ const maxIcons = 100;
 const iconSpawnDelay = 0.5;
 var lastIconSpawnTime = 0;
 
-var spawnMinHeight = -20;
-var spawnMaxHeight = 40;
+var spawnMinHeight = -40;
+var spawnMaxHeight = 10;
 
+var sw = 100;
+
+var windAccelMax = 10;
 
 var validIconClasses = [
 	"icon-monogame",
@@ -188,9 +191,6 @@ function updateScreenDimensions(){
 }
 
 var permA = createPermArray(p);
-var sw = 100;
-
-var windAccelMax = 2;
 
 
 function magnitude(a, b){
