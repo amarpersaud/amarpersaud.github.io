@@ -295,7 +295,11 @@ a, a:hover, a:active, a:visited{
   display: -webkit-flex;
   display: flex;
 }
-#brand  > a:hover{
+#brand > a:visited{
+  color: var(--brand-color);
+}
+#brand  > a:hover,
+#brand > a:visited{
   color: var(--brand-color-hover);
 }
 .site-nav{
