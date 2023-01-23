@@ -111,7 +111,6 @@ var validIconClasses = [
 	"icon-point-right",
 	"icon-cancel-circle",
 	"icon-blocked",
-	"icon-checkmark",
 	"icon-info",
 	"icon-warning",
 	"icon-volume-high",
