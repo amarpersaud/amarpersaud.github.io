@@ -1037,7 +1037,7 @@ x-alert>span>div>div{
 	position: fixed;
 	z-index: 1;
 	font-smooth: 2em;
-	transition: left 0.2s linear, top 0.2s linear;
+	transition: left 0.2s linear, top 0.2s linear, rotate 0.2s linear;
 }
 
 @media screen and (max-width: 760px) {
