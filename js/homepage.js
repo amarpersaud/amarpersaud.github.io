@@ -132,7 +132,9 @@ function createIcon(){
 		y: ((Math.random() * (spawnMaxHeight - spawnMinHeight)) + spawnMinHeight), 
 		vx: 0, 
 		vy: (Math.random() * vmax), 
-		z: 0,
+		va: (Math.random() / 1000.0), 
+		z: (Math.random() / 2.0 + 0.5),
+		va: 0,
 		angle: Math.random(), 
 		iconclass: validIconClasses[Math.floor(Math.random() * validIconClasses.length)], 
 		idn: currentId, 
@@ -149,7 +151,7 @@ function createIcon(){
 	let newElem = document.createElement("i");
 	newElem.setAttribute("class", "frontanimicon " + newicon.iconclass);
 	newElem.setAttribute("id",  newicon.eid);
-	newElem.setAttribute("style", `left: ${newicon.x.toFixed(3)}px; top: ${newicon.y.toFixed(3)}px;`);
+	newElem.setAttribute("style", `left: ${newicon.x.toFixed(3)}px; top: ${newicon.y.toFixed(3)}px; transform: scale(${newicon.z.toFixed(3)}) rotate(${newicon.angle*360}deg);`);
 	
 	contentElem.appendChild(newElem);
 }
@@ -160,8 +162,9 @@ function createIconRandom(){
 		x: (Math.random() * screenW), 
 		y: (Math.random() * screenH), 
 		vx: 0, 
-		vy: (Math.random() * vmax), 
-		z: 0,
+		vy: (Math.random() * vmax),
+		va: (Math.random() / 1000.0),
+		z: (Math.random() / 2.0 + 0.5),
 		angle: Math.random(), 
 		iconclass: validIconClasses[Math.floor(Math.random() * validIconClasses.length)], 
 		idn: currentId, 
@@ -178,7 +181,7 @@ function createIconRandom(){
 	let newElem = document.createElement("i");
 	newElem.setAttribute("class", "frontanimicon " + newicon.iconclass);
 	newElem.setAttribute("id",  newicon.eid);
-	newElem.setAttribute("style", `left: ${newicon.x.toFixed(3)}px; top: ${newicon.y.toFixed(3)}px;`);
+	newElem.setAttribute("style", `left: ${newicon.x.toFixed(3)}px; top: ${newicon.y.toFixed(3)}px; transform: scale(${newicon.z.toFixed(3)}) rotate(${newicon.angle*360}deg);`);
 	
 	contentElem.appendChild(newElem);
 }
@@ -224,6 +227,7 @@ function updateIcons(){
 		
 		ic.vx += windAccelx * dt;
 		ic.vy += windAccely * dt;
+		ic.va += windAccelx * dt / 1000.0;
 		
 		//clamp velocity
 		let vel = Math.sqrt((ic.vx * ic.vx) + (ic.vy * ic.vy));
@@ -232,9 +236,14 @@ function updateIcons(){
 			ic.vy = ic.vy / vel * vmax;
 		}
 		
+		if(Math.sqrt(ic.va * ic.va) >= 0.1){
+			ic.va = ic.va / Math.sqrt(ic.va * ic.va) * 0.1;
+		}
+		
 		//Apply velocity to position
 		ic.x += ic.vx * dt;
 		ic.y += ic.vy * dt;
+		ic.angle += ic.va * dt;
 		
 		//find element
 
@@ -251,7 +260,7 @@ function updateIcons(){
 			snowicons[i] = ic;
 			
 			//update element position
-			iconElem.setAttribute("style", `left: ${ic.x.toFixed(3)}px; top: ${ic.y.toFixed(3)}px; transform: rotate(${ic.angle*360}deg);`);
+			iconElem.setAttribute("style", `left: ${ic.x.toFixed(3)}px; top: ${ic.y.toFixed(3)}px; transform: scale(${ic.z.toFixed(3)}) rotate(${ic.angle*360}deg);`);
 		}
 	}
 	
