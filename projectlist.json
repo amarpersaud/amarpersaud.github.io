@@ -20,7 +20,7 @@
 			"Tags": [
 				"Electronics"
 			],
-			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, Portable, battery, eurorack, CV, filter, high pass, low pass, high-pass, low-pass, amplifier, ADSR, envelope generator, VCO, VCA, VCF, keyboard, microcontroller, mcu, embedded",
+			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed, circuit, board, schematic, portable, battery, eurorack, CV, filter, high, low, pass, high-pass, low-pass, amplifier, ADSR, envelope, generator, VCO, VCA, VCF, oscillator, amplifier, filter, keyboard, microcontroller, mcu, embedded",
 			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 0
@@ -46,7 +46,7 @@
 				"Programming",
 				"CAD"
 			],
-			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, wire, steel, cost, electromagnet, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus, I2C, TWI, USART, UART, slave, controller, processor, microprocessor, standby, sub, chip, select, SPI, CAD, CAD model, model, design",
+			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed, circuit, board, schematic, wire, steel, cost, electromagnet, electromagnetic, electro-magnet, electro-magnetic, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus, I2C, TWI, USART, UART, serial, slave, controller, processor, microprocessor, standby, sub, chip, select, SPI, CAD, model, design, magnet",
 			"Status": "Inactive",
 			"Importance": "Major",
 			"Id": 1
@@ -139,7 +139,7 @@
 			"Tags": [
 				"Programming"
 			],
-			"Keywords" : "programming, coding, code, program, quine, virus, self replicating, replication, source, output, input, terminal, cmd, CLI",
+			"Keywords" : "programming, coding, code, program, quine, virus, self, replicating, replication, source, output, input, terminal, cmd, CLI, c, sharp, csharp, c-sharp",
 			"Status": "Complete",
 			"Importance": "Minor",
 			"Id": 4
@@ -166,7 +166,7 @@
 			"Tags": [
 				"Programming"
 			],
-			"Keywords" : "programming, coding, code, program, terminal, CLI, CMD, maze, solver, path, pathfinder, pathfinding, algorithm, A star, Astar, A-star, maze, image,",
+			"Keywords" : "programming, coding, code, program, terminal, CLI, CMD, maze, solver, path, pathfinder, pathfinding, algorithm, A, star, Astar, A-star, maze, image, c, sharp, csharp, c-sharp",
 			"Status": "Complete",
 			"Importance": "Minor",
 			"Id": 5
@@ -228,14 +228,14 @@
 			"Tags": [
 				"Programming"
 			],
-			"Keywords" : "programming, coding, code, program, c sharp, c-sharp, c#, n-body, nbody, n body, gravity, simulation, opengl, opencl, GPU, gpus, compute, simulate, integrate, velocity verlet, barnes hut, quad tree, quadtree, octree",
+			"Keywords" : "programming, coding, code, program, c, sharp, c-sharp, c#, n-body, nbody, n, body, gravity, simulation, opengl, opencl, GPU, gpus, compute, simulate, integrate, velocity, verlet, barnes, hut, barnes-hut, quad, tree, quad-tree, quadtree, octree",
 			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 7
 		},
 		{
 			"Title": "High Current Multi-Phase Buck Converter", 
-			"Desc": "Senior design project 2022-23. Design and fabrication of a high current, low-cost, multi-phase buck converter with variable input voltage ranging from 5-12V and a fixed output of 1V, supporting an output current of 100A, and with efficiency of 90%",
+			"Desc": "Senior design project 2022-23. Design and fabrication of a high current, low-cost, multi-phase buck converter with variable input voltage ranging from 5-12V and a fixed output of 1V, supporting an output current of 75A, and with efficiency of 90%",
 			"ProjectIcon": "icon-microchip",
 			"TechnologyIcons":
 			[
@@ -254,7 +254,7 @@
 			"Tags": [
 				"Electronics"
 			],
-			"Keywords" : "voltage, buck converter, high current, multi phase, multi-phase, multiphase, dc-dc, dcdc, dc dc, drop, efficient, efficiency",
+			"Keywords" : "voltage, buck, converter, current, multi, phase, multi-phase, multiphase, dc-dc, dcdc, dc dc, drop, efficient, efficiency, low, high, school, college, education, nonisolated, non-isolated",
 			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 8
