@@ -46,8 +46,8 @@
 				"Programming",
 				"CAD"
 			],
-			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, wire, steel, cost, electromagnet, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus, I2C, TWI, USART, UART, slave, controller, processor, microprocessor, standby, sub, chip, select, SPI",
-			"Status": "Active",
+			"Keywords" : "electronics, programming, coding, code, program, electronic, PCB, printed circuit board, schematic, wire, steel, cost, electromagnet, solenoid, driver, microcontroller, mcu, embedded, blind, display, module, modular, serial, communication, bus, I2C, TWI, USART, UART, slave, controller, processor, microprocessor, standby, sub, chip, select, SPI, CAD, CAD model, model, design",
+			"Status": "Inactive",
 			"Importance": "Major",
 			"Id": 1
 		},		
@@ -255,7 +255,7 @@
 				"Electronics"
 			],
 			"Keywords" : "voltage, buck converter, high current, multi phase, multi-phase, multiphase, dc-dc, dcdc, dc dc, drop, efficient, efficiency",
-			"Status": "Active",
+			"Status": "Complete",
 			"Importance": "Major",
 			"Id": 8
 		},
