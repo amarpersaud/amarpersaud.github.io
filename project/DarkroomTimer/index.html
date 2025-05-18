@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+		<meta charset="ISO-8859-1"> 
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js"></script>
+		
+    </head>
+    <body>
+        <template id="step_template">
+            <li class="step">
+                <div class="step_left">
+                    <span class="step_num">Step number</span>
+                    <span class="step_duration">Duration</span>
+                    <span class="step_frequency">Frequency</span>
+                    <span class="step_temp">Temperature</span>
+                    <ul class="step_container">
+                    </ul>
+                </div>
+					<div class="step_right">
+						<button>&uarr;</button>
+						<button>&darr;</button>
+					</div>
+					<div class="step_right">
+						<button>&times;</button>
+						<button>&equiv;</button>
+						<button>+</button>
+					</div>
+            </li>
+        </template>
+
+
+        <div id="outer_container">
+                <div class="step_panel">
+                        <span>Pour In buffer time:  <input type="number" min="0" class="tb"/></span>
+                        <span>Pour Out buffer time: <input type="number" min="0" class="tb"/></span>
+                </div> 
+                <div id="step_editor" class="step_panel">
+					<table>
+						<tr>
+							<td>Name: </td>
+							<td><input id="step_name_edit" class="tb"/></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Type: </td>
+							<td>
+								<select id="step_type_edit" class="tb">
+									<option value="Chemical">Chemical</option>
+									<option value="Physical">Physical</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Duration: </td>
+							<td><input id="step_duration_edit" type="number" class="tb"/> Seconds</td> 
+							<td>
+                                <!--
+								<select id="step_type_edit" class="tb">
+									<option value="seconds">Seconds</option>
+									<option value="inversions">Inversions</option>
+									<option value="times">Times</option>
+								</select>
+                                -->
+							</td>
+						</tr>
+						<tr>
+							<td>Repeat <input type="checkbox" id="step_repeat_edit" onchange="step_repeat_enabled_changed(this)"></input></td></td>
+							<td><input id="step_frequency_duration_edit" type="number" min="1" class="tb"/> times  </td>
+							<td><input type="checkbox" id="step_repeat_until_end_edit"> Until End</input></td>
+						</tr>
+						<tr>
+							<td>Frequency: Every </td>
+							<td> <input id="step_frequency_edit" type="number" class="tb"/> s</td>
+						</tr>
+						<tr>
+							<td>Temperature: </td>
+							<td><input type="number" min="0" class="tb" id="step_temperature_edit"/> C</td>
+						</tr>
+					</table>	
+                    <button id="step_save_edit_button" onclick="step_save_edit_clicked()">Save Step</button><button onclick="step_add_edit_clicked()">Add New Step</button>
+                </div>
+
+
+                <ul id="main_step_list" class="step_container">
+
+                    <li class="step" id="step-0">
+                        <div class="step_left">
+                            <span>Step 0 - Prewash</span>
+                            <span>Duration: 100s</span>
+                            
+                            <ul class="step_container">
+                                <li class="step">
+                                    <div class="step_left">
+                                        <span>Agitation</span>
+                                        <span>Duration: 10s</span>
+                                        <span>Frequency: Continuous</span>
+                                    </div>             
+                                    <div class="step_right">
+                                        <button>&uarr;</button>
+                                        <button>&darr;</button>
+                                    </div>
+                                    <div class="step_right">
+                                        <button>&times;</button>
+                                        <button>&equiv;</button>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+
+                        </div>
+                        <div class="step_right">
+                            <button>&times;</button>
+                            <button>&equiv;</button>
+                            <button>+</button>
+							<button>&uarr;</button>
+							<button>&darr;</button>
+                        </div>
+                    </li>
+                    
+                </ul>
+
+        </div>
+    </body>
+</html>
