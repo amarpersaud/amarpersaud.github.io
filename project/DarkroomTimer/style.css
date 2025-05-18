@@ -1,0 +1,143 @@
+:root {
+	--main-bg-color: brown;
+}
+*{
+	font-family: Helvetica;
+}
+
+
+body,html,head{
+	background-color: #000;
+	color: #eee;
+	min-height: 100vh;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+}
+#outer_container{
+	width: 90%;
+	min-height: 100%;
+	height: 100%;
+	background-color: rgb(50,10,10);
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	margin: 0 	auto;
+}
+
+.step_outer_container{
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+	border-radius: 5px;
+	border: 0;
+	background-color: rgb(220, 240, 220);
+	margin: 0 5px;                
+}
+
+.step_panel{ 
+	background-color: rgb(70,70,70);
+	margin: 5px;
+	padding: 15px;
+	border-radius: 5px;
+	display: block;
+}
+
+.step_panel span{
+	display:block;
+}
+
+.step_panel .tb{
+	width: 150px;
+}
+
+button, .tb, select{
+	min-height: 38px;
+	color: #000;
+	border-radius: 5px;
+	font-size: 20px;
+	margin: 3px 0;  
+	box-sizing: border-box;
+}
+
+.step_container{
+	margin: 5px;
+	padding: 0;
+}
+
+.step_container .step{
+	border: 3px solid rgba(0,0,0,0.4);
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.1), inset -4px -4px 10px rgba(0,0,0,0.05);
+}
+
+#outer_container ul{
+	list-style: None;
+}
+
+.step{
+	width: auto;
+	background-color: rgb(62, 62, 62);
+	padding: 15px;
+	border-radius: 5px;
+	display:flex;
+	flex-direction: row;
+	margin: 5px 0;
+	box-sizing: border-box;
+}
+
+.step:not(:has(.step:hover)):hover {
+	box-shadow: 5px 5px 20px rgba(30,30,50,0.4), inset -5px -5px 20px rgba(30,30,50,0.05);
+	border: 3px solid rgba(0,0,100,0.5);
+}
+
+.step_container .step_container li{
+	background-color: rgb(100, 70, 70);
+}
+.step_container .step_container .step_container li{
+	background-color: rgb(70, 70, 100);
+}
+#step_outer_container > .step_container{
+	width: 100%;
+	background-color: rgb(120, 140, 120);
+	margin: 0 5px 0 5px;
+	border-radius: 5px;
+}
+
+#timer_container{
+	width: 30%;
+	background-color: rgb(200,200,200);
+	border-radius: 5px;
+}
+
+.step_right{
+	display:flex;
+	flex-direction: column;
+	min-width: 38px;
+	width: auto;	
+	margin-left: 5px;
+}
+.step_left{
+	width: 100%;
+	display:flex;
+	flex-direction: column;
+}
+.step_container button{
+	min-width: 38px;
+	border-radius: 100%;
+	border: 1px solid rgba(0,0,0,0.4);
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.1), inset -4px -4px 10px rgba(0,0,0,0.05);
+	margin: 3px 0;
+	font-size: 20px;
+	padding: 0;
+}
+.edited_step{
+	/*background-color: rgb(70, 100, 70) !important;*/
+	border: 3px dashed rgb(50, 170, 50) !important; 
+	box-shadow: 5px 5px 20px rgba(40,40,50,0.4), inset -5px -5px 20px rgba(40,40,50,0.05);
+}
+td{
+	margin: 5px;
+	padding: 0 10px;
+}
