@@ -78,20 +78,20 @@ def ParseCSS(root, filename):
     split_lines = css.split("\n")
     for ln in range(len(split_lines)):
         if("@import" in split_lines[ln]):
-            url = re.search('"([^"]*)"', split_lines[ln])
+            url = re.search('"([^"]*)"', split_lines[ln]).group(0).replace("\"", "")
             includefilepath = ""
             print("Include path: {}".format(url))
             #relative to the html file
             if(url.startswith(".")):
                 print("Relative to file")
-                includefilepath = os.path.join(root, url)
+                includefilepath = os.path.join(root[2:], url[2:])
             else:   
                 #else relative to root / 
                 print("Relative to root")
                 includefilepath = os.path.join(url)
             print("\tInclude filepath: {}".format(includefilepath))
             replacementText = ""
-            with open(includefilepath, 'rb') as incf:
+            with open(includefilepath, 'r') as incf:
                 replacementText = incf.read()                    
             split_lines[ln] = replacementText
     return '\n'.join(split_lines).encode('utf-8')
