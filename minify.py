@@ -12,7 +12,7 @@ class cd:
   def __exit__(self, etype, value, traceback):
     os.chdir(self.savedPath)
 
-for root, subdirs, files in os.walk("./"):
+for root, subdirs, files in os.walk("./css"):
     if '.git' in subdirs:
         subdirs.remove('.git')
     for filename in files:
