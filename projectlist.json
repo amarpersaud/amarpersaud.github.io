@@ -313,6 +313,36 @@
 			"Status": "Complete",
 			"Importance": "Minor",
 			"Id": 10
+		},
+		{
+			"Title": "Darkroom Timer with Customizable Timing", 
+			"Desc": "A darkroom timer with editable ",
+			"ProjectIcon": "icon-sphere",
+			"TechnologyIcons":
+			[
+				"icon-html-five2",
+				"icon-css3",
+				"icon-js"
+			],
+			"IncludeInSearch": true,
+			"MainPage": "https://github.com/amarpersaud/DarkroomTimer",
+			"Buttons": 
+			[
+				{
+					"Text": "<i class='icon-github'></i> Github",
+					"Link": "https://github.com/amarpersaud/DarkroomTimer",
+					"Tooltip": "GitHub Page"
+				}
+
+			],
+			"Tags": [
+				"Programming",
+				"Web"
+			],
+			"Keywords" : "programming, coding, code, program, html, js, dark, room, darkroom, film, 35mm, analog, timer, c41, c-41, processing, agitation, website, web, ",
+			"Status": "Active",
+			"Importance": "Minor",
+			"Id": 11
 		}
     ]
 }
