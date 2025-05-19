@@ -95,7 +95,8 @@ def ParseCSS(root, filename):
                 replacementText = incf.read()                    
             split_lines[ln] = replacementText
     return '\n'.join(split_lines).encode('utf-8')
-    
+
+'''  
 for root, subdirs, files in os.walk(CSS_SRC_LOCATION):
     if '.git' in subdirs:
         subdirs.remove('.git')
@@ -107,3 +108,4 @@ for root, subdirs, files in os.walk(CSS_SRC_LOCATION):
             print("New filepath: {}".format(newFilepath))
             with open(newFilepath, 'wb') as nf:
                 nf.write(parsedCSS)
+'''
