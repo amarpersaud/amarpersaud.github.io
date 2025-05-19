@@ -69,19 +69,20 @@
   }
    
   var navopen = false;
-   
-  document.getElementsByClassName("openbutton")[0].onclick = function(){
-    navigation = document.getElementsByClassName("nav")[0].getElementsByTagName("ul")[0];
-    if(navigation.style.display=="block"){
-      navigation.style.display="none";
+  
+  function NavButtonClicked(){
+    navigation = document.getElementById("nav_list");
+    if(navopen){
+      navigation.setAttribute("class", "navbar-closed");
       navopen = false;
     }
     else{
-      navigation.style.display="block";
+      navigation.setAttribute("class", "navbar-open");
       navopen = true;
     }
-  };
-
+  }
+  
+  document.getElementsByClassName("openbutton")[0].onclick = NavButtonClicked;
 
   var pgid = "";
   if(location.pathname == "/"){

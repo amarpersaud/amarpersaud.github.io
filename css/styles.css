@@ -1158,6 +1158,14 @@ x-alert>span>div>div{
     width: 22px;
     padding: 9px 6px 9px 10px;
   }
+  
+	  
+  .navbar-closed{
+  	display: none !important;
+  }
+  .navbar-open{
+  	display: block !important;
+  }
   .main-content{
     padding: 45px 18px 20px 60px;
   }
