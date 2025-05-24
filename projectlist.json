@@ -316,7 +316,7 @@
 		},
 		{
 			"Title": "Darkroom Timer with Customizable Timing", 
-			"Desc": "A darkroom timer with editable ",
+			"Desc": "A darkroom timer with editable steps, suitable for custom processes",
 			"ProjectIcon": "icon-sphere",
 			"TechnologyIcons":
 			[
@@ -325,7 +325,7 @@
 				"icon-js"
 			],
 			"IncludeInSearch": true,
-			"MainPage": "https://github.com/amarpersaud/DarkroomTimer",
+			"MainPage": "https://amarpersaud.com/DarkroomTimer",
 			"Buttons": 
 			[
 				{
