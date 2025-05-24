@@ -1,5 +1,9 @@
 import http.server
 import socketserver
+import os
+
+#Move up a directory
+os.chdir("../")
 
 PORT = 8000
 
