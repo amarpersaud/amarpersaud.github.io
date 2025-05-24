@@ -5,6 +5,9 @@ import re
 HTML_SRC_LOCATION = "./SRC"
 CSS_SRC_LOCATION = "./SRC"
 
+#Move up a directory
+os.chdir("../")
+
 #Parse HTML file and insert included HTML files
 
 def ParseHTML(root, filename):

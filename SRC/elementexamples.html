@@ -16,17 +16,26 @@
         <h1 class="page-header">Example Elements</h1>
         <hr class="d"/>  
         <h2>Dropdown</h2>
-		<div class="dropdown indentp" active="0" id="mainColorDropdown">
-            <div id="colorbutton" class="btn-default">Red</div>
+		<div class="dropdown indentp" active="0" id="mainColorDropdown" data-default="white">
+            <div class="button"></div>
             <ul>
-              <a class="btn-danger" data-value="danger">Red</a>
-              <a class="btn-success" data-value="success">Green</a>
-              <a class="btn-warning" data-value="warning">Orange</a>
-              <a class="btn-primary" data-value="primary">Blue</a>
-              <a class="btn-info" data-value="info">Light Blue</a>
-              <a class="btn-default" data-value="default">White</a>
+              <li><a class="btn-danger" 	data-cs="btn-danger" 	data-value="red"			>Red</a></li>
+              <li><a class="btn-success" 	data-cs="btn-success" 	data-value="green"			>Green</a></li>
+              <li><a class="btn-warning" 	data-cs="btn-warning" 	data-value="orange"			>Orange</a></li>
+              <li><a class="btn-primary" 	data-cs="btn-primary" 	data-value="blue"			>Blue</a></li>
+              <li><a class="btn-info" 		data-cs="btn-info" 		data-value="lightblue"		>Light Blue</a></li>
+              <li><a class="btn-default" 	data-cs="btn-default" 	data-value="white"			>White</a></li>
             </ul>
-          </div>
+	    </div>
+		<div class="dropdown" active="0" id="projectType" data-default="all">
+			<div class="button"></div>
+			<ul>
+			  <li><a class="btn-success" data-value="electronics" 	data-cs="btn-success">Electronics</a></li>
+			  <li><a class="btn-warning" data-value="programming" 	data-cs="btn-warning">Programming</a></li>
+			  <li><a class="btn-info" 	 data-value="web" 			data-cs="btn-info">Web</a></li>
+			  <li><a class="btn-default" data-value="all" 			data-cs="btn-default">All</a></li>
+			</ul>
+		</div>
 		<div class="push">
 		</div>
 		</div>
